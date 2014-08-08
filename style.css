@@ -440,8 +440,25 @@ header h1 a:visited{
 	margin: 0 0 24px;
 }
 
+.left-half {
+	top:0;
+	left:0;
+	background:#2BBFEF;
+}
+
+.right-half {
+	top:0;
+	right:0;
+	background:#4693A5;
+}
 
 
+
+.half-screen{
+	position:absolute;
+	width:50%;
+	height:100%;
+}
 
 #partner-tool-outer{
 	background:#2BBFEF;

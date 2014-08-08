@@ -448,8 +448,9 @@ header h1 a:visited{
 #quizinart-container{
 	
 	background: url('img/quizanart-bg.png') no-repeat center center;
-	background-size: cover;
-	  background-attachment: fixed;
+	background-repeat: no-repeat;
+	    background-position: 0 0;
+	    background-size: cover;
 	position:relative;
 	overflow:hidden;
 	color:white;

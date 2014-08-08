@@ -114,6 +114,7 @@ $(document).ready(function () {
 	$('#content').imagesLoaded(function() {
 		$('body').addClass('imagesloaded');
 		$(".fill-browser-inner").each(function() {
+			console.log('run');
 				var $thisinner = $(this).outerHeight();
 				var $extraspace = ( ($newHeight - $thisinner) / 2 );
 				

@@ -58,7 +58,6 @@ $(document).ready(function () {
 	
 	$(window).resize(function() {
 		fullScreenSlide();
-		bindHoverFx();
 		mediaQueryCalculator();
 	});
 	

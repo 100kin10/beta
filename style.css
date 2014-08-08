@@ -793,16 +793,6 @@ a.number-option.last-select-option {
 margin-right: 0;
 }
 
-.dotted-border-container {
-background: url('img/dotted-background.svg');
-background-repeat: repeat-x;
-width: 604px;
-position: relative;
-height: 5px;
-margin-top: 40px;
-margin-left: 48px;
-}
-
 .dot{
 	height:17px;
 	width:17px;

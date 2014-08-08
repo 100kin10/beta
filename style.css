@@ -866,17 +866,17 @@ padding-left: 20px;
 
 a.selection-option{
 	-webkit-border-radius: 100px;
-    border-radius: 100px;
-			display:inline-block;
-	width:115px;
-	height:115px;		
-	background:white;
-	font-size: 85px;
+	border-radius: 100px;
+	display: inline-block;
+	width: 95px;
+	height: 95px;
+	background: white;
+	font-size: 72px;
 	color: #2BBFEF;
 	font-family: "brandon-grotesque",sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	text-align:center;
+	text-align: center;
 }
 
 a.number-option {
@@ -1156,7 +1156,7 @@ font-size:22px;
 
 
 body {
-font-size: 46px;
+font-size: 36px;
 }
 
 

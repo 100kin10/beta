@@ -448,10 +448,10 @@ header h1 a:visited{
    ========================================================================== */
 
 #quizinart-container{
-	background:#2B2B2B;
+	background:rgba(231, 95, 109,0.93);
 	position:relative;
 	overflow:hidden;
-	color:#CA974D;
+	color:white;
 }
 
 .not-mobile-device .width-0-479 #quizinart-container{

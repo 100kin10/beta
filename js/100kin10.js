@@ -94,49 +94,36 @@ $(document).ready(function () {
 
 			$('body').addClass('fullscreen-sections');
 
-			$('body').addClass('imagesloaded');
-			$(".fill-browser-inner").each(function() {
-					var $thisinner = $(this).outerHeight();
-					var $headerImage = $('#header-container');
-					var $extraspace = ( ($newHeight - $thisinner - $headerImage) / 2 );
-					if ($extraspace > 0){
-						$(this).css('margin-top', $extraspace);
-					} else {
-						$(this).css('margin-top', '0px');
-						$(this).css('padding-bottom', '160px');
-						$('.not-mobile-device body').css('font-size', '40px');
-						$('.header-image-container').css('margin-bottom' , '50px');
-					}
+			$('#content').imagesLoaded(function() {
+				$('body').addClass('imagesloaded');
+				$(".fill-browser-inner").each(function() {
+						var $thisinner = $(this).outerHeight();
+						var $extraspace = ( ($newHeight - $thisinner) / 2 );
+						
+						if ($extraspace > 0){
+							$(this).css('margin-top', $extraspace);
+						}
+						
+						
+				});
+				
+				$(".fill-browser-inner-section4").each(function() {
+						var $thisinner = $(this).height();
+						var $extraspace = ( (browserheight - $thisinner) / 2 ) - $headerHeight;
+						
+						if ($extraspace > 0){
+							$(this).css('margin-top', $extraspace);
+						}
+						
+						
+				});
+		
 			});
+			
 		}	
 	}
 	
-	$('#content').imagesLoaded(function() {
-		$('body').addClass('imagesloaded');
-		$(".fill-browser-inner").each(function() {
-			console.log('run');
-				var $thisinner = $(this).outerHeight();
-				var $extraspace = ( ($newHeight - $thisinner) / 2 );
-				
-				if ($extraspace > 0){
-					$(this).css('margin-top', $extraspace);
-				}
-				
-				
-		});
-		
-		$(".fill-browser-inner-quizinart").each(function() {
-				var $thisinner = $(this).height();
-				var $extraspace = ( (browserheight - $thisinner) / 2 ) - $headerHeight;
-				
-				if ($extraspace > 0){
-					$(this).css('margin-top', $extraspace);
-				}
-				
-				
-		});
 
-	});
 	
 	
 	function quizinart() {

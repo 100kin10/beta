@@ -128,7 +128,7 @@ $(document).ready(function () {
 		e.preventDefault();
 		e.stopPropagation();
 		$('#partner-contact-form').addClass('open');
-	};
+	)};
 		
 		
 	function quizinart() {

@@ -235,9 +235,11 @@ td { vertical-align: top; }
 body{
 
 	color:white;
-	font-size:50px;
+	font-size:37px;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
+	font-family: "brandon-grotesque",sans-serif;
+	font-style: normal;
 }
 
 
@@ -283,7 +285,7 @@ border:0;
   	    border-radius: 17px;
 padding: 13px 30px 8px 30px;
 
-font-family: "gesta",sans-serif;
+font-family: "brandon-grotesque",sans-serif;
 font-style: normal;
 font-weight: 400;
 
@@ -357,7 +359,7 @@ p + p {
 }
 
 h1, h2, h3, h4, h5 ,h6{
-	font-family: "gesta",sans-serif;
+	font-family: "brandon-grotesque",sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	
@@ -455,6 +457,10 @@ header h1 a:visited{
 	
 }
 
+.right-half-padding{
+	padding-left:30px;
+}
+
 #partner-tool-outer .left-half{
 	background:#2BBFEF;
 }
@@ -472,9 +478,25 @@ header h1 a:visited{
 
 
 
-#partner-tool-outer{
+#partner-tool-outer, #home-partner-tool-outer{
 	background:#2BBFEF;
 }
+
+ #home-partner-tool-outer{
+	 position:relative;
+	 min-height:500px;
+ }
+ 
+ #home-partner-tool-outer .left-half{
+ 	background: url('img/partner-tool-bg.png') no-repeat center center;
+ 	background-repeat: no-repeat;
+ 	    background-size: cover;
+		
+		   -webkit-background-size: cover;
+		   -moz-background-size: cover;
+		   -o-background-size: cover;
+		   background-size: cover;
+ }
 
 #partner-tool-inner{
 	position:relative;
@@ -487,7 +509,8 @@ header h1 a:visited{
 
 
 #learn-more-outer{
-	background:#67B977;
+	background: #67B977;
+	min-height: 650px;
 }
 
 
@@ -511,7 +534,12 @@ header h1 a:visited{
 	height:600px;
 }
 
-
+#site-title{
+	top: 50px;
+	z-index: 1;
+	font-size:27px;
+	position: relative;
+}
 
 /* ==========================================================================
    Test Style
@@ -520,7 +548,6 @@ header h1 a:visited{
 #quizinart-container{
 	background: url('img/quizanart-bg.png') no-repeat center center;
 	background-repeat: no-repeat;
-	    background-position: 0 0;
 	    background-size: cover;
 	position:relative;
 	overflow:hidden;
@@ -540,7 +567,7 @@ background-color: rgba(0,0,0,0.0);
 border: 0px;
 padding: 0px 0px;
 font-size: 50px;
-color: #CA974D;
+color: white;
 font-family: "brandon-grotesque",sans-serif;
 font-style: normal;
 font-weight: 500;
@@ -698,8 +725,6 @@ top: 48px;
 	position:absolute;
 	left:0px;
 	z-index:1;
-	-webkit-box-shadow: inset 5px 5px 0px 8px rgba(0, 0, 0, 1);
-	box-shadow: inset 5px 5px 0px 8px rgba(0, 0, 0, 1);
 	font-weight:900;
 }
 
@@ -707,8 +732,7 @@ top: 48px;
 	position:absolute;	
 	right:0px;
 	z-index:1;
-	-webkit-box-shadow: inset 5px 5px 0px 8px rgba(0, 0, 0, 1);
-	box-shadow: inset 5px 5px 0px 8px rgba(0, 0, 0, 1);
+
 
 	font-weight:900;
 }
@@ -773,7 +797,7 @@ width:100%;
 	margin-left:-12px;
 	-webkit-border-radius: 33px;
     border-radius: 33px;
-	background:#CA974D;
+	background:white;
 	z-index:2;
 	display:none;
 }
@@ -792,7 +816,7 @@ width: 100%;
 height: auto;
 background: transparent;
 font-size: 25px;
-color: #CA974D;
+color: white;
 font-family: "brandon-grotesque",sans-serif;
 font-style: normal;
 font-weight: 400;
@@ -838,7 +862,7 @@ a.selection-option{
 	height:115px;		
 	background:white;
 	font-size: 85px;
-	color: #CA974D;
+	color: #2BBFEF;
 	font-family: "brandon-grotesque",sans-serif;
 	font-style: normal;
 	font-weight: 700;
@@ -856,7 +880,7 @@ margin-right: 0;
 .dot{
 	height:17px;
 	width:17px;
-	background:#CA974D;
+	background:white;
 	-webkit-border-radius: 100px;
     border-radius: 100px;
 		border:5px solid #2B2B2B;
@@ -886,7 +910,7 @@ left: 442px;
 
 a.selection-option.long-button {
 padding: 0 30px;
-font-size: 37px;
+font-size: 30px;
 background: white;
 -webkit-border-radius: 21px;
 border-radius: 21px;
@@ -895,12 +919,31 @@ font-style: normal;
 font-weight: 500;
 width: auto;
 height: 53px;
-padding-top: 14px;
+padding-top: 4px;
 text-transform: uppercase;
 margin: 0 auto;
 display: inline-block;
 color:#2BBFEF;
 overflow:hidden;
+}
+
+a.section-button {
+padding: 0 30px;
+font-size: 30px;
+background: white;
+-webkit-border-radius: 21px;
+border-radius: 21px;
+font-family: "brandon-grotesque",sans-serif;
+font-style: normal;
+font-weight: 500;
+width: auto;
+height: 53px;
+padding-top: 4px;
+text-transform: uppercase;
+margin: 0 auto;
+display: inline-block;
+color: #2BBFEF;
+overflow: hidden;
 }
 
 a#submitting-button{
@@ -936,47 +979,47 @@ padding-top: 60px;
 }
 
 #quizinart-container input::-webkit-input-placeholder {
-   color: #CA974D;
+   color: white;
 }
 
 #quizinart-container input:-moz-placeholder { /* Firefox 18- */
-   color: #CA974D;  
+   color: white;  
 }
 
 #quizinart-container input::-moz-placeholder {  /* Firefox 19+ */
-   color: #CA974D;  
+   color: white;  
 }
 
 #quizinart-container input:-ms-input-placeholder {  
-   color: #CA974D;  
+   color: white;  
 }
 
 
 #quizinart-container textarea::-webkit-input-placeholder {
-   color: #CA974D;
+   color: white;
 }
 
 #quizinart-container textarea:-moz-placeholder { /* Firefox 18- */
-   color: #CA974D;  
+   color: white;  
 }
 
 #quizinart-container textarea::-moz-placeholder {  /* Firefox 19+ */
-   color: #CA974D;  
+   color: white;  
 }
 
 #quizinart-container textarea:-ms-input-placeholder {  
-   color: #CA974D;  
+   color: white;  
 }
 
 #quizinart-container .section-header{
-	color:#CA974D;
+	color:white;
 }
 
 .question-header{
 	color:white;
 	text-align:center;
-	font-size:27px;
-	text-transform:uppercase;
+	font-size:37px;
+	text-transform:inherit;
 	font-family: "brandon-grotesque",sans-serif;
 	font-weight: 500;
 	margin-bottom:72px;

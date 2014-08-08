@@ -10,7 +10,6 @@ $(document).ready(function () {
 		$currentFeature		= 1,
 		$mouseOver	 		= false,
 		$finishedLoading 	= false,
-		$containerHeight 	= $("#ajax-container").height(),
 		$currentWidth		= '',
 		$newWidth			= '',
 		$isMobile			= false,
@@ -32,8 +31,7 @@ $(document).ready(function () {
 		}
 	}		
 
-
-	// cross browser alternative to console.log
+	// cross browser console.log
 	function debug(text) {
 	    if ((typeof(Debug) !== 'undefined') && Debug.writeln) {
 	        Debug.writeln(text);
@@ -80,7 +78,6 @@ $(document).ready(function () {
 	}
 	
 	function fullScreenSlide() {
-		console.log('running');
 		var browserheight = $(window).height();
 		var browserWidth = $(window).width();
 		var halfWidth = browserWidth / 2;
@@ -88,7 +85,7 @@ $(document).ready(function () {
 
 		if (!$isMobile) {
 			$newHeight = browserheight;
-			console.log('running again');
+
 			$('.fillscreen-section').css('min-height', $newHeight);
 
 			$('body').addClass('fullscreen-sections');
@@ -98,12 +95,18 @@ $(document).ready(function () {
 				$(".fill-browser-inner").each(function() {
 						var $thisinner = $(this).outerHeight();
 						var $extraspace = ( ($newHeight - $thisinner) / 2 );
-						
 						if ($extraspace > 0){
 							$(this).css('margin-top', $extraspace);
 						}
-						
-						
+				});
+				
+				$(".vertically-center").each(function() {
+						var $thisinner = $(this).outerHeight();
+						var $parentHeight = $(this).parents('.vertical-parent').height();
+						var $extraspace = ( ($parentHeight - $thisinner) / 2 );
+						if ($extraspace > 0){
+							$(this).css('margin-top', $extraspace);
+						}
 				});
 				
 				$(".fill-browser-inner-quizinart").each(function() {
@@ -131,67 +134,29 @@ $(document).ready(function () {
 		
 		
 	function quizinart() {
-
-		$(".quizinart-text-input").keyup(function(event){
-			
-		    if(event.keyCode == 13){
-		        $container = $(this).closest('.question-container');
-						$container.addClass('questionCompleted');
-						$container.removeClass('questionNotCompleted');
-						$container.removeClass('currentQuestion');
-						
-						if ($(this).attr('id') == 'question0') {
-							
-							$nextQuestion = $( '#question-2' );
-						} else {
-							$nextQuestion = $container.next( '.question-container' );
-						};
-						
-						$nextQuestion.addClass('currentQuestion');
-						$nextInput = $nextQuestion.find('.quizinart-input-container input');
-						$nextInput.select();
-				
-						$formTarget = $(this).data('target');
-						
-						$enteredValue = $(this).val();
-						$($formTarget).val($enteredValue);
-		    }
-		});
-
-		$('a.selection-option').unbind('click');
-		$('a.selection-option').click(function(e) {
+		
+		$( 'a.selection-option').on( 'click', function(e) {
 			e.preventDefault();
 			e.stopPropagation();
 			$formTarget = $(this).data('target');
 			$dataAnswer = $(this).data('answer');
-			if ($formTarget == "#s4-submit") {
-				$('#s4-submit').click();
-			} else {
-					if (!$(this).hasClass('ignore-selection')) {
-							if ($(this).hasClass('radio-selection')) {
-								$newThis = $($formTarget).find('input');
-								$dataAnswer = '[value="' + $dataAnswer + '"]';
-								$($newThis).filter($dataAnswer).prop('checked', true);
-							} else {
-									$($formTarget)[0].selectedIndex = $dataAnswer - 1;
-									/*$($formTarget).prop('checked',true);*/
-									$($formTarget).attr("selected","selected");
-							};
-					
-					};
-				
-			};
-
-			$(this).addClass('optionSelected');
-	        $container = $(this).closest('.question-container');
-			$container.addClass('questionCompleted');
-			$container.removeClass('questionNotCompleted');
+			$dataText = 'text' + $dataAnswer + '';
+			
+			$container = $(this).closest('.question-container');
 			$container.removeClass('currentQuestion');
+			
 			$nextQuestion = $container.next( '.question-container' );
+			
+			$dataResponse = $nextQuestion.data($dataText);
+			$responseTarget = $nextQuestion.find('.response-target');			
+			$responseTarget.text($dataResponse);
+			
 			$nextQuestion.addClass('currentQuestion');
-			$nextInput = $nextQuestion.find('.quizinart-input-container input');
-			$nextInput.select();
+
 		});
+
+
+		
 		
 		$('a.firstQuestion-selection-option').unbind('click');
 		$('a.firstQuestion-selection-option').click(function(e) {

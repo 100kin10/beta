@@ -50,7 +50,7 @@ $(document).ready(function () {
 	}
 
 	function init() {
-		section4();
+		100kTest();
 		fullScreenSlide();
 		mediaQueryCalculator();	
 	}
@@ -111,9 +111,9 @@ $(document).ready(function () {
 	}
 	
 	
-	function section4() {
+	function 100kTest() {
 
-		$(".section4-text-input").keyup(function(event){
+		$(".100kTest-text-input").keyup(function(event){
 			
 		    if(event.keyCode == 13){
 		        $container = $(this).closest('.question-container');
@@ -129,7 +129,7 @@ $(document).ready(function () {
 						};
 						
 						$nextQuestion.addClass('currentQuestion');
-						$nextInput = $nextQuestion.find('.section4-input-container input');
+						$nextInput = $nextQuestion.find('.100kTest-input-container input');
 						$nextInput.select();
 				
 						$formTarget = $(this).data('target');
@@ -173,7 +173,7 @@ $(document).ready(function () {
 			$container.removeClass('currentQuestion');
 			$nextQuestion = $container.next( '.question-container' );
 			$nextQuestion.addClass('currentQuestion');
-			$nextInput = $nextQuestion.find('.section4-input-container input');
+			$nextInput = $nextQuestion.find('.100kTest-input-container input');
 			$nextInput.select();
 		});
 		

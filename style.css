@@ -231,18 +231,18 @@ td { vertical-align: top; }
    Test Style
    ========================================================================== */
 
-#100kTest-container{
+#quizinart-container{
 	background:#2B2B2B;
 	position:relative;
 	overflow:hidden;
 	color:#CA974D;
 }
 
-.not-mobile-device .width-0-479 #100kTest-container{
+.not-mobile-device .width-0-479 #quizinart-container{
 display:none;
 }
 
-#100kTest-container input, #100kTest-container textarea {
+#quizinart-container input, #quizinart-container textarea {
 width: 100%;
 background-color: rgba(0,0,0,0.0);
 border: 0px;
@@ -256,7 +256,7 @@ text-transform: uppercase;
 text-align: center;
 }
 
-#100kTest-container textarea {
+#quizinart-container textarea {
 font-size: 25px;
 height: 160px;
 padding: 35px;
@@ -308,7 +308,7 @@ padding: 35px;
 
 }
 
-#question-0 .100kTest-selections{
+#question-0 .quizinart-selections{
 	height:300px;
 	width:665px;
 	margin:0 auto;
@@ -509,7 +509,7 @@ position:relative;
 min-height:87px;
 }
 
-.100kTest-input-container{
+.quizinart-input-container{
 	-webkit-border-radius: 33px;
     border-radius: 33px;
 	
@@ -527,13 +527,13 @@ min-height:87px;
 	margin-left: 30px;
 }
 
-#100kTest-container .smartest-input-container input{
+#quizinart-container .smartest-input-container input{
 font-size: 24px;
 text-align: left;
 padding-left: 20px;
 }
 
-.100kTest-selections{
+.quizinart-selections{
 	width: 700px;
 	margin: 0 auto;
 }
@@ -636,7 +636,7 @@ height: 98px;
 padding-top: 20px;
 }
 
-.100kTest-selections.paragraph-container {
+.quizinart-selections.paragraph-container {
 -webkit-border-radius: 100px;
 border-radius: 100px;
 -webkit-box-shadow: inset 15px 15px 0px 0px rgba(0, 0, 0, 1);
@@ -659,42 +659,42 @@ padding-top: 60px;
 	padding-top:0px;
 }
 
-#100kTest-container input::-webkit-input-placeholder {
+#quizinart-container input::-webkit-input-placeholder {
    color: #CA974D;
 }
 
-#100kTest-container input:-moz-placeholder { /* Firefox 18- */
+#quizinart-container input:-moz-placeholder { /* Firefox 18- */
    color: #CA974D;  
 }
 
-#100kTest-container input::-moz-placeholder {  /* Firefox 19+ */
+#quizinart-container input::-moz-placeholder {  /* Firefox 19+ */
    color: #CA974D;  
 }
 
-#100kTest-container input:-ms-input-placeholder {  
+#quizinart-container input:-ms-input-placeholder {  
    color: #CA974D;  
 }
 
 
-#100kTest-container textarea::-webkit-input-placeholder {
+#quizinart-container textarea::-webkit-input-placeholder {
    color: #CA974D;
 }
 
-#100kTest-container textarea:-moz-placeholder { /* Firefox 18- */
+#quizinart-container textarea:-moz-placeholder { /* Firefox 18- */
    color: #CA974D;  
 }
 
-#100kTest-container textarea::-moz-placeholder {  /* Firefox 19+ */
+#quizinart-container textarea::-moz-placeholder {  /* Firefox 19+ */
    color: #CA974D;  
 }
 
-#100kTest-container textarea:-ms-input-placeholder {  
+#quizinart-container textarea:-ms-input-placeholder {  
    color: #CA974D;  
 }
 
 
 
-#100kTest-container .section-header{
+#quizinart-container .section-header{
 	color:#CA974D;
 }
 

@@ -81,6 +81,7 @@ $(document).ready(function () {
 	}
 	
 	function fullScreenSlide() {
+		console.log('running');
 		var browserheight = $(window).height();
 		var browserWidth = $(window).width();
 		var halfWidth = browserWidth / 2;
@@ -88,7 +89,7 @@ $(document).ready(function () {
 
 		if (!$isMobile) {
 			$newHeight = browserheight;
-			
+			console.log('running again');
 			$('.fillscreen-section').css('min-height', $newHeight);
 
 			$('body').addClass('fullscreen-sections');

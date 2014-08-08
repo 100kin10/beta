@@ -111,6 +111,32 @@ $(document).ready(function () {
 		}	
 	}
 	
+	$('#content').imagesLoaded(function() {
+		$('body').addClass('imagesloaded');
+		$(".fill-browser-inner").each(function() {
+				var $thisinner = $(this).outerHeight();
+				var $extraspace = ( ($newHeight - $thisinner) / 2 );
+				
+				if ($extraspace > 0){
+					$(this).css('margin-top', $extraspace);
+				}
+				
+				
+		});
+		
+		$(".fill-browser-inner-section4").each(function() {
+				var $thisinner = $(this).height();
+				var $extraspace = ( (browserheight - $thisinner) / 2 ) - $headerHeight;
+				
+				if ($extraspace > 0){
+					$(this).css('margin-top', $extraspace);
+				}
+				
+				
+		});
+
+	});
+	
 	
 	function quizinart() {
 

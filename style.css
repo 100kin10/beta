@@ -878,12 +878,10 @@ left: 442px;
 
 a.selection-option.long-button {
 padding: 0 30px;
-font-size: 21px;
-background: #CA974D;
--webkit-border-radius: 29px;
-border-radius: 29px;
--webkit-box-shadow: inset -7px -7px 0px 0px rgba(0, 0, 0, .1);
-box-shadow: inset -7px -7px 0px 0px rgba(0, 0, 0, .1);
+font-size: 37px;
+background: white;
+-webkit-border-radius: 21px;
+border-radius: 21px;
 font-family: "brandon-grotesque",sans-serif;
 font-style: normal;
 font-weight: 500;
@@ -893,7 +891,7 @@ padding-top: 14px;
 text-transform: uppercase;
 margin: 0 auto;
 display: inline-block;
-color:white;
+color:#2BBFEF;
 overflow:hidden;
 }
 
@@ -901,8 +899,6 @@ a#submitting-button{
 font-size: 43px;
 -webkit-border-radius: 54px;
 border-radius: 54px;
--webkit-box-shadow: inset -13px -13px 0px 0px rgba(0, 0, 0, .1);
-box-shadow: inset -13px -13px 0px 0px rgba(0, 0, 0, .1);
 font-weight: 500;
 height: 98px;
 padding-top: 20px;

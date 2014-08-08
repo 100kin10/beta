@@ -515,7 +515,7 @@ header h1 a:visited{
 
 
 #partner-contact-form{
-	height:0px;
+	height:10px;
 	position:relative;
 	width:100%;
 	overflow:hidden;
@@ -526,8 +526,18 @@ header h1 a:visited{
 			transition: all 0.4s ease-in-out;}
 }
 
+#partner-contact-form:hover{
+	height:600px;
+}
+
+
+#partner-contact-form.closed{
+	height:0px;
+}
+
+
 #partner-contact-form.open{
-	height:auto;
+	height:600px;
 }
 
 #partner-contact-inner{

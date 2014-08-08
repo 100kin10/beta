@@ -129,7 +129,8 @@ $(document).ready(function () {
 	$('a.open-form').click(function(e) {
 		e.preventDefault();
 		e.stopPropagation();
-		$('#partner-contact-form').addClass('open');
+		$('#partner-contact-form').toggleClass('open');
+		$('#partner-contact-form').toggleClass('closed');
 	});
 		
 		

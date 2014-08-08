@@ -109,7 +109,7 @@ $(document).ready(function () {
 				
 				$(".fill-browser-inner-quizinart").each(function() {
 						var $thisinner = $(this).height();
-						var $extraspace = ( (browserheight - $thisinner) / 2 ) - $headerHeight;
+						var $extraspace = ( (browserheight - $thisinner) / 2 );
 						
 						if ($extraspace > 0){
 							$(this).css('margin-top', $extraspace);

@@ -441,17 +441,18 @@ header h1 a:visited{
 }
 
 
-
-
 /* ==========================================================================
    Test Style
    ========================================================================== */
 
 #quizinart-container{
-	background:rgba(231, 95, 109,0.93);
+	
+	background: url('img/quizanart-bg.png') no-repeat center center;
 	position:relative;
 	overflow:hidden;
 	color:white;
+	
+	
 }
 
 .not-mobile-device .width-0-479 #quizinart-container{

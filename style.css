@@ -460,8 +460,15 @@ header h1 a:visited{
 	height:100%;
 }
 
+
+
 #partner-tool-outer{
 	background:#2BBFEF;
+}
+
+#partner-tool-inner{
+	position:relative;
+	z-index:10;
 }
 
 #learn-more-outer{

@@ -122,10 +122,7 @@ $(document).ready(function () {
 			
 		}	
 	}
-	
 
-	
-	
 	function quizinart() {
 
 		$(".quizinart-text-input").keyup(function(event){
@@ -137,7 +134,7 @@ $(document).ready(function () {
 						$container.removeClass('currentQuestion');
 						
 						if ($(this).attr('id') == 'question0') {
-							console.log('true');
+							
 							$nextQuestion = $( '#question-2' );
 						} else {
 							$nextQuestion = $container.next( '.question-container' );
@@ -153,8 +150,7 @@ $(document).ready(function () {
 						$($formTarget).val($enteredValue);
 		    }
 		});
-		
-		 
+
 		$('a.selection-option').unbind('click');
 		$('a.selection-option').click(function(e) {
 			e.preventDefault();
@@ -163,7 +159,6 @@ $(document).ready(function () {
 			$dataAnswer = $(this).data('answer');
 			if ($formTarget == "#s4-submit") {
 				$('#s4-submit').click();
-				_gaq.push(['_trackEvent', 'Submit', 'Section Four Submit', 'Section Four Submit']);
 			} else {
 					if (!$(this).hasClass('ignore-selection')) {
 							if ($(this).hasClass('radio-selection')) {
@@ -179,8 +174,7 @@ $(document).ready(function () {
 					};
 				
 			};
-			
-			
+
 			$(this).addClass('optionSelected');
 	        $container = $(this).closest('.question-container');
 			$container.addClass('questionCompleted');

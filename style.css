@@ -441,12 +441,21 @@ header h1 a:visited{
 }
 
 
+
+
+#partner-tool-outer{
+	background:#2BBFEF;
+}
+
+#learn-more-outer{
+	background:#67B977;
+}
+
 /* ==========================================================================
    Test Style
    ========================================================================== */
 
 #quizinart-container{
-	
 	background: url('img/quizanart-bg.png') no-repeat center center;
 	background-repeat: no-repeat;
 	    background-position: 0 0;
@@ -457,6 +466,7 @@ header h1 a:visited{
 	
 	
 }
+
 
 .not-mobile-device .width-0-479 #quizinart-container{
 display:none;

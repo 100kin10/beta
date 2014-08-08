@@ -122,7 +122,15 @@ $(document).ready(function () {
 			
 		}	
 	}
-
+	
+	
+	$('a.open-form').click(function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$('#partner-contact-form').addClass('open');
+	};
+		
+		
 	function quizinart() {
 
 		$(".quizinart-text-input").keyup(function(event){

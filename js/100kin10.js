@@ -107,7 +107,7 @@ $(document).ready(function () {
 						
 				});
 				
-				$(".fill-browser-inner-section4").each(function() {
+				$(".fill-browser-inner-quizinart").each(function() {
 						var $thisinner = $(this).height();
 						var $extraspace = ( (browserheight - $thisinner) / 2 ) - $headerHeight;
 						

@@ -471,6 +471,11 @@ header h1 a:visited{
 	z-index:10;
 }
 
+#partner-list-outer{
+	background:#E75F6D;
+}
+
+
 #learn-more-outer{
 	background:#67B977;
 }

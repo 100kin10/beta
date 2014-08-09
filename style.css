@@ -566,11 +566,6 @@ header h1 a:visited{
 	
 }
 
-
-.not-mobile-device .width-0-479 #quizinart-container{
-display:none;
-}
-
 #quizinart-container input, #quizinart-container textarea {
 width: 100%;
 background-color: rgba(0,0,0,0.0);
@@ -860,7 +855,7 @@ padding-left: 20px;
 }
 
 .quizinart-selections{
-	width: 700px;
+	max-width: 700px;
 	margin: 0 auto;
 }
 
@@ -1236,6 +1231,11 @@ font-size: 19px;
 	margin: 0 0 24px;
 }
 
+.question-container {
+width: 768px;
+margin-left: -369px;
+}
+
 
 }
 
@@ -1307,6 +1307,13 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 font-size: 20px;
 }
 
+.question-container {
+width: 480px;
+margin-left: -240px;
+}
+
+
+
 
 }
 
@@ -1319,6 +1326,17 @@ font-size: 20px;
 .wrap {padding: 0 24px; width: 272px;}
 .grid12 {width: 272px;}
 .grid12-box {width: 270px;}
+
+
+.question-container, .question-container.paragraph-container {
+max-width: 479px;
+width:auto;
+
+margin-left:0px;
+left:0px;
+margin-top:0px!important;
+}
+
 
 body {
 font-size: 20px;
@@ -1352,6 +1370,8 @@ footer {
 padding-top: 60px;
 padding-bottom: 60px;
 }
+
+
 
 
 

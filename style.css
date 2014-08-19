@@ -238,7 +238,7 @@ body{
 	font-size:37px;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	font-family: "brandon-grotesque",sans-serif;
+	font-family: "omnes-pro",sans-serif;
 	font-style: normal;
 }
 
@@ -309,7 +309,7 @@ border:0;
   	    border-radius: 17px;
 padding: 13px 30px 8px 30px;
 
-font-family: "brandon-grotesque",sans-serif;
+font-family: "omnes-pro",sans-serif;
 font-style: normal;
 font-weight: 400;
 
@@ -383,7 +383,7 @@ p + p {
 }
 
 h1, h2, h3, h4, h5 ,h6{
-	font-family: "brandon-grotesque",sans-serif;
+	font-family: "omnes-pro",sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	
@@ -639,7 +639,7 @@ border: 0px;
 padding: 0px 0px;
 font-size: 50px;
 color: white;
-font-family: "brandon-grotesque",sans-serif;
+font-family: "omnes-pro",sans-serif;
 font-style: normal;
 font-weight: 500;
 text-transform: uppercase;
@@ -890,7 +890,7 @@ height: auto;
 background: transparent;
 font-size: 25px;
 color:#4693A5;
-font-family: "brandon-grotesque",sans-serif;
+font-family: "omnes-pro",sans-serif;
 font-style: normal;
 font-weight: 400;
 text-align: left;
@@ -936,7 +936,7 @@ a.selection-option{
 	background: white;
 	font-size: 72px;
 	color: #2BBFEF;
-	font-family: "brandon-grotesque",sans-serif;
+	font-family: "omnes-pro",sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	text-align: center;
@@ -987,7 +987,7 @@ font-size: 30px;
 background: white;
 -webkit-border-radius: 21px;
 border-radius: 21px;
-font-family: "brandon-grotesque",sans-serif;
+font-family: "omnes-pro",sans-serif;
 font-style: normal;
 font-weight: 500;
 width: auto;
@@ -1006,7 +1006,7 @@ font-size: 30px;
 background: white;
 -webkit-border-radius: 21px;
 border-radius: 21px;
-font-family: "brandon-grotesque",sans-serif;
+font-family: "omnes-pro",sans-serif;
 font-style: normal;
 font-weight: 500;
 width: auto;
@@ -1036,7 +1036,7 @@ box-shadow: inset 15px 15px 0px 0px rgba(0, 0, 0, 1);
 background: white;
 padding: 50px 70px;
 font-size: 36px;
-font-family: "brandon-grotesque",sans-serif;
+font-family: "omnes-pro",sans-serif;
 font-weight: 300;
 line-height: 1.38;
 width:800px;
@@ -1093,7 +1093,7 @@ padding-top: 60px;
 	text-align:center;
 	font-size:37px;
 	text-transform:inherit;
-	font-family: "brandon-grotesque",sans-serif;
+	font-family: "omnes-pro",sans-serif;
 	font-weight: 500;
 	margin-bottom:72px;
 }

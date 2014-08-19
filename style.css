@@ -243,6 +243,30 @@ body{
 }
 
 
+#navigation{
+	background:#5294A5;
+}
+
+#navigation a{
+	color:#ACCED6;
+	font-size:16px;
+	display:inline-block;
+}
+
+#navigation a.float-left{
+	position:absolute;
+	left:0px;
+}
+
+#navigation-inner{
+	text-align:center;
+	position:relative;
+}
+
+#video-container{
+	background:#F4F0D7;
+}
+
 .post-content{
 	text-align:center;
 	line-height: 1.2;
@@ -556,14 +580,56 @@ header h1 a:visited{
    ========================================================================== */
 
 #quizinart-container{
-	background: url('img/quizanart-bg.png') no-repeat center center;
+	background:#E8606E;
 	background-repeat: no-repeat;
 	    background-size: cover;
 	position:relative;
-	overflow:hidden;
+	overflow:visible;
 	color:white;
 	
 	
+}
+
+#quizinart-inner{
+	
+	-webkit-transition: all 0.4s ease-in-out;
+			-moz-transition: all 0.4s ease-in-out;
+	        -ms-transition: all 0.4s ease-in-out;
+	        -o-transition: all 0.4s ease-in-out;
+			transition: all 0.4s ease-in-out;
+			border--webkit-border-radius:12px; /* Saf3+, Chrome */
+			   -moz-border-radius:12px; /* FF1+ */
+			        border-radius:12px; /* Opera 10.5, IE 9 */ 
+			border:1.5px solid #1F1B1C;
+			background:#E7606E;
+			margin-top:-140px;
+			margin-bottom:100px;
+			position:relative;
+}
+
+#quizinart-inner-border{
+	-webkit-transition: all 0.4s ease-in-out;
+			-moz-transition: all 0.4s ease-in-out;
+	        -ms-transition: all 0.4s ease-in-out;
+	        -o-transition: all 0.4s ease-in-out;
+			transition: all 0.4s ease-in-out;
+			border--webkit-border-radius:12px; /* Saf3+, Chrome */
+			   -moz-border-radius:12px; /* FF1+ */
+			        border-radius:12px; /* Opera 10.5, IE 9 */ 
+			border:1.5px solid #1F1B1C;
+			background:#F4F0D7;
+			min-height:500px;
+			margin:6px;
+			overflow: hidden;
+			position: relative;
+}
+
+h2#quizinart-title{
+	font-size:25px;
+	color:#E7606E;
+	position:absolute;
+	width:100%;
+	top:30px;
 }
 
 #quizinart-container input, #quizinart-container textarea {
@@ -607,6 +673,8 @@ padding: 35px;
 	opacity: 0.0;
 	left:50%;
 	margin-left:-400px;
+	margin-top: 154px;
+	margin-bottom: 60px;
 }
 .question-container.paragraph-container{
 	width:900px;
@@ -821,7 +889,7 @@ width: 100%;
 height: auto;
 background: transparent;
 font-size: 25px;
-color: white;
+color:#4693A5;
 font-family: "brandon-grotesque",sans-serif;
 font-style: normal;
 font-weight: 400;
@@ -1021,7 +1089,7 @@ padding-top: 60px;
 }
 
 .question-header{
-	color:white;
+	color:#4693A5;
 	text-align:center;
 	font-size:37px;
 	text-transform:inherit;

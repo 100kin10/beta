@@ -147,6 +147,8 @@ $(document).ready(function () {
 			$container.removeClass('currentQuestion');
 			
 			$nextQuestion = $container.next( '.question-container' );
+			$nextQuestionHeight = $nextQuestion.outerHeight('true');
+			$('#quizinart-inner-border').height($nextQuestionHeight);
 			
 			$dataResponse = $nextQuestion.data($dataText);
 			$responseTarget = $nextQuestion.find('.response-target');			

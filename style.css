@@ -1067,7 +1067,7 @@ img.gif-share {
   display: block;
   position: absolute;
   z-index: 20;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(71, 148, 166, 0.9);
   overflow: hidden;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -1140,7 +1140,7 @@ a.expand {
 }
 .effect-6 .img.hover .overlay a.expand {
   top: 50%;
-  margin-top: -30px;
+  margin-top: -35px;
   opacity: 1;
 }
 

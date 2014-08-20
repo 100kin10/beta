@@ -303,6 +303,66 @@ body{
 	top: 446px;
 }
 
+h3.section-header{
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+#section-2-header{
+	margin-top: -20px;
+}
+
+#section-3-header{
+	padding-top: 50px;
+}
+
+#section-4-header{
+	padding-top: 80px;
+	text-decoration: none;
+	font-size: 23px;
+	color: #4794A6;
+}
+
+#section-3-sub-header{
+	text-align: left;
+	font-weight: bold;
+	padding-bottom: 40px;
+}
+
+.section-3-section-header{
+	font-weight: bold;
+	font-size: 40px;
+}
+
+.section-3-section-body{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#handoff-box{
+	border: 2px solid rgba(0, 0, 0, 1);
+}
+
+#learn-button{
+	width:	350px;
+	height: 67px;
+	line-height: 67px;
+}
+
+#fun-button{
+	width:	450px;
+	height: 67px;
+	line-height: 67px;
+	margin-top: 60px; 
+	margin-bottom: 45px; 
+}
+
+#handoff-button{
+	height: 120px;
+	line-height: 120px;
+}
+
 .navigation-margin{
 	margin-top: -10px;
 }
@@ -578,9 +638,21 @@ header h1 a:visited{
 
 
 #learn-more-outer{
-	background: #67B977;
+	background: #2CC0F0;
 	min-height: 650px;
 }
+
+#playground-outer{
+	background: #F5F1D8;
+	min-height: 650px;
+}
+
+.playground-gif{
+	margin-right: 15px !important;
+	margin-bottom: 15px !important;
+}
+
+
 
 
 #partner-contact-form{
@@ -631,8 +703,7 @@ header h1 a:visited{
 	position:relative;
 	overflow:visible;
 	color:white;
-	
-	
+	padding-bottom: 180px;
 }
 
 #quizinart-inner{
@@ -1064,7 +1135,7 @@ padding-top: 4px;
 text-transform: uppercase;
 margin: 0 auto;
 display: inline-block;
-color: #2BBFEF;
+color: #4794A6;
 overflow: hidden;
 }
 

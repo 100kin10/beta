@@ -238,7 +238,7 @@ body{
 	font-size:37px;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	font-family: "omnes-pro",sans-serif;
+	font-family: "omnes-pro", "omnes", sans-serif;
 	font-style: normal;
 }
 
@@ -387,6 +387,10 @@ h3.section-header{
 
 }
 
+.footer-section-header{
+	text-align: left;
+}
+
 
 .background-cover-container{
 	position:absolute;
@@ -414,7 +418,6 @@ border:0;
   	    border-radius: 17px;
 padding: 13px 30px 8px 30px;
 
-font-family: "omnes-pro",sans-serif;
 font-style: normal;
 font-weight: 400;
 
@@ -458,6 +461,20 @@ input:focus, textarea:focus, button:focus {
 */
 
 
+p.footer-organization-header{
+	font-size: 14px;
+	font-style: italic;
+	line-height: .1;
+	margin-bottom: 0px;
+	color: rgba(255, 255, 255, .5);
+}
+
+a.footer-organization{
+	font-size: 16px;
+	line-height: .5;
+	color: rgba(255, 255, 255, .5);
+}
+
 #footer-newsletter .wpcf7-response-output {
 color: white;
 text-align: left;
@@ -469,7 +486,7 @@ margin: 0;
 footer{
 	position:relative;
 	min-height: 200px;
-	background-color:#2B708C;
+	background-color:#4794A6;
 	font-family: "brandon-grotesque",sans-serif;
 	font-style: normal;
 	font-weight: 300;
@@ -493,12 +510,12 @@ footer{
 }
 
 .not-mobile-device .footer-column:hover{
-	background:#121010;
+	background:#E8606E;
 }
 
 .footer-column-inner{
 	padding-left:24px;
-	border-left:1px solid #121010;
+	border-left:1px solid rgba(255, 255, 255, .3);
 }
 
 #footer-communicate .force-break {
@@ -510,44 +527,49 @@ display: inline-block;
 	padding-right:24px;
 }
 
+#footer-newsletter .force-break {
+	width: 100px;
+	display: inline-block;
+}
+
 textarea:focus, input:focus{
     outline: 0;
 }
 
-input#newsletter-input::-webkit-input-placeholder {
+input.newsletter-input::-webkit-input-placeholder {
    color: white;
 }
 
-input#newsletter-input:-moz-placeholder { /* Firefox 18- */
+input.newsletter-input:-moz-placeholder { /* Firefox 18- */
    color: white;  
 }
 
-input#newsletter-input::-moz-placeholder {  /* Firefox 19+ */
+input.newsletter-input::-moz-placeholder {  /* Firefox 19+ */
    color: white;  
 }
 
-input#newsletter-input:-ms-input-placeholder {  
+input.newsletter-input:-ms-input-placeholder {  
    color: white;  
 }
 
 
-input#newsletter-input-2::-webkit-input-placeholder {
+input.newsletter-input-2::-webkit-input-placeholder {
    color: #00A0E7;
 }
 
-input#newsletter-input-2:-moz-placeholder { /* Firefox 18- */
+input.newsletter-input-2:-moz-placeholder { /* Firefox 18- */
    color: #00A0E7;  
 }
 
-input#newsletter-input-2::-moz-placeholder {  /* Firefox 19+ */
+input.newsletter-input-2::-moz-placeholder {  /* Firefox 19+ */
    color: #00A0E7;  
 }
 
-input#newsletter-input-2:-ms-input-placeholder {  
+input.newsletter-input-2:-ms-input-placeholder {  
    color: #00A0E7;  
 }
 
-#footer-newsletter input#newsletter-input {
+#footer-newsletter input.newsletter-input {
 width: 100%;
 background: rgba(35,31,32,0.0);
 border: 0px;
@@ -573,7 +595,7 @@ letter-spacing: -2px;
 		transition: opacity .4s ease-in-out;
 }
 
-#footer-newsletter.beingHovered input#newsletter-input{
+#footer-newsletter.beingHovered input.newsletter-input{
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
     filter: alpha(opacity=70);
     -moz-opacity: 0.7;
@@ -583,13 +605,13 @@ letter-spacing: -2px;
 	
 }
 
-#footer-newsletter input#newsletter-input:focus {
+#footer-newsletter input.newsletter-input:focus {
 font-size: 20px;
 letter-spacing: 0px;
 line-height: 1.5;
 }
 
-input#newsletter-input-2 {
+input.newsletter-input-2 {
 width: 100%;
 background-color: rgba(0,0,0,0.0);
 border: 0px;
@@ -624,7 +646,7 @@ opacity: 0.4;
 
 
 
-input#newsletter-input-2:hover, input#newsletter-input-2:focus {
+input.newsletter-input-2:hover, input.newsletter-input-2:focus {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
     -moz-opacity: 1.0;
@@ -654,7 +676,7 @@ footer h3{
 
 #footer-social .force-break{
 	display:inline-block;
-	width:30px;
+	width:160px;
 }
 
 .footer-column:hover h3, .footer-column:hover #email-name{
@@ -807,7 +829,6 @@ p + p {
 }
 
 h1, h2, h3, h4, h5 ,h6{
-	font-family: "omnes-pro",sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	
@@ -969,10 +990,8 @@ header h1 a:visited{
 .playground-gif{
 	margin-right: 15px !important;
 	margin-bottom: 15px !important;
+
 }
-
-
-
 
 #partner-contact-form{
 	height:10px;
@@ -1009,6 +1028,120 @@ header h1 a:visited{
 	z-index: 1;
 	font-size:27px;
 	position: relative;
+}
+
+img.gif-share {
+	position: relative;
+	width:75px !important;
+	max-width: 75px !important;
+}
+
+
+/* ============================================================
+  GLOBAL CC adding transition
+============================================================ */
+.effects {
+  padding-left: 15px;
+}
+.effects .img {
+  position: relative;
+}
+.effects .img:nth-child(n) {
+  margin-right: 5px;
+}
+.effects .img:first-child {
+  margin-left: -15px;
+}
+.effects .img:last-child {
+  margin-right: 0;
+}
+.effects .img img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.overlay {
+  display: block;
+  position: absolute;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+a.close-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 45px;
+  text-align: center;
+  background-color: #000;
+  cursor: pointer;
+}
+a.close-overlay.hidden {
+  display: none;
+}
+
+a.expand {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  border: solid 0px #fff;
+  text-align: center;
+  color: #fff;
+  line-height: 50px;
+  font-weight: 700;
+  font-size: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+}
+
+/* ============================================================
+  EFFECT 6 - ICON BOUNCE IN
+============================================================ */
+.effect-6 .overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+.effect-6 .overlay a.expand {
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.effect-6 .img.hover .overlay {
+  opacity: 1;
+}
+.effect-6 .img.hover .overlay a.expand {
+  top: 50%;
+  margin-top: -30px;
+  opacity: 1;
 }
 
 /* ==========================================================================
@@ -1078,7 +1211,6 @@ border: 0px;
 padding: 0px 0px;
 font-size: 50px;
 color: white;
-font-family: "omnes-pro",sans-serif;
 font-style: normal;
 font-weight: 500;
 text-transform: uppercase;
@@ -1329,7 +1461,6 @@ height: auto;
 background: transparent;
 font-size: 25px;
 color:#4693A5;
-font-family: "omnes-pro",sans-serif;
 font-style: normal;
 font-weight: 400;
 text-align: left;
@@ -1375,7 +1506,6 @@ a.selection-option{
 	background: white;
 	font-size: 72px;
 	color: #2BBFEF;
-	font-family: "omnes-pro",sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	text-align: center;
@@ -1426,7 +1556,6 @@ font-size: 30px;
 background: white;
 -webkit-border-radius: 21px;
 border-radius: 21px;
-font-family: "omnes-pro",sans-serif;
 font-style: normal;
 font-weight: 500;
 width: auto;
@@ -1445,7 +1574,6 @@ font-size: 30px;
 background: white;
 -webkit-border-radius: 21px;
 border-radius: 21px;
-font-family: "omnes-pro",sans-serif;
 font-style: normal;
 font-weight: 500;
 width: auto;
@@ -1475,7 +1603,6 @@ box-shadow: inset 15px 15px 0px 0px rgba(0, 0, 0, 1);
 background: white;
 padding: 50px 70px;
 font-size: 36px;
-font-family: "omnes-pro",sans-serif;
 font-weight: 300;
 line-height: 1.38;
 width:800px;
@@ -1532,7 +1659,6 @@ padding-top: 60px;
 	text-align:center;
 	font-size:37px;
 	text-transform:inherit;
-	font-family: "omnes-pro",sans-serif;
 	font-weight: 500;
 	margin-bottom:72px;
 }

@@ -25,6 +25,44 @@
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+		<script>
+		    $(document).ready(function(){
+		        if (Modernizr.touch) {
+		            // show the close overlay button
+		            $(".close-overlay").removeClass("hidden");
+		            // handle the adding of hover class when clicked
+		            $(".img").click(function(e){
+		                if (!$(this).hasClass("hover")) {
+		                    $(this).addClass("hover");
+		                }
+		            });
+		            // handle the closing of the overlay
+		            $(".close-overlay").click(function(e){
+		                e.preventDefault();
+		                e.stopPropagation();
+		                if ($(this).closest(".img").hasClass("hover")) {
+		                    $(this).closest(".img").removeClass("hover");
+		                }
+		            });
+		        } else {
+		            // handle the mouseenter functionality
+		            $(".img").mouseenter(function(){
+		                $(this).addClass("hover");
+		            })
+		            // handle the mouseleave functionality
+		            .mouseleave(function(){
+		                $(this).removeClass("hover");
+		            });
+		        }
+		        $("#chalkboard").on('click', function() {
+					$("#hidden-video").fadeIn();
+				});
+				$("#video-embed").on('click', function() {
+					$("#hidden-video").fadeOut();
+				});
+		    });
+		</script>
 	</head>
 	<body class="home">
 		<header id="navigation" class="clear">
@@ -41,11 +79,19 @@
 					<a href="http://www.tumblr.com" alt="Tumblr Share"><img src="img/blank-share.svg" alt="Tumblr Share Image"></a>
 				</div>
 			</div>
-			
 		</header>
+		<section id="hidden-video" style="display:none;">
+			<div id="video-embed">
+				<center>
+					<iframe width="960" height="720" src="http://www.youtube.com/embed/ViftZTfRSt8?rel=0" frameborder="0" allowfullscreen></iframe>
+				</center>
+			</div>
+		</section>
 		<section id="video-container" class="clear">
 			<div id="video-container-inner" class="container wrap">
-				<img id="chalkboard" src="img/chalkboard.png"/>
+				<a href="#" alt="video-link">
+					<img id="chalkboard" src="img/chalkboard.png"/>
+				</a>
 			</div>
 		</section>
 		
@@ -324,33 +370,169 @@ get more STEM teachers?</h2>
 				<h3 id="section-4-header" class="section-header">Uh-Oh You're Entering The Fun Zone</h3>
 			</div>
 			<center>
-				<div class="grid4 float-grid-item playground-gif">
-					<img src="img/taco.png" alt="playground-gif">
-				</div>
-				<div class="grid4 float-grid-item playground-gif">
-					<img src="img/taco.png" alt="playground-gif">
-				</div>
-				<div class="grid4 float-grid-item playground-gif">
-					<img src="img/taco.png" alt="playground-gif">
-				</div>
-				<div class="grid4 float-grid-item playground-gif">
-					<img src="img/taco.png" alt="playground-gif">
-				</div>
-				<div class="grid4 float-grid-item playground-gif">
-					<img src="img/taco.png" alt="playground-gif">
-				</div>
-				<div class="grid4 float-grid-item playground-gif">
-					<img src="img/taco.png" alt="playground-gif">
-				</div>
-				<div class="grid4 float-grid-item playground-gif">
-					<img src="img/taco.png" alt="playground-gif">
-				</div>
-				<div class="grid4 float-grid-item playground-gif">
-					<img src="img/taco.png" alt="playground-gif">
-				</div>
-				<div class="grid4 float-grid-item playground-gif">
-					<img src="img/taco.png" alt="playground-gif">
-				</div>
+
+				<div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+		            <div class="img">
+		                <img src="img/taco.png" alt="">
+		                <div class="overlay">
+		                	<span class="expand">
+		                		<a href="http://www.facebook.com" class="expand">
+		                			<img src="img/facebook-share.svg" class="gif-share" style="right:120px;">
+		                		</a>
+		                    	<a href="http://www.twitter.com" class="expand">
+		                    		<img src="img/twitter-share.svg" class="gif-share" style="right:7px;">
+		                    	</a>
+		                    	<a href="http://www.tumblr.com" class="expand">
+		                    		<img src="img/blank-share.svg" class="gif-share" style="left:110px;">
+		                    	</a>
+		                	</span>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+		            <div class="img">
+		                <img src="img/taco.png" alt="">
+		                <div class="overlay">
+		                	<span class="expand">
+		                		<a href="http://www.facebook.com" class="expand">
+		                			<img src="img/facebook-share.svg" class="gif-share" style="right:120px;">
+		                		</a>
+		                    	<a href="http://www.twitter.com" class="expand">
+		                    		<img src="img/twitter-share.svg" class="gif-share" style="right:7px;">
+		                    	</a>
+		                    	<a href="http://www.tumblr.com" class="expand">
+		                    		<img src="img/blank-share.svg" class="gif-share" style="left:110px;">
+		                    	</a>
+		                	</span>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+		            <div class="img">
+		                <img src="img/taco.png" alt="">
+		                <div class="overlay">
+		                	<span class="expand">
+		                		<a href="http://www.facebook.com" class="expand">
+		                			<img src="img/facebook-share.svg" class="gif-share" style="right:120px;">
+		                		</a>
+		                    	<a href="http://www.twitter.com" class="expand">
+		                    		<img src="img/twitter-share.svg" class="gif-share" style="right:7px;">
+		                    	</a>
+		                    	<a href="http://www.tumblr.com" class="expand">
+		                    		<img src="img/blank-share.svg" class="gif-share" style="left:110px;">
+		                    	</a>
+		                	</span>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+		            <div class="img">
+		                <img src="img/taco.png" alt="">
+		                <div class="overlay">
+		                	<span class="expand">
+		                		<a href="http://www.facebook.com" class="expand">
+		                			<img src="img/facebook-share.svg" class="gif-share" style="right:120px;">
+		                		</a>
+		                    	<a href="http://www.twitter.com" class="expand">
+		                    		<img src="img/twitter-share.svg" class="gif-share" style="right:7px;">
+		                    	</a>
+		                    	<a href="http://www.tumblr.com" class="expand">
+		                    		<img src="img/blank-share.svg" class="gif-share" style="left:110px;">
+		                    	</a>
+		                	</span>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+		            <div class="img">
+		                <img src="img/taco.png" alt="">
+		                <div class="overlay">
+		                	<span class="expand">
+		                		<a href="http://www.facebook.com" class="expand">
+		                			<img src="img/facebook-share.svg" class="gif-share" style="right:120px;">
+		                		</a>
+		                    	<a href="http://www.twitter.com" class="expand">
+		                    		<img src="img/twitter-share.svg" class="gif-share" style="right:7px;">
+		                    	</a>
+		                    	<a href="http://www.tumblr.com" class="expand">
+		                    		<img src="img/blank-share.svg" class="gif-share" style="left:110px;">
+		                    	</a>
+		                	</span>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+		            <div class="img">
+		                <img src="img/taco.png" alt="">
+		                <div class="overlay">
+		                	<span class="expand">
+		                		<a href="http://www.facebook.com" class="expand">
+		                			<img src="img/facebook-share.svg" class="gif-share" style="right:120px;">
+		                		</a>
+		                    	<a href="http://www.twitter.com" class="expand">
+		                    		<img src="img/twitter-share.svg" class="gif-share" style="right:7px;">
+		                    	</a>
+		                    	<a href="http://www.tumblr.com" class="expand">
+		                    		<img src="img/blank-share.svg" class="gif-share" style="left:110px;">
+		                    	</a>
+		                	</span>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+		            <div class="img">
+		                <img src="img/taco.png" alt="">
+		                <div class="overlay">
+		                	<span class="expand">
+		                		<a href="http://www.facebook.com" class="expand">
+		                			<img src="img/facebook-share.svg" class="gif-share" style="right:120px;">
+		                		</a>
+		                    	<a href="http://www.twitter.com" class="expand">
+		                    		<img src="img/twitter-share.svg" class="gif-share" style="right:7px;">
+		                    	</a>
+		                    	<a href="http://www.tumblr.com" class="expand">
+		                    		<img src="img/blank-share.svg" class="gif-share" style="left:110px;">
+		                    	</a>
+		                	</span>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+		            <div class="img">
+		                <img src="img/taco.png" alt="">
+		                <div class="overlay">
+		                	<span class="expand">
+		                		<a href="http://www.facebook.com" class="expand">
+		                			<img src="img/facebook-share.svg" class="gif-share" style="right:120px;">
+		                		</a>
+		                    	<a href="http://www.twitter.com" class="expand">
+		                    		<img src="img/twitter-share.svg" class="gif-share" style="right:7px;">
+		                    	</a>
+		                    	<a href="http://www.tumblr.com" class="expand">
+		                    		<img src="img/blank-share.svg" class="gif-share" style="left:110px;">
+		                    	</a>
+		                	</span>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+		            <div class="img">
+		                <img src="img/taco.png" alt="">
+		                <div class="overlay">
+		                	<span class="expand">
+		                		<a href="http://www.facebook.com" class="expand">
+		                			<img src="img/facebook-share.svg" class="gif-share" style="right:120px;">
+		                		</a>
+		                    	<a href="http://www.twitter.com" class="expand">
+		                    		<img src="img/twitter-share.svg" class="gif-share" style="right:7px;">
+		                    	</a>
+		                    	<a href="http://www.tumblr.com" class="expand">
+		                    		<img src="img/blank-share.svg" class="gif-share" style="left:110px;">
+		                    	</a>
+		                	</span>
+		                </div>
+		            </div>
+		        </div>
 			</center>
 			<div class="grid12 float-grid-item">
 				<center>
@@ -364,43 +546,72 @@ get more STEM teachers?</h2>
 		<div id="footer-inner" class="container wrap clear">
 			<div id="footer-communicate" class="footer-column grid4 float-grid-item ">
 				<div class="footer-column-inner">
-					<h3>COMMUNICATE <span class="force-break"></span>AT US</h3>
-					<div id="email-name">
-						<div id="footer-title-container">Email:</div>
-						<a href="mailto:answeringmachine@CultivatedWit.com" title="Email Cultivated Wit">AnsweringMachine<br>@CultivatedWit.com</a>
-					</div>
+					<h3 class="footer-section-header">THE PEOPLE<span class="force-break"></span>BEHIND THIS</h3>
+
+					<p class="grid2 float-grid-item footer-organization-header">
+						Leading Organization
+					</p>
+					<p class="grid1 float-grid-item footer-organization-header">
+						Partners
+					</p>
+					<p class="grid2 float-grid-item">
+						<a class="footer-organization" href="http://www.100kin10.org/">100KIN10</a>
+					</p>
+					<p class="grid1 float-grid-item">
+						<a class="footer-organization" href="http://www.100kin10.org/">See all 30</a>
+					</p>
+					<p class="grid2 float-grid-item footer-organization-header">
+						The Creatives
+					</p>
+					<p class="grid1 float-grid-item footer-organization-header">
+						&nbsp;
+					</p>
+					<p class="grid2 float-grid-item">
+						<a class="footer-organization" href="http://www.cultivatedwit.com">Cultivated Wit</a>
+					</p>
 				</div>
 			</div>
 		
 			<div id="footer-social" class="footer-column grid4 float-grid-item ">
 				<div class="footer-column-inner">						
-					<h3>Monitor Our Public <span class="force-break"></span>Private Lives</h3>
+					<h3 class="footer-section-header">
+						FOLLOW ALONG 
+						<span class="force-break"></span>
+						WITH THE CAMPAIGN</h3>
 					<div id="follow-links">
 						<div class="follow-facebook footer social-link"><a class="follow-link" href="http://facebook.com/cultivatedwit" target="_blank"></a></div>
 						<div class="follow-twitter footer social-link"><a class="follow-link" href="https://twitter.com/cultivatedwit" target="_blank"></a></div>
-						<div class="follow-fourth footer social-link"><a class="follow-link" href="http://www.youtube.com/user/CultivatedWit" target="_blank"></a></div>
-						<div class="follow-whiskey footer social-link"><a class="follow-link" href="<?php echo esc_url( get_permalink( get_page_by_title( 'whiskey friday' ) ) ); ?>"></a></div>
 					</div>
 				</div>
 			</div>
 		
 			<div id="footer-newsletter" class="footer-column grid4 float-grid-item last-float-item">
 				<div class="footer-column-inner">	
-					<h3>Receive Our <span class="strikeout">Propaganda</span> Newsletter</h3>	
+					<h3 class="footer-section-header">GET NEWS ABOUT<span class="force-break"></span>STEM TEACHING</h3>	
 					<div id="newsletter-container" class="clear">
-						<div class="wpcf7" id="wpcf7-f1859-t1-o1">
-							<form action="/form-test/#wpcf7-f1859-t1-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-								<div style="display: none;">
-									<input type="hidden" name="_wpcf7" value="1859" />
-									<input type="hidden" name="_wpcf7_version" value="3.5.2" />
-									<input type="hidden" name="_wpcf7_locale" value="en_US" />
-									<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1859-t1-o1" />
-									<input type="hidden" name="_wpnonce" value="2d89767394" />
+						<div id="mc_embed_signup">
+							<form action="http://cultivatedwit.us2.list-manage.com/subscribe/post?u=5fe2c35965f2ba5253995ead9&amp;id=b512fa47a1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+	
+								<div class="mc-field-group">
+									<!--<label for="mce-EMAIL">Email Address </label>
+									<input type="email" value="" placeholder="Your Email Here" name="EMAIL" class="required email" id="mce-EMAIL">-->
+
+									<input type="email" name="EMAIL" value="" size="40" class="newsletter-input" id="mce-EMAIL" placeholder="Your Email" />
+
 								</div>
-								<span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email treat" id="newsletter-input" placeholder="Your Email" /></span>
-								<div class="wpcf7-response-output wpcf7-display-none"></div>
+								<div id="mce-responses" class="clear">
+									<div class="response" id="mce-error-response" style="display:none">
+									</div>
+									<div class="response" id="mce-success-response" style="display:none">
+									</div>
+								</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							    <div style="position: absolute; left: -5000px;"><input type="text" name="b_5fe2c35965f2ba5253995ead9_b512fa47a1" tabindex="-1" value="">
+							    </div>
+
+							    <input type="submit" style="position: absolute; left: -9999px" id="mc-embedded-subscribe"/>
 							</form>
 						</div>
+						
 					</div>	
 				</div>
 			</div>

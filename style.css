@@ -523,7 +523,7 @@ span#classroom{
 	width: 300px;
 }
 
-a.partner-link, .partner-info-header{
+.partner-link, a.partner-link, .partner-info-header{
 	font-size: .5em;
 	color: #2CC0F0;
 }
@@ -558,6 +558,69 @@ a.partner-link, .partner-info-header{
 #background-cover-blue{
 background-color:rgba(74, 190, 240, 0.9);
 }
+
+.partner-extra-name{
+	color: #4794A6;
+	font-size: .79em;
+	font-weight: 500;
+}
+
+.partner-extra-body, li.partner-extra-body{
+	color: black;
+	font-size: .4em;
+	font-weight: 400;
+}
+
+.partner-extra-body {
+	margin-bottom: -10px;
+}
+
+li.partner-extra-body{
+	line-height: 2;
+}
+
+.partner-extra-list {
+	margin-top: 10px;
+	margin-bottom: 20px;
+
+}
+
+.partner-extra-details-body{
+	color: #4794A6;
+}
+
+.partner-extra-details{
+	margin-left: 60px !important;
+}
+
+.partner-extra-visit{
+	font-size: .5em;
+}
+
+.partner-extra-section-header{
+	margin-top: 25px;
+}
+
+.fullscreen_hide{
+	display: none;
+}
+
+.fullscreen_show{
+	opacity:    1; 
+	background-color: #ffffff;
+	width:      100%;
+	height:     100%; 
+	z-index:    1000;
+	top:        0; 
+	left:       0; 
+	position:   fixed; 
+	color: red;
+}
+
+.extra-spacer{
+	margin-top: 20px !important;
+}
+
 
 button, input[type="button"], input[type="reset"], input[type="submit"] {
  font-size:42px;

@@ -57,7 +57,27 @@
 		                $(this).removeClass("hover");
 		            });
 		        }
+		        $('#learn-more-wilson').click(function(){
+		        	//alert("test");
+		        	$( "#fullscreen-wilson" ).fadeIn( "fast" );
+		        	$( "#fullscreen-wilson" ).addClass('fullscreen_show');
+		        	// to prevent scroll
+		        	return false;
+				});
+				$('.close').click(function(){
+					$( ".fullscreen" ).hide();
+					$( ".fullscreen" ).removeClass('fullscreen_show');
+					$( ".fullscreen" ).addClass('fullscreen_hide');
+					return false;
+				});
 		    });
+			$(document).keyup(function(e) {
+			  	if (e.keyCode == 27) { 
+			  		$( ".fullscreen" ).hide();
+					$( ".fullscreen" ).removeClass('fullscreen_show');
+					$( ".fullscreen" ).addClass('fullscreen_hide');
+				};
+			});
 		</script>
 	</head>
 	<body class="home">
@@ -126,13 +146,69 @@
 						These programs have national reach.
 					</p>
 					<hr class="yellow-line">
+
 					<span class="grid7 float-grid-item answer-copy">
 						<p class="partner-name">The Woodrow Wilson National Fellowship Foundation</p>
 						<p class="partner-info">Three year mentoring program that offers admission into a master’s degree program, a $30,000 stipend, and in-classroom experience at a high-need school.</p>
-						<a href="#" class="partner-link" id="learn-more-wilson">Learn more</a>
+
+						<section id="fullscreen-wilson" class="fullscreen_hide fullscreen">
+							<span class="grid2 float-grid-item">
+							</span>
+							<span class="grid12 float-grid-item extra-spacer">
+								<a href="#" class="close"><img src="img/close.svg" alt="close"></a>
+							</span>
+							<br>
+
+							<span class="grid2 float-grid-item">
+							</span>
+							<span class="grid7 float-grid-item">
+								<p class="partner-extra-name">The Woodrow Wilson National Fellowship Foundation</p>
+								<p class="partner-extra-body">Three year mentoring program that offers admission into a master’s degree program, a $30,000 stipend, and in-classroom experience at a high-need school.</p>
+								<a class="partner-extra-visit" href="#">Visit their website</a>
+								<br>
+								<p class="partner-extra-section-header partner-info-header">This program offers...</p>
+								<ul class="partner-extra-list">
+									<li class="partner-extra-body">taco</li>
+									<li class="partner-extra-body">taco</li>
+									<li class="partner-extra-body">taco</li>
+								</ul>
+								<p class="partner-extra-section-header partner-info-header">The ideal recruit...</p>
+								<ul class="partner-extra-list">
+									<li class="partner-extra-body">taco</li>
+									<li class="partner-extra-body">taco</li>
+									<li class="partner-extra-body">taco</li>
+								</ul>
+								<p class="partner-extra-section-header partner-info-header">What makes this program special is...</p>
+								<ul class="partner-extra-list">
+									<li class="partner-extra-body">taco</li>
+									<li class="partner-extra-body">taco</li>
+									<li class="partner-extra-body">taco</li>
+								</ul>
+								<p class="partner-extra-section-header partner-info-header">If you want to learn more check out...</p>
+								<ul class="partner-extra-list">
+									<li class="partner-extra-body">taco</li>
+									<li class="partner-extra-body">taco</li>
+									<li class="partner-extra-body">taco</li>
+								</ul>
+
+							</span>
+
+							<span class="grid3 float-grid-item partner-extra-details">
+								<p class="partner-info-header">Location</p>
+								<p class="partner-info partner-extra-details-body">Anywhere</p>
+								<p class="partner-info-header">Website</p>
+								<p class="partner-info partner-extra-details-body">www.website.com</p>
+								<p class="partner-info-header">Contact</p>
+								<p class="partner-info partner-contact-items partner-extra-details-body">tweeting @woodrowwilsontf</p>
+								<p class="partner-info partner-contact-items partner-extra-details-body">emailing lsmith@woodrow.org</p>
+								<p class="partner-info partner-contact-items partner-extra-details-body">calling 609-452-7007 x141</p>
+							</span>
+						</section>
+						<a id="learn-more-wilson" href="#" class="partner-link">Learn more [overlay here]</a>
 						<br>
 						<a href="" class="partner-link">Visit their website</a>
 					</span>
+
 					<span class="grid3 float-grid-item answer-copy-location-contact">
 						<p class="partner-info-header">Location</p>
 						<p class="partner-info">Anywhere</p>
@@ -147,7 +223,7 @@
 					<span class="grid7 float-grid-item answer-copy">
 						<p class="partner-name">The Woodrow Wilson National Fellowship Foundation</p>
 						<p class="partner-info">Three year mentoring program that offers admission into a master’s degree program, a $30,000 stipend, and in-classroom experience at a high-need school.</p>
-						<a href="" class="partner-link">Learn more</a>
+						<a class="partner-link">Learn more</a>
 						<br>
 						<a href="" class="partner-link">Visit their website</a>
 					</span>

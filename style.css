@@ -266,11 +266,23 @@ body{
 #navigation-inner{
 	text-align:center;
 	position:relative;
+	font-weight: 500;
 }
 
 #navigation-center-item{
 	margin-left: 40px;
 	margin-right: 40px;
+}
+
+div.active-nav-item{
+	display: inline-block;
+	border-top: 2px solid rgba(255, 255, 255, 1);
+	margin-top: 5px;
+	line-height: 2;
+}
+
+a.active-nav-item{
+	color: rgba(255, 255, 255, 1) !important;
 }
 
 #chalkboard{
@@ -399,6 +411,144 @@ h3.section-header{
 	top:0;
 	z-index:0;
 	
+}
+
+#teaching-large{
+	background-color:rgba(299, 61, 61, 0.9);
+	padding-top: 48px;
+}
+
+#teaching-header{
+	background-color:rgba(255, 255, 255, 1);
+}
+
+p.teaching{
+	color: #2CC0F0;
+	font-size: 1em;
+	font-weight: 600;
+}
+
+p.teaching-hint{
+	color: #2CC0F0;
+	font-size: .5em;
+	font-weight: 300;
+	margin-top: -30px;
+}
+
+p.teaching-paragraph{
+	color: #4794A6;
+	font-size: .6em;
+}
+
+span#classroom{
+	margin-bottom: 0px;
+}
+
+.force-break{
+	width: 160px;
+	display: inline-block;
+}
+
+#teaching-header-white{
+	background-color:rgba(255, 255, 255, 1);
+	margin-bottom: 0px;
+}
+
+#teaching-answers{
+	margin-top: -30px;
+}
+
+.answers-partners-header{
+	color: #ffffff;
+	font-size: 1.5em;
+	font-weight: 600;
+	line-height: 1;
+}
+
+#answers-paragraph{
+	font-size: .8em;
+	font-weight: 500;
+	color: #FBE750;
+
+}
+
+#answers-footnote{
+	font-size: .5em;
+	font-weight: 500;
+	color: #ffffff;
+}
+
+#hundredk-test-form{
+	margin: 20px;
+}
+
+#partners-list{
+	background-color: #4794A6;
+}
+
+.partners-list-container{
+	background-color: #438B9C;
+	padding: 20px;
+	border-radius: 25px;
+}
+
+.partner-list-title-yellow{
+	color: #FBE750;
+	font-weight: 500;
+}
+
+.partner-name{
+	font-size: .7em;
+	font-weight: 500;
+}
+
+.partner-info{
+	font-size: .44em;
+	font-weight: 500;
+}
+
+.partner-contact-items {
+	line-height: .5;
+}
+
+.partner-spacer{
+	display:inline-block;
+	height: 50px;
+	width: 100px;
+}
+
+.partner-list-spacer{
+	display:inline-block;
+	height: 50px;
+	width: 300px;
+}
+
+a.partner-link, .partner-info-header{
+	font-size: .5em;
+	color: #2CC0F0;
+}
+
+.yellow-line{
+	border-color: #FBE750;
+	margin-top: 15px;
+}
+
+#partner-list-header{
+	margin-top: 40px;
+}
+
+#partner-list-header-paragraph{
+	font-size: .9em;
+	font-weight: 500;
+}
+
+.answer-copy-location-contact{
+	margin-left: 60px !important;
+}
+
+#form-container{
+	background-color: #2CC0F0;
+	border-radius: 25px;
 }
 
 #background-cover-red{

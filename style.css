@@ -1401,6 +1401,13 @@ img.gif-share {
 	max-width: 75px !important;
 }
 
+#img-wrap #static, #img-wrap:hover #animated{
+    display: inline;
+}
+
+#img-wrap #animated, #img-wrap:hover #static{
+    display: none;
+}
 
 /* ============================================================
   GLOBAL CC adding transition

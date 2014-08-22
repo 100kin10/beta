@@ -696,11 +696,11 @@ li.partner-extra-body{
 	margin-bottom: 0px;
 }
 
-.person-headline{
-	color: white;
-	font-size: 1em;
-	font-weight: 600;
-	line-height: .5;
+.person-headline {
+color: white;
+font-size: 1em;
+font-weight: 600;
+line-height: 1.4;
 }
 
 #top-person-headline{
@@ -712,11 +712,11 @@ li.partner-extra-body{
 	position: absolute;
 }
 
-#obama-quote{
-	color: #F5F1D8;
-	margin-top: 120px;
-	font-size: .9em;
-	font-weight: 600;
+#obama-quote {
+color: #f4f0d7;
+margin-top: 120px;
+font-size: 33px;
+font-weight: 500;
 }
 
 #obama-name{
@@ -745,11 +745,12 @@ line-height: 1.4;
 	line-height: 1.1;
 }
 
-.learn-section-quote{
-	color: #2bbfef;
-	font-size: .8em;
-	font-weight: 500;
-	margin-bottom: -20px;
+.learn-section-quote {
+color: #2bbfef;
+font-size: 36px;
+font-weight: 500;
+margin-bottom: -20px;
+line-height: 1.5;
 }
 
 .learn-section-quote-attribution{

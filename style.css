@@ -274,14 +274,25 @@ body{
 	margin-right: 40px;
 }
 
-div.active-nav-item{
+div.active-nav-item {
 	display: inline-block;
 	border-top: 2px solid rgba(255, 255, 255, 1);
 	margin-top: 5px;
 	line-height: 2;
 }
 
-a.active-nav-item{
+.kill-border{
+	border: none !important;
+}
+
+#active-nav-center-border{
+	border-top: 2px solid rgba(255, 255, 255, 1);
+	width: 93px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+a.active-nav-item {
 	color: rgba(255, 255, 255, 1) !important;
 }
 
@@ -566,7 +577,7 @@ background-color:rgba(74, 190, 240, 0.9);
 }
 
 .partner-extra-body, li.partner-extra-body{
-	color: black;
+	color: #575D63;
 	font-size: .4em;
 	font-weight: 400;
 }
@@ -619,6 +630,147 @@ li.partner-extra-body{
 
 .extra-spacer{
 	margin-top: 20px !important;
+}
+
+#person-top-item{
+	background-color: #4794A6;
+	padding-top: 50px;
+}
+
+#person-top-blue{
+	background-color: #4794A6;
+	margin-bottom: 0px;
+}
+
+#person-of-the-year{
+	padding-left: 60px;
+	margin-bottom: 0px;
+}
+
+.person-headline{
+	color: white;
+	font-size: 1em;
+	font-weight: 600;
+	line-height: .5;
+}
+
+#top-person-headline{
+	margin-top: -10px;
+}
+
+#this-guy{
+	margin-left: -50px;
+	position: absolute;
+}
+
+#obama-quote{
+	color: #F5F1D8;
+	margin-top: 120px;
+	font-size: .9em;
+	font-weight: 600;
+}
+
+#obama-name{
+	color: #FBE750;
+	font-size: .7em;
+	font-weight: 500;
+}
+
+.learn-section-2{
+	background-color: white;
+	color: red;
+}
+
+.learn-section-headline{
+	color: #4794A6;
+	font-size: 1.7em;
+	font-weight: 500;
+	line-height: 1.1;
+}
+
+.learn-section-headline-final{
+	color: #4794A6;
+	font-size: 1.3em;
+	font-weight: 500;
+	line-height: 1.1;
+}
+
+.learn-section-quote{
+	color: #2CC0F0;
+	font-size: .8em;
+	font-weight: 500;
+	margin-bottom: -20px;
+}
+
+.learn-section-quote-attribution{
+	color: #E8606E;
+	font-size: .5em;
+	font-weight: 500;
+	margin-left: 30px;
+}
+
+.learn-section-paragraphs{
+	color: #575D63;
+	font-size: .5em;
+	margin-left: 204px;
+	margin-right: 0px;
+	line-height: 2;
+	font-weight: 500;
+}
+
+#learn-joke-section{
+	background-color: #4794A6;
+	margin-bottom: 0px;
+}
+
+#learn-long-section{
+	background-color: white;
+	margin-bottom: 0px;
+}
+
+#joke-section-headline{
+	margin-top: 40px;
+	font-weight: 500;
+	font-size: 1.1em;
+}
+
+.better-than-joke{
+	color: white;
+	font-size: 1.5em;
+	font-weight: 500;
+	margin-bottom: 0px !important;
+}
+
+.better-than-joke-number{
+	color: white;
+	font-size: 5.5em;
+	font-weight: 500;
+}
+
+.red{
+	color: #E8606E;
+}
+
+.learn-section-spacer{
+	display:inline-block;
+	height: 100px;
+}
+
+.learn-partner-list-title{
+	font-size: 1.1em;
+	font-weight: 500;
+}
+
+ul.learn-partner-list{
+	margin-right: 0px;
+}
+
+li.learn-partner-list{
+	list-style-type: none;
+	color: #4794A6;
+	font-size: .8em;
+	font-weight: 500;
+	line-height: 2;
 }
 
 

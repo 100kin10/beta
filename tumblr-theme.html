@@ -21,17 +21,17 @@
 
 
 <script type="text/javascript">
-	$(document).ready(function() {
+    $(document).ready(function() {
 
-		$.ajax({
-			url: 'http://api.tumblr.com/v2/blog/dreammergers.tumblr.com/posts/?api_key=AGQo9HGMLtE0TJVreADIoexMk5psGgy44le9854OL5aYoJMDGO&limit=1&tag=sticky',
-			dataType: 'jsonp',
-			type: 'get',
-			success: function(data){
-			
-			}
-		});
-	});
+        $.ajax({
+            url: 'http://api.tumblr.com/v2/blog/dreammergers.tumblr.com/posts/?api_key=AGQo9HGMLtE0TJVreADIoexMk5psGgy44le9854OL5aYoJMDGO&limit=1&tag=sticky',
+            dataType: 'jsonp',
+            type: 'get',
+            success: function(data){
+            
+            }
+        });
+    });
 </script>
 
 
@@ -83,7 +83,8 @@
         
         <link rel="stylesheet" href="http://static.tumblr.com/vr9xgox/PuGmmhqcs/normalize.css">
         <link rel="stylesheet" href="http://static.tumblr.com/vr9xgox/adcmzkawk/main.css">
-
+        <link rel="stylesheet" href="http://static.tumblr.com/gnizia5/zkenaq6x8/tumblr-style.css"/>
+        
         <!-- HTML5 Shiv -->
         <!--[if lt IE 9]>
                 <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
@@ -156,6 +157,30 @@
 
             /* Custom CSS */
             {CustomCSS}
+            .sub-title{
+                margin-top: 0px !important;
+                font-size: .5em;
+                font-weight: 600;
+                color:#5294A5;
+                opacity: 1;
+            }
+            #footer{
+                background-color: #FAFAFA !important;
+            }
+            .post-controls li .reblog_button{
+                margin-top: -12px !important;
+            }
+            .caption {
+                font-size: .45em;
+                font-weight: 500;
+                color: #5294A5;
+            }
+            .tag {
+                font-size: 1.2em !important;
+                font-weight: 500;
+                color: #B4B5B1;
+                font-family: "omnes-pro", "omnes", sans-serif !important;
+            }
         </style>
         
         
@@ -172,12 +197,30 @@
     </head>
     <body data-urlencoded-name="{URLEncodedName}" class="{select:Layout}{block:IndexPage} index-page{/block:IndexPage}{block:PermalinkPage} permalink{/block:PermalinkPage}{block:SearchPage} search-page{block:NoSearchResults} no-results{/block:NoSearchResults}{/block:SearchPage}">
     
+    <header id="navigation" class="clear">
+            <div id="navigation-inner" class="container wrap">
+                <a href="index.html" class="grid2 float-grid  float-grid-item">HOME</a>
+                <div class="centered-text grid8 float-grid-item">
+                    
+                        <a href="teach.html" >I WANT TO TEACH</a>
+                    <a href="learn.html" id="navigation-center-item">LEARN MORE</a>
+                    <div class="active-nav-item">
+                    <a href="http://blowmindsteachstem.tumblr.com/" class="active-nav-item">SHAREABLES</a>
+                    
+                    </div>
+                </div>
+                <div id="share-container" class=" grid2 float-grid-item last-float-item">
+                    <a href="http://www.facebook.com" alt="Facebook Share"><img src="https://dl.dropboxusercontent.com/u/94928054/facebook-share.svg" alt="Facebook Share Image"></a>
+                    <a href="http://www.twitter.com" alt="Twitter Share"><img src="https://dl.dropboxusercontent.com/u/94928054/twitter-share.svg" alt="Twitter Share Image"></a>
+                </div>
+            </div>
+    </header>
+    
     <div style="height: 0px; width:0px; position: absolute; overflow:hidden;"><img src="http://www.cultivatedwit.com/wp-content/themes/cultivatedwit/cultivatedwit-child/merger/the_merger.jpg" height="669" width="1194"></div>
     
         <section id="page">
             <div class="nav-menu-wrapper {block:IfNotCollapseNavigation}search-only{/block:IfNotCollapseNavigation}">
                 <nav class="nav-menu pop">
-                    <a class="selector"><span class="icon"></span></a>
                     <div class="pop-menu west">
                         <ul>
                             <li class="no-hover">
@@ -227,50 +270,6 @@
                     </div>
                     {/block:IfHeaderImage}{/block:IfShowHeaderImage}
 
-                    <div class="blog-title content">
-                        <figure class="avatar-wrapper">
-                            <a href="/" style="background-image: url({PortraitURL-128})" class="user-avatar"><img src="{PortraitURL-128}" alt="" class="print-only invisible"></a>
-                        </figure>
-                        {block:IfShowTitle}
-                        <h1><a href="/">{Title}</a></h1>
-                        {/block:IfShowTitle}
-                        {block:IfShowDescription}
-                        <span class="sub-title">
-                            {Description}
-                        </span>
-                        {/block:IfShowDescription}
-                    </div>
-
-                    {block:IfNotCollapseNavigation}
-                    <div class="{block:IfNotShowTitle}{block:IfNotShowDescription}no-title-desc{/block:IfNotShowDescription}{/block:IfNotShowTitle} exposed-nav-wrapper content">
-                        <div class="h-line"></div>
-                        <nav class="nav-menu">
-                            <ul>
-                                <li>
-                                    <a href="/archive">{lang:Archive}</a>
-                                </li>
-                                {block:AskEnabled}
-                                    <li>
-                                        <a href="/ask" class="ask">{AskLabel}</a>
-                                    </li>
-                                {/block:AskEnabled}
-                                {block:HasPages}
-                                    {block:Pages}
-                                    <li>
-                                        <a href="{URL}" class="page">{Label}</a>
-                                    </li>
-                                    {/block:Pages}
-                                {/block:HasPages}
-                                {block:SubmissionsEnabled}
-                                    <li>
-                                        <a href="/submit" class="submit">{SubmitLabel}</a>
-                                    </li>
-                                {/block:SubmissionsEnabled}
-                            </ul>
-                        </nav>
-                    </div>
-                    {/block:IfNotCollapseNavigation}
-
                     <div class="back-to-top"><a class="top" href="#"></a></div>
                 </header>
             </div>
@@ -299,9 +298,10 @@
 
 <div class="blog-title content">
                             <span class="sub-title">
-                            <span class="tumblr_theme_marker_blogdescription">Our two creative agencies are now <a href="http://www.cultivatedwit.com/merger-announcement-2/">one full-service fun producer.</a><br>
-This is the new, bigger, better, 4x-more adjectived <a target="_blank" href="http://cultivatedwit.com">Cultivated Wit.</a>.</span>
+                            <span class="tumblr_theme_marker_blogdescription">Words about how this is the fun area and that you should share some 
+stuff with your friends so it makes you look funnier than you are.</span>
                         </span>
+                        <br>
                     </div>
 
 
@@ -394,15 +394,6 @@ This is the new, bigger, better, 4x-more adjectived <a target="_blank" href="htt
                             </article>
                             
                             <div id="merger-week-container">
-                                <div id="merger-week-header">
-                                   <img src="http://www.cultivatedwit.com/wp-content/themes/cultivatedwit/cultivatedwit-child/merger/merger-week.svg"/>
-                                </div> 
-                                
-                                <div id="merger-subtext">
-                                    This merger is so beautiful and exciting, why stop with our companies?<br>
-                                    Follow <a href="http://twitter.com/search/%23mergermania">#MergerMania</a> all week to see the insane amalgamations we dream up. <a href="http://merger.cultivatedwit.com/submit">Then submit your own.</a>
-                                </div>
-                                
                                 <div id="social-media-buttons">
                                     <a href="http://facebook.com/cultivatedwit" id="facebook-button"></a>
                                     <a href="http://twitter.com/cultivatedwit" id="twitter-button"></a>

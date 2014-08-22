@@ -560,6 +560,11 @@ background-color: #5294A5;
 	font-weight: 500;
 }
 
+.partner-info a{
+	color:#FBE750;
+}
+
+
 .partner-contact-items {
 	line-height: .5;
 }

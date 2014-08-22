@@ -313,6 +313,10 @@ a.active-nav-item {
 	margin-top: -35px;
 }
 
+#swipebox-overlay {
+	background: rgba(255,255,255,0.8);
+}
+
 #curved-arrow{
 	position: absolute;
 	top: -35px;

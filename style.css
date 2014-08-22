@@ -923,6 +923,10 @@ input:focus, textarea:focus, button:focus {
 */
 
 
+#newsletter-container a{
+	color:white;
+}
+
 p.footer-organization-header{
 	font-size: 14px;
 	font-style: italic;

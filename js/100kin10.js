@@ -51,6 +51,17 @@ $(document).ready(function () {
 		quizinart();
 		fullScreenSlide();
 		mediaQueryCalculator();	
+		
+	
+		if(!$isMobile){
+			$('a.changing-number').unbind('hover');
+			$('a.changing-number').hover(function() {
+			    $(this).html($(this).data('answer'));
+			}, function() {
+			    $(this).html($(this).data('original'));
+			});
+		}
+		
 	}
 	
 	

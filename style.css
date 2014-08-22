@@ -753,6 +753,10 @@ margin-bottom: -20px;
 line-height: 1.5;
 }
 
+.final-statement{
+	color:#4693a5;
+}
+
 .learn-section-quote-attribution{
 	color: #E8606E;
 	font-size: .5em;

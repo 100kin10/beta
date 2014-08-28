@@ -1479,7 +1479,7 @@ min-height: 650px;
 }
 
 
-.ss-form-question.errorbox-good {
+.ss-form-question {
 background-color: #4DBFEF;
 border-radius: 25px;
 overflow: hidden;

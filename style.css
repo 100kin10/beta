@@ -618,6 +618,14 @@ border-radius: 25px;*/
 overflow: hidden;
 }
 
+.ss-form-question {
+background-color: #4DBFEF;
+border-radius: 25px;
+overflow: hidden;
+padding: 50px;
+margin-bottom: 30px;
+}
+
 #background-cover-red{
 	background-color:rgba(299, 61, 61, 0.9);
 }
@@ -1478,14 +1486,6 @@ min-height: 650px;
 			transition: all 0.4s ease-in-out;}
 }
 
-
-.ss-form-question {
-background-color: #4DBFEF;
-border-radius: 25px;
-overflow: hidden;
-padding: 50px;
-margin-bottom: 30px;
-}
 
 
 #partner-contact-form:hover{

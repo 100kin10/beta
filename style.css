@@ -611,8 +611,10 @@ line-height: 1.5;
 }
 
 #form-container {
+/*
 background-color: #4DBFEF;
-border-radius: 25px;
+border-radius: 25px;*/
+
 overflow: hidden;
 }
 
@@ -1475,6 +1477,16 @@ min-height: 650px;
 	        -o-transition: all 0.4s ease-in-out;
 			transition: all 0.4s ease-in-out;}
 }
+
+
+.ss-form-question.errorbox-good {
+background-color: #4DBFEF;
+border-radius: 25px;
+overflow: hidden;
+padding: 50px;
+margin-bottom: 30px;
+}
+
 
 #partner-contact-form:hover{
 	height:600px;

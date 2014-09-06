@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width"/>
 		<title>Blow Minds. Teach STEM.</title>
 		<link rel="profile" href="http://gmpg.org/xfn/11"/>
-		<link rel="stylesheet" type="text/css" media="all" href="style.css"/>
+		<link rel="stylesheet" type="text/css" media="all" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" media="all" href="stylesheets/swipebox.css"/>
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -77,11 +77,11 @@
 	<body class="home">
 		<header id="navigation" class="clear">
 			<div id="navigation-inner" class="container wrap">
-				<a href="index.html" class="grid2 float-grid  float-grid-item	left-align">HOME</a>
+				<a href="index.html" class="home grid2 float-grid float-grid-item	left-align">Blow Minds</a>
 				<div class="centered-text grid8 float-grid-item">
-					<a href="teach.html">Explore Teaching</a>
-					<a href="learn.html" id="navigation-center-item">Why This Exists</a>
-					<a href="http://blowmindsteachstem.tumblr.com/">Cray Station</a>
+					<a href="teach.html">Me? A STEM Teacher?</a>
+					<a href="learn.html" id="navigation-center-item">Why Teachers?</a>
+					<a href="http://blowmindsteachstem.tumblr.com/">OMFG!!!</a>
 
 				</div>
 				<div id="share-container" class=" grid2 float-grid-item last-float-item right-align">
@@ -95,27 +95,40 @@
 			<div id="video-container-inner" class="container wrap">
 				<a class="swipebox-video" rel="youtube" href="http://youtu.be/9hBIJogkSaU">
 					<img id="chalkboard" src="img/chalkboard.png"/>
+					<div id="playbutton">
+						<span>Watch</span> Our Totally Mind-Blowing Cartoon
+					</div>
 				</a>
 			</div>
 		</section>
 		
 		<section id="quizinart-container" class="clear ">
-			<div id="quizinart-inner" class="container grid10 clear">
-				<img id="curved-arrow" src="img/curved-arrow.svg">
-				<a href="http://facebook.com"><img id="quizinart-facebook" class="quizinart-share-buttons" src="img/quizinart-facebook.svg"></a>
-				<a href="http://twitter.com"><img id="quizinart-twitter" class="quizinart-share-buttons" src="img/quizinart-twitter.svg"></a>
-				<a href="http://tumblr.com"><img id="quizinart-tumblr" class="quizinart-share-buttons" src="img/quizinart-tumblr.svg"></a>
-				<div id="quizinart-inner-border">
-					<h2 id="quizinart-title">What Career Is Right For You? Take Our 100% Unbiased Quiz</h2>
-					<div id="question-0-1" class="question-container  currentQuestion fill-browser-inner-quizinart-deactivated">
+			<div id="quizinart-inner-border" class="container grid10 clear">
+
+				<div id="quizinart-share-buttons">
+					<a href="http://facebook.com"><img id="quizinart-facebook" src="img/quizinart-facebook.svg"></a>
+					<a href="http://twitter.com"><img id="quizinart-twitter" src="img/quizinart-twitter.svg"></a>
+					<a href="http://tumblr.com"><img id="quizinart-tumblr" src="img/quizinart-tumblr.svg"></a>
+				</div>
+
+				<div id="quizinart-inner">
+
+					<div id="quizinart-intro" class="question-container currentQuestion">
+						<h2 id="quizinart-title">Wondering what the hell you’re going to do with your totally meaningful world-changing life?</h2>
+						<h3 id="quizinart-subtitle">Take Our 100% Unbiased Science-based Life Quiz.</h3>
+						<h4 id="quizinart-sub-subtitle">(Now With Algorithms!)</h4>
+						<a id="quizinart-start-button" class="button">Begin</a>
+					</div>
+
+					<div id="question-0-1" class="question-container fill-browser-inner-quizinart-deactivated"> <!-- currentQuestion -->
 						<div class="question-header">
 							Are you smarter than a child?
 						</div>
 						<div class="quizinart-selections">
 							<div class="button-container not-under-paragraph">
-								<a href="#1" id="second-yes" class="selection-option long-button ignore-selection" data-answer="1" >Yes</a>
-								<a href="#1" id="second-yes" class="selection-option long-button ignore-selection" data-answer="2" >No</a>
-								<a href="#1" id="second-yes" class="selection-option long-button ignore-selection" data-answer="3" >Depends on the child</a>
+								<a href="#1" id="second-yes" class="selection-option button long ignore-selection" data-answer="1" >Yes</a>
+								<a href="#1" id="second-yes" class="selection-option button long ignore-selection" data-answer="2" >No</a>
+								<a href="#1" id="second-yes" class="selection-option button long ignore-selection" data-answer="3" >Depends on the child</a>
 							</div>
 						</div>
 					</div>	
@@ -214,12 +227,12 @@
 								Interesting. <br>
 								How would you rate your experience so far?
 							</div>
-							<div class="quizinart-selections">
+							<div class="quizinart-selections center-align">
 								<a href="#1" class="selection-option number-option" data-answer="1">1</a>
 								<a href="#2" class="selection-option number-option" data-answer="2">2</a>
 								<a href="#3" class="selection-option number-option" data-answer="3">3</a>
 								<a href="#4" class="selection-option number-option" data-answer="4">4</a>
-								<a href="#5" class="selection-option number-option last-select-option" data-answer="5">5</a>
+								<a href="#5" class="selection-option number-option" data-answer="5">5</a>
 							</div>
 						</div>
 						
@@ -379,205 +392,209 @@
 						
 					</div>
 	
-						<div id="question-19" class="question-container fill-browser-inner-quizinart-deactivated">
-							<div class="final-statement">
-								<p>Wow. Would you believe it? Our highly advanced, totally legit algorithms suggest you would make for a great science, technology, engineering, or math teacher! And wouldn’t you know it, we have incredible resources to get you started down that path right here on this site.</p>
+					<div id="question-19" class="question-container fill-browser-inner-quizinart-deactivated">
+						<div class="final-statement">
+							<h3>You should be a STEM Teacher!</h3>
 
-								<p>Share your results with the world, scroll on down to explore how to become a STEM teacher.</p>
-							</div>
+							<p>Wow. Would you believe it? Our highly advanced, totally legit algorithms suggest you would make for a great science, technology, engineering, or math teacher! And wouldn’t you know it, we have incredible resources to get you started down that path right here on this site.</p>
+
+							<a class="button large share">
+								<img src="img/quizinart-facebook.svg" alt="">
+								Share on Facebook
+							</a>
+							<a class="button large share">
+								<img src="img/quizinart-twitter.svg" alt="">
+								Share on Twitter</a>
 						</div>
-			
-			</div> <!-- #quizinart-inner-border -->
-		</div><!-- #quizinart-inner -->
-			
-			<div id="tool-handoff-inner" class="container wrap">
-				<div class="grid12 float-grid-item">
-					<div class="underlined-header-wrapper">
-												<h3 id="section-2-header" class="section-header">LET’S GET SERIOUS. BRIEFLY.</h3>
 					</div>
-				</div>
-				<div class="grid5 float-grid-item">
-					<img id="handoff-box" src="img/brain.png" alt="handoff-box">
-				</div>
-				<div class=" handoff-text grid7 float-grid-item last-float-item vertically-center right-half-padding">
-					This is where we offer the honest opportunity to learn about and connect with teacher training programs.
-					
-					<a id="handoff-button" href="teach.html" class="section-button">Let’s Get Teach-y</a>
-				</div>
-			</div>
 			
+				</div> <!-- #quizinart-inner -->
+			</div><!-- #quizinart-inner-border -->
 		</section> <!-- #quizinart-container -->
+
+		<section id="tool-handoff" class="clear">
+			<div id="tool-handoff-inner" class="container wrap">
+
+				<div class="grid5 float-grid-item">
+					<img id="handoff-box" src="img/figure1.png" alt="handoff-box">
+				</div>
+				<div class="grid7 float-grid-item last-float-item vertically-center right-half-padding">
+					<h3>Are you a Science, Technology, Engineering, or Math (STEM) Major?</h3>
+
+					<p>The number one most bestest thing you can do for the world is teach STEM. You could build a giant brain army to solve all of the future’s problems. Teachers are better than everyone else. Their farts don’t even stink.*</p>
+
+					<a id="handoff-button" href="teach.html" class="button large taller">Learn More about Teaching STEM</a>
+
+					<p class="caveat">*something science is still working on</p>
+				</div>
+
+			</div>
+		</section> <!-- #tool-handoff -->
  
-	<section id="learn-more-outer" class="clear vertical-parent">
-		<div id="learn-more-inner" class="container wrap clear vertically-center">
-			<div class="grid12">
-				<div class="underlined-header-wrapper">
-					<h3 id="section-3-header" class="section-header">Spoiler! This Site Has An Agenda</h3>
+		<section id="learn-more-outer" class="clear vertical-parent">
+			<div id="learn-more-inner" class="container wrap clear vertically-center">
+				<div class="grid12">
+					<h2 id="section-3-sub-header">Don’t want Americans to be called stupid dumb dumbs by other bully countries? Then help us recruit more STEM teachers</h2>
+				</div>
+				<div class="grid4 float-grid-item">
+					<p class="section-3-section-header">Minds Don’t Blow Themselves</p>
+					<p class="section-3-section-body">On the smallest scale, this movement is about one moment. When somebody takes something they find profoundly interesting, and shares it in a way that it becomes profoundly interesting to somebody else. It’s why teachers teach.</p>
+				</div>
+				<div class="grid4 float-grid-item">
+					<p class="section-3-section-header">The World Don’t Change Itself</p>
+					<p class="section-3-section-body">On the biggest scale, this movement is about a better future. It’s about connecting the dots between solving problems, finding cures, improving lives, and the educational foundation required to make all those possible.</p>
+				</div>
+				<div class="grid4 float-grid-item last-float-item">
+					<p class="section-3-section-header">We Don't Not Help Yourself</p>
+					<p class="section-3-section-body">Sorry, our desire for consistency on these headers got a little outta control. Point is, the biggest obstacle most STEM majors face in becoming a great teacher is usually their own ignorance on how easy that process can be. Hence, this site.</p>
+				</div>
+				<div class="section-button-container grid12 float-grid-item">
+					<center>
+						<a id="learn-button" href="learn.html" class="button taller wider">More Background About how America isn’t #1</a>
+					</center>
 				</div>
 			</div>
-			<div class="grid12">
-				<h2 id="section-3-sub-header">The future of STEM directly depends on the present of STEM teaching. </h2>
-			</div>
-			<div class="grid4 float-grid-item">
-				<p class="section-3-section-header">Minds Don’t Blow Themselves</p>
-				<p class="section-3-section-body">On the smallest scale, this movement is about one moment. When somebody takes something they find profoundly interesting, and shares it in a way that it becomes profoundly interesting to somebody else. It’s why teachers teach.</p>
-			</div>
-			<div class="grid4 float-grid-item">
-				<p class="section-3-section-header">The World Doesn’t Change Itself</p>
-				<p class="section-3-section-body">On the biggest scale, this movement is about a better future. It’s about connecting the dots between solving problems, finding cures, improving lives, and the educational foundation required to make all those possible. </p>
-			</div>
-			<div class="grid4 float-grid-item last-float-item">
-				<p class="section-3-section-header">We (And You) Can Move The Needle</p>
-				<p class="section-3-section-body">Sorry, our desire for consistency on these headers went a little far. Point is, the biggest obstacle most STEM majors face in becoming great teachers is often not realizing how easy that process can be. Hence, this site. Mind. Blown.</p>
-			</div>
-			<div class="section-button-container grid12 float-grid-item">
-				<center>
-					<a id="learn-button" href="learn.html" class="section-button">Learn More & Join In</a>
-				</center>
-			</div>
-		</div>
-	</section>
+		</section>
 
-	<section id="playground-outer" class="clear vertical-parent">
-		<div id="playground-inner" class="container wrap clear vertically-center">
-			<div class="grid12">
-				<h3 id="section-4-header" class="section-header">GOOD SCROLLING! HERE’S A REWARD</h3>
-			</div>
-	
-				<div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
-		            <div class="img">
-		                <div id="img-wrap" class="static">
-						    <img id="animated" src="img/gifs/adventure-time.gif" alt="">
-						    <img id="static" src="img/gifs/adventure-time.png" alt="">
-						</div>
-		            </div>
-		        </div>
-		        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
-		            <div class="img">
-		            	<div id="img-wrap" class="static">
-						    <img id="animated" src="img/gifs/rick-and-morty.gif" alt="">
-						    <img id="static" src="img/gifs/rick-and-morty.png" alt="">
-						</div>
-		            </div>
-		        </div>
-		        <div class="grid4 float-grid-item last-float-item playground-gif effects clearfix effect-6">
-		            <div class="img">
-		                <div id="img-wrap" class="static">
-						    <img id="animated" src="img/gifs/adventure-time.gif" alt="">
-						    <img id="static" src="img/gifs/adventure-time.png" alt="">
-						</div>
-		            </div>
-		        </div>
-		        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
-		            <div class="img">
-		                <div id="img-wrap" class="static">
-						    <img id="animated" src="img/gifs/adventure-time.gif" alt="">
-						    <img id="static" src="img/gifs/adventure-time.png" alt="">
-						</div>
-		            </div>
-		        </div>
-		        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
-		            <div class="img">
-		                <div id="img-wrap" class="static">
-						    <img id="animated" src="img/gifs/rick-and-morty.gif" alt="">
-						    <img id="static" src="img/gifs/rick-and-morty.png" alt="">
-						</div>
-		            </div>
-		        </div>
-		        <div class="grid4 float-grid-item last-float-item playground-gif effects clearfix effect-6">
-		            <div class="img">
-		                <div id="img-wrap" class="static">
-						    <img id="animated" src="img/gifs/adventure-time.gif" alt="">
-						    <img id="static" src="img/gifs/adventure-time.png" alt="">
-						</div>
-		            </div>
-		        </div>
-		        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
-		            <div class="img">
-		                <div id="img-wrap" class="static">
-						    <img id="animated" src="img/gifs/adventure-time.gif" alt="">
-						    <img id="static" src="img/gifs/adventure-time.png" alt="">
-						</div>
-		            </div>
-		        </div>
-		        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
-		            <div class="img">
-		                <div id="img-wrap" class="static">
-						    <img id="animated" src="img/gifs/rick-and-morty.gif" alt="">
-						    <img id="static" src="img/gifs/rick-and-morty.png" alt="">
-						</div>
-		            </div>
-		        </div>
-		        <div class="grid4 float-grid-item last-float-item playground-gif effects clearfix effect-6">
-		            <div class="img">
-		                <div id="img-wrap" class="static">
-						    <img id="animated" src="img/gifs/adventure-time.gif" alt="">
-						    <img id="static" src="img/gifs/adventure-time.png" alt="">
-						</div>
-		            </div>
-		        </div>
-			<div class="grid12 center-align">
-					<a id="fun-button" href="http://blowmindsteachstem.tumblr.com/" class="section-button">Cray Station</a>
-			</div>
-		</div>
-	</section>
- 
-	<footer role="contentinfo" class="clear">
-		<div id="footer-inner" class="container wrap clear">
-			<div id="footer-communicate" class="footer-column grid4 float-grid-item ">
-				<div class="footer-column-inner">
-					<h3 class="footer-section-header">Who Made This?</h3>
-
-					<p class="grid2 float-grid-item footer-organization-header">
-						Leading Organization
-					</p>
-					<p class="grid1 float-grid-item footer-organization-header">
-						Partners
-					</p>
-					<p class="grid2 float-grid-item">
-						<a class="footer-organization" href="http://www.100kin10.org/">100KIN10</a>
-					</p>
-					<p class="grid1 float-grid-item">
-						<a class="footer-organization" href="http://www.100kin10.org/">See all 30</a>
-					</p>
-					<p class="grid2 float-grid-item footer-organization-header">
-						The Agency
-					</p>
-					<p class="grid1 float-grid-item footer-organization-header">
-						&nbsp;
-					</p>
-					<p class="grid2 float-grid-item">
-						<a class="footer-organization" href="http://www.cultivatedwit.com">Cultivated Wit</a>
-					</p>
+		<section id="playground-outer" class="clear vertical-parent">
+			<div id="playground-inner" class="container wrap clear vertically-center">
+				<div class="grid12">
+					<h3 id="section-4-header" class="section-header">A Teacher Taught The Kid That One Day Invented Gifs</h3>
 				</div>
-			</div>
 		
-			<div id="footer-social" class="footer-column grid4 float-grid-item ">
-				<div class="footer-column-inner">						
-					<h3 class="footer-section-header">
-						LET’S BE DIGI-PALS!</h3>
-					<div id="follow-links">
-						<div class="follow-facebook footer social-link"><a class="follow-link" href="http://facebook.com" target="_blank"></a></div>
-						<div class="follow-twitter footer social-link"><a class="follow-link" href="https://twitter.com" target="_blank"></a></div>
+					<div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+			            <div class="img">
+			                <div id="img-wrap" class="static">
+							    <img id="animated" src="img/gifs/adventure-time.gif" alt="">
+							    <img id="static" src="img/gifs/adventure-time.png" alt="">
+							</div>
+			            </div>
+			        </div>
+			        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+			            <div class="img">
+			            	<div id="img-wrap" class="static">
+							    <img id="animated" src="img/gifs/rick-and-morty.gif" alt="">
+							    <img id="static" src="img/gifs/rick-and-morty.png" alt="">
+							</div>
+			            </div>
+			        </div>
+			        <div class="grid4 float-grid-item last-float-item playground-gif effects clearfix effect-6">
+			            <div class="img">
+			                <div id="img-wrap" class="static">
+							    <img id="animated" src="img/gifs/adventure-time.gif" alt="">
+							    <img id="static" src="img/gifs/adventure-time.png" alt="">
+							</div>
+			            </div>
+			        </div>
+			        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+			            <div class="img">
+			                <div id="img-wrap" class="static">
+							    <img id="animated" src="img/gifs/adventure-time.gif" alt="">
+							    <img id="static" src="img/gifs/adventure-time.png" alt="">
+							</div>
+			            </div>
+			        </div>
+			        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+			            <div class="img">
+			                <div id="img-wrap" class="static">
+							    <img id="animated" src="img/gifs/rick-and-morty.gif" alt="">
+							    <img id="static" src="img/gifs/rick-and-morty.png" alt="">
+							</div>
+			            </div>
+			        </div>
+			        <div class="grid4 float-grid-item last-float-item playground-gif effects clearfix effect-6">
+			            <div class="img">
+			                <div id="img-wrap" class="static">
+							    <img id="animated" src="img/gifs/adventure-time.gif" alt="">
+							    <img id="static" src="img/gifs/adventure-time.png" alt="">
+							</div>
+			            </div>
+			        </div>
+			        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+			            <div class="img">
+			                <div id="img-wrap" class="static">
+							    <img id="animated" src="img/gifs/adventure-time.gif" alt="">
+							    <img id="static" src="img/gifs/adventure-time.png" alt="">
+							</div>
+			            </div>
+			        </div>
+			        <div class="grid4 float-grid-item playground-gif effects clearfix effect-6">
+			            <div class="img">
+			                <div id="img-wrap" class="static">
+							    <img id="animated" src="img/gifs/rick-and-morty.gif" alt="">
+							    <img id="static" src="img/gifs/rick-and-morty.png" alt="">
+							</div>
+			            </div>
+			        </div>
+			        <div class="grid4 float-grid-item last-float-item playground-gif effects clearfix effect-6">
+			            <div class="img">
+			                <div id="img-wrap" class="static">
+							    <img id="animated" src="img/gifs/adventure-time.gif" alt="">
+							    <img id="static" src="img/gifs/adventure-time.png" alt="">
+							</div>
+			            </div>
+			        </div>
+				<div class="grid12 center-align">
+						<a id="fun-button" href="http://blowmindsteachstem.tumblr.com/" class="button large taller blue">See more things STEM is responsible for</a>
+				</div>
+			</div>
+		</section>
+	 
+		<footer role="contentinfo" class="clear">
+			<div id="footer-inner" class="container wrap clear">
+				<div id="footer-communicate" class="footer-column grid4 float-grid-item ">
+					<div class="footer-column-inner">
+						<h3 class="footer-section-header">The Once-Students Behind This</h3>
+
+						<p class="grid2 float-grid-item footer-organization-header">
+							Leading Organization
+						</p>
+						<p class="grid1 float-grid-item footer-organization-header">
+							Partners
+						</p>
+						<p class="grid2 float-grid-item">
+							<a class="footer-organization" href="http://www.100kin10.org/">100KIN10</a>
+						</p>
+						<p class="grid1 float-grid-item">
+							<a class="footer-organization" href="http://www.100kin10.org/">See all 30</a>
+						</p>
+						<p class="grid2 float-grid-item footer-organization-header">
+							The Agency
+						</p>
+						<p class="grid1 float-grid-item footer-organization-header">
+							&nbsp;
+						</p>
+						<p class="grid2 float-grid-item">
+							<a class="footer-organization" href="http://www.cultivatedwit.com">Cultivated Wit</a>
+						</p>
+					</div>
+				</div>
+			
+				<div id="footer-social" class="footer-column grid4 float-grid-item ">
+					<div class="footer-column-inner">						
+						<h3 class="footer-section-header">A Student of STEM Invented the Following</h3>
+						<div id="follow-links">
+							<div class="follow-facebook footer social-link"><a class="follow-link" href="http://facebook.com" target="_blank"></a></div>
+							<div class="follow-twitter footer social-link"><a class="follow-link" href="https://twitter.com" target="_blank"></a></div>
+						</div>
+					</div>
+				</div>
+			
+				<div id="footer-newsletter" class="footer-column grid4 float-grid-item last-float-item">
+					<div class="footer-column-inner">	
+						<h3 class="footer-section-header">STEM is also responsible for email</h3>	
+						<div id="newsletter-container" class="clear">
+							<a href="mailto:answeringmachine@cultivatedwit.com">Send us an email</a>
+							
+						</div>	
 					</div>
 				</div>
 			</div>
-		
-			<div id="footer-newsletter" class="footer-column grid4 float-grid-item last-float-item">
-				<div class="footer-column-inner">	
-					<h3 class="footer-section-header">Contact</h3>	
-					<div id="newsletter-container" class="clear">
-						<a href="mailto:answeringmachine@cultivatedwit.com">Send us an email</a>
-						
-					</div>	
-				</div>
-			</div>
-		</div>
-		
+			
 
-	</footer><!-- footer -->
-	
-	<script type='text/javascript' src='js/100kin10.js'></script>
+		</footer><!-- footer -->
+		
+		<script type='text/javascript' src='js/100kin10.js'></script>
 
 	</body>
 </html>

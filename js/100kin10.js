@@ -146,7 +146,23 @@ $(document).ready(function () {
 		
 		
 	function quizinart() {
+
+		$introHeight = $('#quizinart-intro').outerHeight('true');
+		$('#quizinart-inner').height($introHeight);
 		
+		$('#quizinart-start-button').on( 'click', function(e) {
+
+			$container = $('#quizinart-intro')
+			$container.removeClass('currentQuestion');
+
+			$nextQuestion = $container.next( '.question-container' );
+			$nextQuestionHeight = $nextQuestion.outerHeight('true');
+			$('#quizinart-inner').height($nextQuestionHeight);
+
+			$nextQuestion.addClass('currentQuestion');
+
+		});
+
 		$( 'a.selection-option').on( 'click', function(e) {
 			e.preventDefault();
 			e.stopPropagation();
@@ -159,7 +175,7 @@ $(document).ready(function () {
 			
 			$nextQuestion = $container.next( '.question-container' );
 			$nextQuestionHeight = $nextQuestion.outerHeight('true');
-			$('#quizinart-inner-border').height($nextQuestionHeight);
+			$('#quizinart-inner').height($nextQuestionHeight);
 			
 			$dataResponse = $nextQuestion.data($dataText);
 			$responseTarget = $nextQuestion.find('.response-target');			

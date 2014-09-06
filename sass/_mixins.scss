@@ -1,0 +1,29 @@
+@mixin breakpoint($point) {
+  @if $point == x-large {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+  @else if $point == large {
+    @media only screen and (min-width: 1024px) and (max-width: 1199px) { @content; }
+  }
+  @else if $point == large-up {
+    @media only screen and (min-width: 1024px) { @content; }
+  }
+  @else if $point == ipad {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px)  { @content; }
+  }
+  @else if $point == medium {
+    @media only screen and (min-width: 768px) and (max-width: 1023px) { @content; }
+  }
+  @else if $point == medium-up {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+  @else if $point == small {
+    @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
+  }
+  @else if $point == small-up {
+    @media only screen and (min-width: 480px) { @content; }
+  }
+  @else if $point == x-small {
+    @media only screen and (max-width: 479px) { @content; }
+  }
+}

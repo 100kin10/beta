@@ -1,3 +1,66 @@
+// IE8 polyfill for GetComputed Style (for Responsive Script below)
+if (!window.getComputedStyle) {
+    window.getComputedStyle = function(el, pseudo) {
+        this.el = el;
+        this.getPropertyValue = function(prop) {
+            var re = /(\-([a-z]){1})/g;
+            if (prop == 'float') prop = 'styleFloat';
+            if (re.test(prop)) {
+                prop = prop.replace(re, function () {
+                    return arguments[2].toUpperCase();
+                });
+            }
+            return el.currentStyle[prop] ? el.currentStyle[prop] : null;
+        }
+        return this;
+    }
+}
+
+// Figure out scrollbar width in Firefox so that media query stuff happens at the same time.
+var scrollBarWidth = 0;
+if ($.browser.mozilla) {
+  scrollBarWidth = window.innerWidth - jQuery("body").width();
+}
+
+// as the page loads, call these scripts
+$(window).load(responsivequery);
+$(window).resize(responsivequery);
+
+function responsivequery() {
+  /* getting viewport width */
+  var responsive_viewport = $(window).width() + scrollBarWidth;
+
+  var socialbuttons = $("#quizinart-share-buttons");
+
+	$introHeight = $('#quizinart-intro.active').outerHeight(true);
+
+	if ($introHeight) {
+		// alert($introHeight);
+		$('#quizinart-inner').height($introHeight);
+		$('#quizinart-intro').addClass('currentQuestion');
+	}
+	else {
+		$('.currentQuestion').height('auto');
+		$currentHeight = $('.currentQuestion').outerHeight(true);
+		$('#quizinart-inner').height($currentHeight);
+	}
+
+  if (responsive_viewport < 640) {
+		if (socialbuttons.hasClass('largescreen')) {
+			socialbuttons.detach();
+			socialbuttons.appendTo('#video-container-inner').removeClass('largescreen').addClass('smallscreen');
+		}
+  }
+
+  if (responsive_viewport >= 640) {
+		if (socialbuttons.hasClass('smallscreen')) {
+			socialbuttons.detach();
+			socialbuttons.prependTo('#quizinart-inner-border').removeClass('smallscreen').addClass('largescreen');
+		}
+  }
+};
+
+
 $(document).ready(function () {
 
 	var base				= $('#blogURL').attr('href'),
@@ -147,13 +210,10 @@ $(document).ready(function () {
 		
 	function quizinart() {
 
-		$introHeight = $('#quizinart-intro').outerHeight('true');
-		$('#quizinart-inner').height($introHeight);
-		
 		$('#quizinart-start-button').on( 'click', function(e) {
 
 			$container = $('#quizinart-intro')
-			$container.removeClass('currentQuestion');
+			$container.removeClass('currentQuestion').addClass('inactive').removeClass('active');
 
 			$nextQuestion = $container.next( '.question-container' );
 			$nextQuestionHeight = $nextQuestion.outerHeight('true');

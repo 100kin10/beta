@@ -79,7 +79,7 @@
 		<header id="navigation">
 			<div id="navigation-inner" class="row">
 
-				<a href="index.html" id="home" class="column medium-2 left-align">Blow Minds</a>
+				<a href="index.html" class="active-nav-item column medium-2 left-align">Blow Minds</a>
 
 				<div class="column medium-8 centered-text">
 					<a href="teach.html">Me? A STEM Teacher?</a>
@@ -99,8 +99,9 @@
 			<div id="video-container-inner" class="row">
 				<a class="swipebox-video" rel="youtube" href="http://youtu.be/9hBIJogkSaU">
 					<img id="chalkboard" src="img/chalkboard.png"/>
-					<div id="playbutton">
-						<span>Watch</span> Our Totally Mind-Blowing Cartoon
+					<img id="chalkboard-mobile" src="img/chalkboard-mobile.png"/>
+					<div id="playbutton" class="pink taller">
+						<span>Watch</span> Our Mind-Blowing Cartoon
 					</div>
 				</a>
 			</div>
@@ -108,10 +109,10 @@
 		
 		<section id="quizinart-container">
 			<div class="row">
-				<div class="column medium-10 medium-centered">
+				<div class="column large-10 large-centered">
 					<div id="quizinart-inner-border">
 
-						<div id="quizinart-share-buttons">
+						<div id="quizinart-share-buttons" class="largescreen">
 							<a href="http://facebook.com"><img id="quizinart-facebook" src="img/quizinart-facebook.svg"></a>
 							<a href="http://twitter.com"><img id="quizinart-twitter" src="img/quizinart-twitter.svg"></a>
 							<a href="http://tumblr.com"><img id="quizinart-tumblr" src="img/quizinart-tumblr.svg"></a>
@@ -119,7 +120,7 @@
 
 						<div id="quizinart-inner">
 
-							<div id="quizinart-intro" class="question-container currentQuestion">
+							<div id="quizinart-intro" class="question-container active">
 								<h2 id="quizinart-title">Wondering what the hell you’re going to do with your totally meaningful world-changing life?</h2>
 								<h3 id="quizinart-subtitle">Take Our 100% Unbiased Science-based Life Quiz.</h3>
 								<h4 id="quizinart-sub-subtitle">(Now With Algorithms!)</h4>
@@ -423,16 +424,18 @@
 		<section id="tool-handoff">
 			<div id="tool-handoff-inner" class="row">
 
-				<div class="column medium-5">
-					<img id="handoff-box" src="img/figure1.png" alt="handoff-box">
+				<div class="column xlarge-5">
+					<img id="figure1" src="img/figure1.png" alt="">
 				</div>
-				<div class="column medium-7">
+				<div class="column medium-10 medium-centered xlarge-7 xlarge-uncentered">
 					<h3>Are you a Science, Technology, Engineering, or Math (STEM) Major?</h3>
 
 					<p>The number one most bestest thing you can do for the world is teach STEM. You could build a giant brain army to solve all of the future’s problems. Teachers are better than everyone else. Their farts don’t even stink.*</p>
 
-					<a id="handoff-button" href="teach.html" class="button large taller">Learn More about Teaching STEM</a>
-
+					<div class="clearfix">
+						<a id="handoff-button" href="teach.html" class="button large taller">Learn More about Teaching&nbsp;STEM</a>
+					</div>
+	
 					<p class="caveat">*something science is still working on</p>
 				</div>
 
@@ -444,21 +447,23 @@
 
 				<h2 id="section-3-sub-header" class="column">Don’t want Americans to be called stupid dumb dumbs by other bully countries? Then help us recruit more STEM teachers</h2>
 
-				<div class="column medium-4">
-					<h3 class="section-3-section-header">Minds Don’t Blow Themselves</h3>
-					<p class="section-3-section-body">On the smallest scale, this movement is about one moment. When somebody takes something they find profoundly interesting, and shares it in a way that it becomes profoundly interesting to somebody else. It’s why teachers teach.</p>
-				</div>
-				<div class="column medium-4">
-					<h3 class="section-3-section-header">The World Don’t Change Itself</h3>
-					<p class="section-3-section-body">On the biggest scale, this movement is about a better future. It’s about connecting the dots between solving problems, finding cures, improving lives, and the educational foundation required to make all those possible.</p>
-				</div>
-				<div class="column medium-4">
-					<h3 class="section-3-section-header">We Don't Not Help Yourself</h3>
-					<p class="section-3-section-body">Sorry, our desire for consistency on these headers got a little outta control. Point is, the biggest obstacle most STEM majors face in becoming a great teacher is usually their own ignorance on how easy that process can be. Hence, this site.</p>
+				<div id="learn-more-content" class="row">
+					<div class="column large-4">
+						<h3>Minds Don’t Blow Themselves</h3>
+						<p>On the smallest scale, this movement is about one moment. When somebody takes something they find profoundly interesting, and shares it in a way that it becomes profoundly interesting to somebody else. It’s why teachers teach.</p>
+					</div>
+					<div class="column large-4">
+						<h3>The World Don’t Change Itself</h3>
+						<p>On the biggest scale, this movement is about a better future. It’s about connecting the dots between solving problems, finding cures, improving lives, and the educational foundation required to make all those possible.</p>
+					</div>
+					<div class="column large-4">
+						<h3>We Don't Not Help Yourself</h3>
+						<p>Sorry, our desire for consistency on these headers got a little outta control. Point is, the biggest obstacle most STEM majors face in becoming a great teacher is usually their own ignorance on how easy that process can be. Hence, this site.</p>
+					</div>
 				</div>
 
-				<div class="center-align">
-					<a id="learn-button" href="learn.html" class="button taller wider">More Background About how America isn’t #1</a>
+				<div class="column center-align">
+					<a id="learn-button" href="learn.html" class="button taller wider">More Background About how America&nbsp;isn’t&nbsp;#1</a>
 				</div>
 
 			</div>
@@ -466,9 +471,9 @@
 
 		<section id="playground-outer">
 			<div id="playground-inner" class="row">
-				<h3 id="section-4-header" class="section-header">A Teacher Taught The Kid That One Day Invented GIFs</h3>
+				<h3 id="section-4-header" class="section-header">A Teacher Taught The Kid That&nbsp;One&nbsp;Day&nbsp;Invented&nbsp;GIFs</h3>
 
-				<ul class="medium-block-grid-3">
+				<ul class="large-block-grid-3">
 
 					<li class="playground-gif effects">
             <div id="img-wrap" class="static">
@@ -536,7 +541,7 @@
 	      </ul>
 
 				<div class="column center-align">
-					<a id="fun-button" href="http://blowmindsteachstem.tumblr.com/" class="button large taller blue">See more things STEM is responsible for</a>
+					<a id="fun-button" href="http://blowmindsteachstem.tumblr.com/" class="button large taller blue">See more things STEM is&nbsp;responsible&nbsp;for</a>
 				</div>
 			</div>
 		</section>
@@ -588,4 +593,3 @@
 
 	</body>
 </html>
- 

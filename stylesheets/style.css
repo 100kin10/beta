@@ -2558,20 +2558,17 @@ h1 {
 
 h2 {
   font-size: 3.4375em;
-  text-align: center;
   margin-bottom: 0.18182em;
   font-weight: 500;
 }
 
 h3 {
   font-size: 2.8125em;
-  text-align: center;
   margin-bottom: 0.44444em;
 }
 
 h4 {
   font-size: 2.3125em;
-  text-align: center;
   margin-bottom: 0.27027em;
 }
 
@@ -3424,6 +3421,90 @@ footer {
 
 #img-wrap #animated, #img-wrap:hover #static {
   display: none;
+}
+
+#teaching-large {
+  background-color: #F4F0D7;
+  color: #4693A5;
+  padding-top: 48px;
+}
+
+#teaching-large-inner {
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+}
+
+#teaching-large-intro {
+  color: #2BBFEF;
+}
+#teaching-large-intro h1 {
+  line-height: 1;
+  margin-top: 5%;
+  text-align: left;
+}
+#teaching-large-intro h1 span {
+  color: #EF984A;
+}
+#teaching-large-intro p {
+  font-size: 1.625em;
+  font-weight: 400;
+}
+
+#teaching-large-content {
+  font-size: 0.86666666666667em;
+  position: relative;
+}
+#teaching-large-content h3 {
+  font-size: 2em;
+  text-align: left;
+}
+#teaching-large-content h3 span {
+  color: #EF984A;
+}
+#teaching-large-content p {
+  font-family: "ff-tisa-web-pro", "omnes-pro", "omnes", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 1.25em;
+}
+#teaching-large-content .button {
+  font-weight: 600;
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 1.2em 0;
+}
+
+#teaching-form {
+  background-color: #E8606E;
+}
+#teaching-form #teaching-form-intro {
+  overflow: hidden;
+}
+#teaching-form .formintro {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+#teaching-form .figure1 {
+  padding: 0;
+}
+#teaching-form .figure1 img {
+  position: absolute;
+  top: -2em;
+}
+@media only screen and (max-width: 640px) {
+  #teaching-form .figure1 img {
+    width: 200%;
+    max-width: inherit;
+  }
+}
+#teaching-form h2 {
+  font-size: 4.625em;
+  font-weight: 600;
+  line-height: 1;
+}
+#teaching-form p {
+  font-size: 1.25em;
+  color: #FBE64F;
+  line-height: 1.75;
 }
 
 p.teaching {

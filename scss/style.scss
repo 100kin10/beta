@@ -115,19 +115,16 @@ h1 {
 }
 h2 {
   font-size: em-calc(55);
-  text-align:center;
   margin-bottom: (10em/55);
   font-weight:500;
 }
 h3 {
   font-size:em-calc(45);
-  text-align:center;
   margin-bottom:(20em/45);
 }
 
 h4 {
   font-size:em-calc(37);
-  text-align:center;
   margin-bottom:(10em/37);
 }
 
@@ -876,7 +873,93 @@ footer {
 }
 
 
+// ==========================================================================
+// Teaching Page
+// ==========================================================================
 
+// Intro Section
+// ------------------------------------------------------
+
+#teaching-large {
+  background-color: $manilla;
+  color:$other-blue;
+  padding-top: 48px;
+}
+#teaching-large-inner {
+  padding-top: 2.5em;
+  padding-bottom:2.5em;
+}
+#teaching-large-intro {
+  color:$blue;
+  h1 {
+    line-height:1;
+    margin-top:5%;
+    text-align:left;
+    span { color:$orange; }
+  }
+  p {
+    font-size:(26em/16);
+    font-weight:400;
+  }
+}
+#teaching-large-content {
+  font-size:0.86666666666667em;
+  position:relative;
+  h3 {
+    font-size:2em;
+    text-align:left;
+    span { color:$orange; }
+  }
+  p {
+    font-family:$tisa;
+    font-size:1.25em;
+  }
+  .button {
+    font-weight:600;
+    display:block;
+    padding-left:0;
+    padding-right:0;
+    margin:1.2em 0;
+  }
+}
+
+// Form Section
+// ------------------------------------------------------
+
+#teaching-form {
+  background-color:$pink;
+  #teaching-form-intro {
+    overflow:hidden;
+  }
+  .formintro {
+    padding-top:4em;
+    padding-bottom:4em;
+  }
+  .figure1 {
+    padding:0;
+    img {
+      position: absolute;
+      top: -2em;
+      @media #{$medium-down} {
+        width: 200%;
+        max-width: inherit;
+      }
+    }
+  }
+  h2 {
+    font-size:em-calc(74);
+    font-weight:600;
+    line-height:1;
+  }
+  p {
+    font-size:1.25em;
+    color:$yellow;
+    line-height:1.75;
+  }
+  img {
+
+  }
+}
 
 
 

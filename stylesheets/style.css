@@ -3525,8 +3525,17 @@ footer {
 .img-wrap .animated, .img-wrap:hover .static, .img-wrap.active .static {
   display: none;
 }
+.img-wrap .img-share {
+  padding: 2.5% 0 5%;
+}
+.img-wrap .img-share img {
+  margin: 0 1.5%;
+  max-width: 20%;
+  width: 9em;
+}
 @media only screen and (min-width: 641px) {
   .img-wrap .img-share {
+    padding: 0;
     position: absolute;
     right: .5em;
     bottom: -5em;
@@ -3537,6 +3546,9 @@ footer {
   }
   .img-wrap .img-share img {
     margin: 0 .125em;
+    max-width: inherit;
+    width: 30px;
+    height: 30px;
   }
   .img-wrap:hover .img-share {
     bottom: .5em;

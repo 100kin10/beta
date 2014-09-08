@@ -2750,6 +2750,9 @@ label:hover .radio-button-inner-circle, .checked .radio-button-inner-circle, .ra
   z-index: 100;
   text-transform: uppercase;
   overflow: hidden;
+  -moz-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.125);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.125);
 }
 #navigation a {
   color: #ACCED6;
@@ -3472,6 +3475,7 @@ footer {
   color: #4693A5;
   letter-spacing: .04em;
   margin: 9.5% 0;
+  text-align: center;
 }
 @media only screen and (max-width: 640px) {
   #playground-outer h3 {
@@ -3743,6 +3747,22 @@ footer {
   color: #4693A5;
   margin: 2em 0;
 }
+.partners-list-container .single-partner {
+  margin-bottom: 2.5em;
+}
+.partners-list-container .partner-list-title + .single-partner {
+  margin-top: 2em;
+}
+
+h4.state {
+  font-size: 1.75em;
+  color: #E8606E;
+  padding-top: 1.5em;
+  margin-bottom: .66em;
+}
+.partner-list-title + h4.state {
+  padding-top: .75em;
+}
 
 h3.partner-list-title {
   font-size: 2.5em;
@@ -3771,7 +3791,7 @@ h3.partner-list-title {
 }
 
 .fullscreen {
-  color: #555;
+  color: #575757;
 }
 .fullscreen.fullscreen_hide {
   display: none;
@@ -3829,58 +3849,50 @@ h3.partner-list-title {
   color: #4693A5;
 }
 
-#person-of-the-year {
-  padding-left: 60px;
-  margin-bottom: 0px;
+#person-top-item {
+  background-color: #4693A5;
+  padding-top: 48px;
 }
 
-.person-headline {
-  color: white;
-  font-size: 1em;
-  font-weight: 600;
-  line-height: 1.4;
+#person-top-inner {
+  padding: 2.25em 0;
+}
+
+#person-of-the-year img {
+  display: block;
+  margin: 0 auto;
 }
 
 #top-person-headline {
-  margin-top: -10px;
-}
-
-#this-guy {
-  margin-left: -50px;
-  position: absolute;
+  color: #FFF;
+  font-weight: 600;
+  margin-top: .75em;
+  font-size: 2.875em;
 }
 
 #obama-quote {
   color: #F4F0D7;
-  margin-top: 120px;
+  margin-top: 2.5em;
   font-size: 33px;
   font-weight: 500;
 }
+#obama-quote span {
+  color: #FBE64F;
+}
 
 #obama-name {
-  color: #FBE750;
+  display: inline-block;
+  color: #FBE64F;
   font-size: .7em;
   font-weight: 500;
 }
 
-.learn-section-2 {
-  background-color: white;
-  color: red;
-  margin-top: 50px;
-}
-
 .learn-section-headline {
   color: #4693A5;
-  font-size: 63px;
+  font-size: 4.5em;
   font-weight: 500;
-  line-height: 1.4;
-}
-
-.learn-section-headline-final {
-  color: #5294A5;
-  font-size: 1.3em;
-  font-weight: 500;
-  line-height: 1.1;
+  margin-bottom: 1em;
+  margin-top: -0.125em;
 }
 
 .learn-section-quote {
@@ -3891,21 +3903,28 @@ h3.partner-list-title {
   line-height: 1.5;
 }
 
-.learn-section-quote-attribution {
+.learn-section-share {
   color: #E8606E;
-  font-size: .5em;
+  font-size: 1.375em;
   font-weight: 500;
-  margin-left: 30px;
+  text-align: right;
 }
 
 .learn-section-paragraphs {
-  color: #575c62;
-  font-size: 20px;
-  margin-left: 204px;
-  margin-right: 0px;
-  line-height: 1.6;
+  color: #575757;
   font-weight: 400;
   font-family: "ff-tisa-web-pro", "omnes-pro", "omnes", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+.learn-section-paragraphs p {
+  font-size: 1.25em;
+  line-height: 1.8;
+}
+
+.learn-section-headline-final {
+  color: #5294A5;
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 1.1;
 }
 
 #learn-joke-section {

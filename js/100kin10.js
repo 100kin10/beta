@@ -63,6 +63,15 @@ function responsivequery() {
 
 $(document).ready(function () {
 
+	$('#form-container input[type="radio"]').after('<div class="radio-button-outer-circle"><div class="radio-button-inner-circle"></div></div>');
+	$('#form-container input[type="radio"]').on( 'change', function() {
+		if ($(this).is(':checked')) {
+			$('input[name="' + $(this).attr('name') + '"]').siblings(".radio-button-outer-circle").removeClass('checked');
+			$(this).siblings(".radio-button-outer-circle").addClass('checked');
+		}
+	});
+
+
 	var base				= $('#blogURL').attr('href'),
 		$firstPostLink		= $('#first-post-link').attr('href'),
 		$mainContent		= $("#ajax-container"),
@@ -223,7 +232,7 @@ $(document).ready(function () {
 
 		});
 
-		$( 'a.selection-option').on( 'click', function(e) {
+		$( 'label.selection-option').on( 'click', function(e) {
 			e.preventDefault();
 			e.stopPropagation();
 			$formTarget = $(this).data('target');

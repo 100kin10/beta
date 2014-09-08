@@ -171,10 +171,6 @@ h4 {
     padding-left:2em;
     padding-right:2em;
   }
-}
-.button, a.button, button, input[type="button"], input[type="reset"], input[type="submit"] {
-  @include button;
-  cursor:pointer;
   &.blue {
     color:#FFF;
     background-color:$blue;
@@ -183,6 +179,10 @@ h4 {
     color:#FFF;
     background-color:$pink;
   }
+}
+.button, a.button, button, input[type="button"], input[type="reset"], input[type="submit"] {
+  @include button;
+  cursor:pointer;
 }
 
 // ==========================================================================
@@ -906,11 +906,31 @@ footer {
     }
   }
 }
-#img-wrap #static, #img-wrap:hover #animated{
-  display: inline;
-}
-#img-wrap #animated, #img-wrap:hover #static{
-  display: none;
+.img-wrap {
+  position:relative;
+  overflow:hidden;
+  .static, &:hover .animated, &.active .animated {
+    display:inline;
+  }
+  .animated, &:hover .static, &.active .static {
+    display:none;
+  }
+  @media #{$large-up} {
+    .img-share {
+      position: absolute;
+      right: .5em;
+      bottom:-5em;
+      @include transition(all .2s ease-in);
+      img {
+        margin: 0 .125em;
+      }
+    }
+    &:hover {
+      .img-share {
+        bottom: .5em;
+      }
+    }
+  }
 }
 
 

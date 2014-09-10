@@ -232,27 +232,50 @@ $(document).ready(function () {
 
 		});
 
-		$( 'label.selection-option').on( 'click', function(e) {
+		$('.quizinart-selections label').on( 'click', function(e) {
 			e.preventDefault();
 			e.stopPropagation();
-			$formTarget = $(this).data('target');
-			$dataAnswer = $(this).data('answer');
-			$dataText = 'text' + $dataAnswer + '';
+
+			// $formTarget = $(this).data('target');
+			// $dataAnswer = $(this).data('answer');
+			// $dataText = 'text' + $dataAnswer + '';
 			
+			$quip = $(this).data('quip');
+
 			$container = $(this).closest('.question-container');
 			$container.removeClass('currentQuestion');
 			
 			$nextQuestion = $container.next( '.question-container' );
 			$nextQuestionHeight = $nextQuestion.outerHeight('true');
 			$('#quizinart-inner').height($nextQuestionHeight);
+
+			$nextQuestion.find('.question-header').prepend($quip);
+
+			// $quipContainer.html($quip);
 			
-			$dataResponse = $nextQuestion.data($dataText);
-			$responseTarget = $nextQuestion.find('.response-target');			
-			$responseTarget.text($dataResponse);
+			// $dataResponse = $nextQuestion.data($dataText);
+			// $responseTarget = $nextQuestion.find('.response-target');			
+			// $responseTarget.text($dataResponse);
 			
 			$nextQuestion.addClass('currentQuestion');
 
 		});
+
+		var list = $(".button-container");
+		//make default state _not_ a special case by adding a class to it
+		$("label:not(.one,.two,.three,.four)", list).addClass("default"); 
+		//declare cycle transition function
+		var cycleClass = function(classFrom, classTo){
+			list.delegate("label.no."+classFrom, "mouseover", function(){
+				$(this).toggleClass(classFrom + " " + classTo);
+			});
+		};
+		cycleClass("default", "one");
+		cycleClass("one", "two");
+    cycleClass("two", "three");
+		cycleClass("three", "four");
+		cycleClass("four", "default");
+
 
 
 		

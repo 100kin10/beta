@@ -673,7 +673,7 @@ footer {
   filter: alpha(opacity=0);
   @include opacity(0);
   left:50%;
-  padding:12% 0;
+  padding:8% 0;
   // @media #{$large-only} {
   //   width: 760px;
   //   margin-left: -380px;
@@ -686,6 +686,13 @@ footer {
   //   width:900px;
   //   margin-left:-450px;
   // }
+  .question-number {
+    color:$yellow;
+    font-size: 1.25em;
+    margin-bottom: .4em;
+    cursor: default;
+    display: block;
+  }
   &.currentQuestion{
     top:0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -707,6 +714,7 @@ footer {
   font-weight: 500;
   line-height:1.15;
   margin-bottom:1em;
+  text-align:left;
 }
 .button-container{
   text-align: center;

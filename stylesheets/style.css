@@ -3322,7 +3322,14 @@ footer {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   left: 50%;
-  padding: 12% 0;
+  padding: 8% 0;
+}
+.question-container .question-number {
+  color: #FBE64F;
+  font-size: 1.25em;
+  margin-bottom: .4em;
+  cursor: default;
+  display: block;
 }
 .question-container.currentQuestion {
   top: 0;
@@ -3347,6 +3354,7 @@ footer {
   font-weight: 500;
   line-height: 1.15;
   margin-bottom: 1em;
+  text-align: left;
 }
 
 .button-container {

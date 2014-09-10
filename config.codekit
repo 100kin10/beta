@@ -3587,6 +3587,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/img\/_share-facebook.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 95318,
+		"inputAbbreviatedPath": "\/img\/_share-facebook.jpg",
+		"outputAbbreviatedPath": "\/img\/_share-facebook.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/brain.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3738,6 +3749,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/js\/100kin10.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/100kin10.js",
+		"outputAbbreviatedPath": "\/js\/min\/100kin10-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/js\/_app.js": {
 		"fileType": 64,

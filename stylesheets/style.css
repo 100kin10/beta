@@ -2817,27 +2817,13 @@ label:hover .radio-button-inner-circle, .checked .radio-button-inner-circle, .ra
   padding: 0;
 }
 
-#navigation-center-item {
+.home #nav-home, .learn #nav-learn, .teach #nav-teach, .tumblr #nav-tumblr {
+  color: white !important;
+}
+
+#nav-learn {
   margin-left: 5%;
   margin-right: 5%;
-}
-
-div.active-nav-item {
-  display: inline-block;
-  border-top: 2px solid white;
-  margin-top: 5px;
-  line-height: 2;
-}
-
-#active-nav-center-border {
-  border-top: 2px solid white;
-  width: 93px;
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-a.active-nav-item {
-  color: white !important;
 }
 
 footer {
@@ -3210,7 +3196,7 @@ footer {
     color: transparent;
   }
   #playbutton:hover {
-    background-color: rgba(31, 27, 28, 0.75);
+    background-color: #E8606E;
   }
   #playbutton span {
     text-indent: 200%;

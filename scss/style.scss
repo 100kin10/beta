@@ -286,25 +286,24 @@ textarea {
     padding:0;
   }
 }
-#navigation-center-item{
+//  {
+//   display: inline-block;
+//   border-top: 2px solid rgba(255, 255, 255, 1);
+//   margin-top: 5px;
+//   line-height: 2;
+// }
+// #active-nav-center-border{
+//   border-top: 2px solid rgba(255, 255, 255, 1);
+//   width: 93px;
+//   margin-left: 40px;
+//   margin-right: 40px;
+// }
+.home #nav-home, .learn #nav-learn, .teach #nav-teach, .tumblr #nav-tumblr {
+  color: rgba(255, 255, 255, 1) !important;
+}
+#nav-learn {
   margin-left: 5%;
   margin-right: 5%;
-}
-div.active-nav-item {
-  display: inline-block;
-  border-top: 2px solid rgba(255, 255, 255, 1);
-  margin-top: 5px;
-  line-height: 2;
-}
-#active-nav-center-border{
-  border-top: 2px solid rgba(255, 255, 255, 1);
-  width: 93px;
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-a.active-nav-item {
-  color: rgba(255, 255, 255, 1) !important;
 }
 
 // ==========================================================================
@@ -584,7 +583,7 @@ footer {
     text-indent:200%;
     color:transparent;
     &:hover {
-      background-color:rgba(#1F1B1C,.75);
+      background-color:$pink;
     }
     span {
       text-indent:200%;

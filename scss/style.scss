@@ -1021,6 +1021,30 @@ footer {
 #teaching-large-content {
   font-size:1.4em;
   position:relative;
+  @media #{$large-up} {
+    @include flexbox;
+    @include align-items(stretch);
+    @include justify-content(center);
+    .column {
+      @include flexbox;
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      > div {
+        display: flex;
+        display: -webkit-flex;
+        flex: 1 100%;
+        flex-flow: column nowrap;
+      }
+      p {
+        display: flex;
+        -webkit-flex: 2;
+        flex: 2;
+      }
+    }
+  }
   @media #{$medium-only} {
     max-width:550px;
   }
@@ -1042,9 +1066,12 @@ footer {
   .button {
     font-weight:600;
     display:block;
-    padding-left:.4em;
-    padding-right:.4em;
-    margin:1.2em 0;
+    padding-left:0.4em;
+    padding-right:0.4em;
+    margin:.6em 0 1.8em;
+    @media #{$large-up} {
+      margin:1.2em 0;
+    }
   }
   small {
     color:$blue;
@@ -1334,24 +1361,63 @@ h3.partner-list-title{
 #person-top-item{
   background-color: $other-blue;
   padding-top: 48px;
+  @media #{$large-up} {
+    .no-flexbox.flexboxlegacy & {
+      text-align:center;
+      .row {
+        text-align:left;
+      }
+    }
+    .row {
+      @include flexbox;
+      @include align-items(center);
+      @include justify-content(center);
+      .column {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+      }
+    }
+  }
+}
+@media #{$large-only} {
+  #person-intro {
+    padding-left: 5%;
+  }
 }
 #person-top-inner {
-  padding: 2.25em 0;
+  padding-top: 2.25em;
+  padding-bottom: 2.25em;
+  font-size:1.2em;
+  @media #{$large-up} {
+    font-size:0.8em;
+  }
+  @media #{$mid-large-up} {
+    font-size:1em;
+  }
+
 }
 #person-of-the-year img {
   display:block;
   margin:0 auto;
+  width:85%;
 }
 #top-person-headline {
   color: #FFF;
   font-weight: 600;
-  margin-top: .75em;
+  margin-top: 0.75em;
+  margin-bottom: 1.25em;
   font-size: 2.875em;
+  @media #{$medium-only} {
+    font-size:3.75em;
+    margin-bottom:.75em;
+  }
 }
 #obama-quote {
   color: $manilla;
-  margin-top: 2.5em;
-  font-size: 33px;
+  font-size:2em;
   font-weight: 500;
   span {
     color:$yellow;

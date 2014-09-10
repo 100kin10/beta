@@ -20,15 +20,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_partials\/_global-variables.kit": {
-		"fileType": 2048,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_partials\/_global-variables.kit",
-		"outputAbbreviatedPath": "\/_partials\/_global-variables.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/_partials\/_header.kit": {
 		"fileType": 2048,
 		"ignore": 1,
@@ -44,6 +35,15 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_partials\/_nav.kit",
 		"outputAbbreviatedPath": "\/_partials\/_nav.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_partials\/_share-wrapper.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_partials\/_share-wrapper.kit",
+		"outputAbbreviatedPath": "\/_partials\/_share-wrapper.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -3632,17 +3632,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/img\/_share-facebook.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 95318,
-		"inputAbbreviatedPath": "\/img\/_share-facebook.jpg",
-		"outputAbbreviatedPath": "\/img\/_share-facebook.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/brain.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3771,6 +3760,28 @@
 		"initialSize": 288503,
 		"inputAbbreviatedPath": "\/img\/quizanart-bg.png",
 		"outputAbbreviatedPath": "\/img\/quizanart-bg.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/share-image-facebook.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 95318,
+		"inputAbbreviatedPath": "\/img\/share-image-facebook.jpg",
+		"outputAbbreviatedPath": "\/img\/share-image-facebook.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/share-image-facebook.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 67503,
+		"inputAbbreviatedPath": "\/img\/share-image-facebook.png",
+		"outputAbbreviatedPath": "\/img\/share-image-facebook.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4070,6 +4081,15 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/teach.kit",
 		"outputAbbreviatedPath": "\/teach.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/test-wrap.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/test-wrap.kit",
+		"outputAbbreviatedPath": "\/test-wrap.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},

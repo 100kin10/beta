@@ -1,0 +1,26 @@
+<!-- @import "__global-variables.kit" -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>$title</title>
+
+    <meta property="og:title" content="<!--$title-->" />
+    <meta property="og:site_name" content="<!--$site_name-->">
+    <meta property="og:description" content="<!--$description-->" />
+    <meta property="og:image" content="<!--$canonical-url-->img/<!--$image-->" />
+    <meta property="og:type" content="<!--$type-->">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>html, body, frameset, frame { margin:0; padding:0; border:0;}</style>
+
+  </head>
+    <frameset rows="100%,*" border="0">
+      <frame src="<!--$canonical-url--><!--$embed-->" frameborder="0" />
+      <frame frameborder="0" noresize />
+    </frameset>
+ </html>

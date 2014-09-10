@@ -3358,10 +3358,10 @@ footer {
 }
 .button-container .no {
   position: relative;
-  -moz-transition: all 0.025s ease-in-out;
-  -o-transition: all 0.025s ease-in-out;
-  -webkit-transition: all 0.025s ease-in-out;
-  transition: all 0.025s ease-in-out;
+  -moz-transition: all 0.05s ease-in-out;
+  -o-transition: all 0.05s ease-in-out;
+  -webkit-transition: all 0.05s ease-in-out;
+  transition: all 0.05s ease-in-out;
   top: 0;
   left: 0;
 }

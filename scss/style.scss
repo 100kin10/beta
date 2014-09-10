@@ -716,7 +716,7 @@ footer {
   }
   .no {
     position:relative;
-    @include transition(all .025s ease-in-out);
+    @include transition(all .05s ease-in-out);
     top:0;
     left:0;
     &.one { top:2em; left:0;}

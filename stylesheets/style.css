@@ -3083,6 +3083,26 @@ footer {
   }
 }
 
+@media only screen and (min-width: 641px) {
+  #video-wrap {
+    display: block;
+    position: absolute;
+    top: 6%;
+    left: 16.5%;
+    right: 16.5%;
+    bottom: 29.5%;
+  }
+}
+
+#the-video {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 @media only screen and (max-width: 640px) {
   #playbutton {
     padding: .2em 1.6em;
@@ -3180,7 +3200,7 @@ footer {
 @media only screen and (min-width: 641px) {
   #playbutton {
     position: absolute;
-    top: 36.5%;
+    top: 47%;
     left: 50%;
     width: 6.25em;
     margin-left: -3.125em;

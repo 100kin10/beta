@@ -518,6 +518,24 @@ footer {
     display:none;
   }
 }
+#video-wrap {
+  @media #{$large-up} {
+    display: block;
+    position: absolute;
+    top: 6%;
+    left: 16.5%;
+    right: 16.5%;
+    bottom: 29.5%;
+  }
+}
+#the-video {
+  display:block;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
 #playbutton {
   @media #{$medium-down} {
     @include button;
@@ -570,7 +588,7 @@ footer {
   }
   @media #{$large-up} {
     position:absolute;
-    top:36.5%;
+    top:47%;
     left:50%;
     width:em-calc(100);
     margin-left:em-calc(-50);

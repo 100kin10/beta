@@ -3,25 +3,48 @@
 <!-- @import "_partials/_header.kit" -->
 <!-- @import "_partials/_nav.kit" -->
 
+
+
+		<div class="custom-th"><img src="cusotm-yt-thumbanil.jpg" style="cursor:pointer" /></div>
+
+
+
     <section id="video-container">
       <div id="video-container-inner" class="row">
-        <a class="swipebox-video" rel="youtube" href="http://youtu.be/9hBIJogkSaU">
+        <a class="video-click" href="http://youtu.be/9hBIJogkSaU" data-video-id="9hBIJogkSaU">
           <img id="chalkboard" src="img/chalkboard.png"/>
           <img id="chalkboard-mobile" src="img/chalkboard-mobile.png"/>
-          <div id="playbutton" class="pink taller">
-            <span>Watch</span> Our Mind-Blowing Cartoon
-          </div>
+          <div id="video-wrap">
+						<div id="the-video" style="display:none">
+							
+						</div>
+	          <div id="playbutton" class="pink taller">
+	            <span>Watch</span> Our Mind-Blowing Cartoon
+	          </div>
+	        </div>
         </a>
       </div>
     </section>
-    
+
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('.video-click').click(function(e) {
+				vid = $(this).data("video-id");
+				e.preventDefault();
+				$('#playbutton').hide();
+				$("#the-video").html('<iframe width="100%" height="100%" src="//www.youtube.com/embed/' + vid + '?wmode=transparent&showinfo=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
+				$("#the-video").show();
+				});
+			});
+		</script>
+
     <section id="quizinart-container">
       <div class="row">
         <div class="column large-10 large-centered">
           <div id="quizinart-inner-border">
 
             <div id="quizinart-share-buttons" class="largescreen">
-              <a href="http://facebook.com"><img id="quizinart-facebook" src="img/share-facebook-blue.svg"></a>
+              <a href="#" onclick="return fbs_click('<!--$canonical-url-->test-wrap.html')"><img id="quizinart-facebook" src="img/share-facebook-blue.svg"></a>
               <a href="http://twitter.com"><img id="quizinart-twitter" src="img/share-twitter-blue.svg"></a>
               <a href="http://tumblr.com"><img id="quizinart-tumblr" src="img/share-tumblr-blue.svg"></a>
             </div>

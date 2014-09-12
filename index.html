@@ -78,30 +78,31 @@
   </head>
   <body class="home">
     <div class="off-canvas-wrap" data-offcanvas>
-      <div class="inner-wrap">        <a class="left-off-canvas-toggle show-for-medium-down" href="#">Menu</a>
-
-        <!-- Off Canvas Menu -->
+      <div class="inner-wrap">        <!-- Off Canvas Menu -->
         <aside class="left-off-canvas-menu">
             <!-- whatever you want goes here -->
             <ul>
-              <li><a href="#">Item 1</a></li>
-              <li><a href="#">Item 1</a></li>
-              <li><a href="#">Item 1</a></li>
+              <li><a id="left-home" href="index.html" target="_parent">Blow Minds</a></li>
+              <li><a id="left-teach" href="teach.html" target="_parent">Me? A STEM Teacher?</a></li>
+              <li><a id="left-learn" href="learn.html" target="_parent">Why Teachers?</a></li>
+              <li><a id="left-tumblr" href="http://blowmindsteachstem.tumblr.com/" target="_parent">OMFG!!!</a></li>
             </ul>
         </aside>
 
-        <header id="navigation" class="hide-for-medium-down">
+        <header id="navigation">
           <div id="navigation-inner" class="row">
 
-            <a id="nav-home" href="index.html"  target="_parent" class="column medium-2 left-align">Blow Minds</a>
+            <a class="left-off-canvas-toggle menu-icon show-for-medium-down" href="#"></a>
 
-            <div class="column medium-8 centered-text">
+            <a id="nav-home" href="index.html" target="_parent" class="column medium-2 left-align hide-for-medium-down">Blow Minds</a>
+
+            <div class="column medium-8 centered-text hide-for-medium-down">
               <a id="nav-teach" href="teach.html" target="_parent">Me? A STEM Teacher?</a>
               <a id="nav-learn" href="learn.html" target="_parent">Why Teachers?</a>
               <a id="nav-tumblr" href="http://blowmindsteachstem.tumblr.com/" target="_parent">OMFG!!!</a>
             </div>
 
-            <div id="share-container" class="column medium-2 right-align">
+            <div id="share-container" class="column medium-2 right-align  hide-for-medium-down">
               <a class="fb_link" onclick="return fbs_click('http://100kin10.github.io/beta/')" href="#" alt="Facebook Share"><img src="img/share-facebook.svg" alt="Facebook Share Image"></a>
               <a href="http://twitter.com/intent/tweet?text=Minds+don%27t+blow+themselves.+Become+a+STEM+teacher.&url=http://100kin10.github.io/beta/" alt="Twitter Share" target="_blank"><img src="img/share-twitter.svg" alt="Twitter Share Image"></a>
               <a href="http://www.tumblr.com" alt="Tumblr Share"><img src="img/share-tumblr.svg" alt="Tumblr Share Image"></a>
@@ -648,9 +649,13 @@
       <a class="exit-off-canvas"></a>
       </div><!-- .inner-wrap -->
     </div><!-- .off-canvas-wrap -->
+
+<!-- <script src="bower_components/foundation/js/foundation.min.js"></script> -->
       
     <script src="bower_components/foundation/js/foundation/foundation.js"></script>
     <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+
     <!-- Other JS plugins can be included here -->
     <script type='text/javascript' src='js/100kin10.js'></script>
 

@@ -14,6 +14,7 @@ Version:        0.1.0
 @import "foundation/components/block-grid";
 @import "foundation/components/grid";
 @import "foundation/components/offcanvas";
+@import "foundation/components/reveal";
 @import "foundation/components/visibility";
 
 @import 'mixins';
@@ -46,10 +47,10 @@ $brandon: "brandon-grotesque", $omnes;
 
 html, body {
   font-size:8px;
-  @media #{$small-only} { // FOR DEV ONLY. REMOVE WHEN FINISHED
-    width:320px;
-    margin:0 auto;
-  }
+  // @media #{$small-only} { // FOR DEV ONLY. REMOVE WHEN FINISHED
+  //   width:320px;
+  //   margin:0 auto;
+  // }
   @media #{$medium-up} {
     font-size:10px;
   }
@@ -276,6 +277,9 @@ textarea {
 // Nav
 // ==========================================================================
 
+// Top navbar
+// ------------------------------------------------------
+
 #navigation {
   background: $other-blue;
   height: 48px;
@@ -305,31 +309,56 @@ textarea {
 }
 #navigation-inner{
   text-align:center;
-  position:relative;
+  // position:relative;
   font-weight: 500;
   padding:0 $column-gutter;
   .column {
     padding:0;
   }
 }
-//  {
-//   display: inline-block;
-//   border-top: 2px solid rgba(255, 255, 255, 1);
-//   margin-top: 5px;
-//   line-height: 2;
-// }
-// #active-nav-center-border{
-//   border-top: 2px solid rgba(255, 255, 255, 1);
-//   width: 93px;
-//   margin-left: 40px;
-//   margin-right: 40px;
-// }
+.menu-icon {
+  height: 48px;
+  width: 70px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -24px;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 28%;
+    top: 16px;
+    width: 44%;
+    height: 2px;
+    background: #fff;
+    box-shadow: 0 7px 0 0 #fff, 0 14px 0 0 #fff;
+  }
+}
 .home #nav-home, .learn #nav-learn, .teach #nav-teach, .tumblr #nav-tumblr {
   color: rgba(255, 255, 255, 1) !important;
 }
 #nav-learn {
   margin-left: 5%;
   margin-right: 5%;
+}
+
+// Off Canvas
+// ------------------------------------------------------
+
+.left-off-canvas-menu ul {
+  font-size:2.5em;
+  text-transform:uppercase;
+  margin: 1em;
+  list-style-type:none;
+  a {
+    display:block;
+  }
+}
+.home #left-home, .learn #left-learn, .teach #left-teach, .tumblr #left-tumblr {
+  color: rgba(255, 255, 255, 1) !important;
+}
+#left-home {
+  padding-bottom:1em;
 }
 
 // ==========================================================================
@@ -619,10 +648,10 @@ footer {
     }
   }
   @media #{$small-only} {
-    font-size:1.5em;
+    font-size:1.9em;
   }
   @media #{$smallium-only} {
-    font-size:2em;
+    font-size:2.4em;
   }
   @media #{$large-up} {
     position:absolute;

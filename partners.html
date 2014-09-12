@@ -88,6 +88,23 @@ We know some organizations that will work with you to help you teach. Would you 
 	</footer> 
 	<script type='text/javascript' src='js/100kin10.js'></script>
 
+	<script type="text/javascript">
+      var _sf_async_config = { uid: 40470, domain: '100kin10.github.io', useCanonical: true };
+      (function() {
+        function loadChartbeat() {
+          window._sf_endpt = (new Date()).getTime();
+          var e = document.createElement('script');
+          e.setAttribute('language', 'javascript');
+          e.setAttribute('type', 'text/javascript');
+          e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
+          document.body.appendChild(e);
+        };
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+          loadChartbeat : function() { oldonload(); loadChartbeat(); };
+      })();
+    </script>
+
 	</body>
 </html>
  

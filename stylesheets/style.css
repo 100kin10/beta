@@ -4423,6 +4423,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   line-height: 1.15;
   margin: 0;
+  color: inherit;
 }
 
 h1 {
@@ -5878,6 +5879,9 @@ footer {
 }
 #form-container .question-number span {
   font-size: 0.8em;
+}
+#form-container ol {
+  margin: 0;
 }
 #form-container input[type="text"], #form-container select, #form-container .fake-select {
   width: 100%;

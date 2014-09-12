@@ -145,7 +145,7 @@
 					vid = $(this).data("video-id");
 					e.preventDefault();
 					$('#playbutton').fadeOut(500, function() {
-						$("#the-video").html('<iframe src="//www.youtube.com/embed/' + vid + '?wmode=transparent&showinfo=0&controls=0&rel=0&autoplay=1&enablejsapi=1&vq=hd720" frameborder="0" allowfullscreen></iframe>');
+						$("#the-video").html('<iframe src="//www.youtube.com/embed/' + vid + '?wmode=transparent&showinfo=0&controls=0&rel=0&autoplay=1&enablejsapi=1" frameborder="0" allowfullscreen></iframe>');
 					});
 					$("#the-video").fadeIn(1000);
 					$(".closebutton").fadeIn(1000);
@@ -659,8 +659,11 @@
     <!-- Other JS plugins can be included here -->
     <script type='text/javascript' src='js/100kin10.js'></script>
 
-
     <script> $(document).foundation(); </script>
+
+
+
+
 
     <script type="text/javascript">
       var _sf_async_config = { uid: 40470, domain: '100kin10.github.io', useCanonical: true };

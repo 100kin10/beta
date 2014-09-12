@@ -95,31 +95,58 @@
     </header>
     <section id="video-container">
       <div id="video-container-inner" class="row">
-        <a class="video-click" href="http://youtu.be/9hBIJogkSaU" data-video-id="9hBIJogkSaU">
+        <div id="video-wrap">
           <img id="chalkboard" src="img/chalkboard.png"/>
           <img id="chalkboard-mobile" src="img/chalkboard-mobile.png"/>
-          <div id="video-wrap">
-						<div id="the-video" style="display:none">
-							
-						</div>
+          <a class="video-click" href="http://youtu.be/9hBIJogkSaU" data-video-id="9hBIJogkSaU">
+						<div id="the-video" style="display:none"></div>
 	          <div id="playbutton" class="pink taller">
 	            <span>Watch</span> Our Mind-Blowing Cartoon
 	          </div>
-	        </div>
-        </a>
+	          <div class="closebutton">×</div>
+	        </a>
+        </div>
       </div>
     </section>
 
 		<script type="text/javascript">
+
+		// Inject YouTube API script
+		var tag = document.createElement('script');
+		tag.src = "//www.youtube.com/player_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		function onYouTubePlayerAPIReady() {
+
+		}
+
 		$(document).ready(function() {
-			$('.video-click').click(function(e) {
-				vid = $(this).data("video-id");
-				e.preventDefault();
-				$('#playbutton').hide();
-				$("#the-video").html('<iframe width="100%" height="100%" src="//www.youtube.com/embed/' + vid + '?wmode=transparent&showinfo=0&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
-				$("#the-video").show();
+
+			function videoclick() {
+				$('.video-click').on('click', function(e) {
+					$(this).off('click').removeAttr('href').removeClass('video-click').addClass('video-click-active');
+					vid = $(this).data("video-id");
+					e.preventDefault();
+					$('#playbutton').fadeOut(500, function() {
+						$("#the-video").html('<iframe src="//www.youtube.com/embed/' + vid + '?wmode=transparent&showinfo=0&controls=0&rel=0&autoplay=1&enablejsapi=1" frameborder="0" allowfullscreen></iframe>');
+					});
+					$("#the-video").fadeIn(1000);
+					$(".closebutton").fadeIn(1000);
 				});
+			}
+
+			videoclick();
+
+			$('.closebutton').on('click', function() {
+				$(this).hide( 1, function() {
+					videoclick();
+				});
+				$('#the-video').html('').hide();
+				$('#playbutton').show();
+				$('.video-click-active').removeClass('video-click-active').addClass('video-click');
 			});
+		});
 		</script>
 
     <section id="quizinart-container">

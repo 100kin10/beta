@@ -319,17 +319,19 @@ $(document).ready(function () {
 	});
 		
 		
+
+
+
 	function quizinart() {
 
 		$('#quizinart-start-button').on( 'click', function(e) {
 
 			$container = $('#quizinart-intro')
-			$container.removeClass('currentQuestion').addClass('inactive').removeClass('active');
-
 			$nextQuestion = $container.next( '.question-container' );
 			$nextQuestionHeight = $nextQuestion.outerHeight('true');
-			$('#quizinart-inner').height($nextQuestionHeight);
 
+			$container.removeClass('currentQuestion').addClass('inactive').removeClass('active');
+			$('#quizinart-inner').height($nextQuestionHeight);
 			$nextQuestion.addClass('currentQuestion');
 
 		});
@@ -337,29 +339,16 @@ $(document).ready(function () {
 		$('.quizinart-selections label').on( 'click', function(e) {
 			e.preventDefault();
 			e.stopPropagation();
-
-			// $formTarget = $(this).data('target');
-			// $dataAnswer = $(this).data('answer');
-			// $dataText = 'text' + $dataAnswer + '';
 			
 			$quip = $(this).data('quip');
-
 			$container = $(this).closest('.question-container');
+			$nextQuestion = $container.next('.question-container');
+
 			$container.removeClass('currentQuestion');
-			
-			$nextQuestion = $container.next( '.question-container' );
-			$nextQuestionHeight = $nextQuestion.outerHeight('true');
+			$nextQuestion.addClass('currentQuestion').find('.question-header').prepend($quip);
+
+			$nextQuestionHeight = $nextQuestion.outerHeight('true'); //Important to define this AFTER the previous question's intro has been prepended.
 			$('#quizinart-inner').height($nextQuestionHeight);
-
-			$nextQuestion.find('.question-header').prepend($quip);
-
-			// $quipContainer.html($quip);
-			
-			// $dataResponse = $nextQuestion.data($dataText);
-			// $responseTarget = $nextQuestion.find('.response-target');			
-			// $responseTarget.text($dataResponse);
-			
-			$nextQuestion.addClass('currentQuestion');
 
 		});
 
@@ -372,48 +361,14 @@ $(document).ready(function () {
 				$(this).toggleClass(classFrom + " " + classTo);
 			});
 		};
-		cycleClass("default", "one");
+		cycleClass("default", "two");
 		cycleClass("one", "two");
     cycleClass("two", "three");
 		cycleClass("three", "four");
 		cycleClass("four", "default");
 
-
-
-		
-		
-		$('a.firstQuestion-selection-option').unbind('click');
-		$('a.firstQuestion-selection-option').click(function(e) {
-			e.preventDefault();
-			e.stopPropagation();
-			
-			 $container = $(this).closest('.question-container');
-			 $container.removeClass('currentQuestion');
-			 $container.addClass('questionCompleted');
-			
-			 
-			 if($isMobile || ($('body').hasClass('width-0-479'))){
-				 
-	 			if ($(this).data('answer') == 'yes') {
-	 				$('#mobile-question-0-1').addClass('currentQuestion');
-	 			} else {
-	 				$('#mobile-question-0-2').addClass('currentQuestion');
-	 			}
-				 
-				 
-			 } else {
-	 			if ($(this).data('answer') == 'yes') {
-	 				$('#question-0-1').addClass('currentQuestion');
-	 			} else {
-	 				$('#enter-no').addClass('currentQuestion');
-	 			}
-			 }
-			 	
-			
-			
-		});
-
-	}
+	};
 	
 	init();
+
 });

@@ -3,12 +3,6 @@
 <!-- @import "_partials/_header.kit" -->
 <!-- @import "_partials/_nav.kit" -->
 
-
-
-		<div class="custom-th"><img src="cusotm-yt-thumbanil.jpg" style="cursor:pointer" /></div>
-
-
-
     <section id="video-container">
       <div id="video-container-inner" class="row">
         <a class="video-click" href="http://youtu.be/9hBIJogkSaU" data-video-id="9hBIJogkSaU">
@@ -32,7 +26,7 @@
 				vid = $(this).data("video-id");
 				e.preventDefault();
 				$('#playbutton').hide();
-				$("#the-video").html('<iframe width="100%" height="100%" src="//www.youtube.com/embed/' + vid + '?wmode=transparent&showinfo=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
+				$("#the-video").html('<iframe width="100%" height="100%" src="//www.youtube.com/embed/' + vid + '?wmode=transparent&showinfo=0&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
 				$("#the-video").show();
 				});
 			});

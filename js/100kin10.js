@@ -69,13 +69,109 @@ function fbs_click($shareurl,$sharetitle) {
 
 $(document).ready(function () {
 
-	$('#form-container input[type="radio"]').after('<div class="radio-button-outer-circle"><div class="radio-button-inner-circle"></div></div>');
-	$('#form-container input[type="radio"]').on( 'change', function() {
+	// Find the select boxes and change them to fancy fake select boxes and radio buttons
+	// ----------------------------------------
+	$('.ss-select select').each(function() {
+	  var $this = $(this);
+	  var $name = $this.attr('name');
+    $this.wrap('<div class="giantChecklist-outerwrap"></div>').before('<div class="fake-select"></div>').wrap('<div class="giantChecklist-wrap"><div class="giantChecklist"><ul class="ss-choices"></ul></div></div>');
+
+		$this.find('option').each(function(i, e) { // get the options
+			$value = $(this).val();
+			if ($value) {
+		    $('<li class="ss-choice-item"><label><input type="radio" name="' + $name + '" value="' + $value +'" /><span class="ss-choice-label">' + $value +'</span></label></li>') // create a radio element
+	        .appendTo($(this).parents('.ss-choices')); // prepend to some visible place
+	     }
+		});
+		$this.remove();
+	});
+
+	// Find the lists of checkboxes with more than 12 options and turn them into a fake select box that allows multiple choice
+	// ----------------------------------------
+	$('.ss-checkbox .ss-choices').each(function() {
+	  var $this = $(this);
+	  if ($this.find('.ss-choice-item').length > 12) {
+      $this.wrap('<div class="giantChecklist-outerwrap"></div>').before('<div class="fake-select"></div>').wrap('<div class="giantChecklist-wrap"><div class="giantChecklist"></div></div>');
+	  }
+	});
+
+	// Adding fancy radio buttons, updating them on change
+	// ----------------------------------------
+	$('#form-container input[type="radio"]')
+	.hide()
+	.after('<div class="radio-button-outer"><div class="radio-button-inner"></div></div>')
+	.on( 'change', function() {
+
+		var selectionName = $(this).parents('.ss-choice-item').find('.ss-choice-label').text();
+
 		if ($(this).is(':checked')) {
-			$('input[name="' + $(this).attr('name') + '"]').siblings(".radio-button-outer-circle").removeClass('checked');
-			$(this).siblings(".radio-button-outer-circle").addClass('checked');
+			$('input[name="' + $(this).attr('name') + '"]').siblings(".radio-button-outer").removeClass('checked');
+			$(this).parents('.giantChecklist-outerwrap').find('.fake-select').html('<span title="' + selectionName + '">' + selectionName + '</span>');
+			$(this).siblings(".radio-button-outer").addClass('checked');
+			$('.giantChecklist-outerwrap').removeClass('listOpen'); // If it was inside one of the fake select boxes, let's close it
 		}
 	});
+
+	// Adding fancy checkboxes, updating fake checkboxes on change, and updating selection inside fake select boxes
+	// ----------------------------------------
+	$('#form-container input[type="checkbox"]')
+	.hide()
+	.after('<div class="checkbox-outer"><div class="checkbox-inner">✓</div></div>')
+	.on( 'change', function() {
+
+		var selectionName = $(this).parents('.ss-choice-item').find('.ss-choice-label').text();
+
+		if ($(this).is(':checked')) {
+			$(this).siblings(".checkbox-outer").addClass('checked');
+			$(this).parents('.giantChecklist-outerwrap').find('.fake-select').append('<span title="' + selectionName + '">' + selectionName + '</span>');
+		} else {
+			$(this).siblings(".checkbox-outer").removeClass('checked');
+			$(this).parents('.giantChecklist-outerwrap').find('span[title="' + selectionName + '"]').remove();
+		}
+	});
+
+	// Toggle dropdown from fake select element
+	// ----------------------------------------
+	$('.fake-select').on( 'click', function() {
+		if ($(this).parents('.giantChecklist-outerwrap').hasClass('listOpen')) {
+			$(this).parents('.giantChecklist-outerwrap').removeClass('listOpen');	 // If the one we clicked on it open, close it
+		} else {
+			$('.giantChecklist-outerwrap').removeClass('listOpen');
+			$(this).parents('.giantChecklist-outerwrap').addClass('listOpen'); // If the one we clicked on is NOT open, close them ALL and THEN open it.
+		}
+	});
+
+	// Remove dropdown when you click away from it
+	// ----------------------------------------
+	$(document).mouseup(function (e) {
+		var container = $('.giantChecklist-outerwrap');
+		if (!container.is(e.target) && container.has(e.target).length === 0) { // if the target of the click isn't the container nor a descendant of the container
+		  container.removeClass('listOpen');
+		}
+	});
+
+
+	// Add question numbers at the top of each question
+	// ----------------------------------------
+
+	var $questionNumber = 0;
+	$('.ss-form-question').each(function() {
+	  $questionNumber++;
+	  $(this).prepend('<label class="question-number">Question ' + $questionNumber + '</label>');
+	});
+	$('.question-number').append('/' + $questionNumber);
+
+
+// <label class="question-number">Question 2/5</label>
+
+
+
+
+
+
+
+
+
 
 
 	var base				= $('#blogURL').attr('href'),

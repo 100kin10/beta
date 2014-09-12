@@ -148,20 +148,17 @@ h4 {
 // ==========================================================================
 
 @mixin button {
-  padding: .2em 1.6em;
-  font-size: em-calc(30);
   background: #FFF;
   border:0;
   @include border-radius(.5em);
   font-style: normal;
   font-weight: 500;
   width: auto;
-  margin: 0 .16666em;
-  display: inline-block;
   color: $other-blue;
   overflow: hidden;
   line-height:1;
   text-align:center;
+  outline:0;
   &.large {
     font-size: em-calc(37);
     padding: .45em 1em;
@@ -186,7 +183,11 @@ h4 {
 }
 .button, a.button, button, input[type="button"], input[type="reset"], input[type="submit"] {
   @include button;
+  font-size: em-calc(30);
+  padding: .2em 1.6em;
   cursor:pointer;
+  display: inline-block;
+  margin: 0 .16666em;
 }
 
 // ==========================================================================
@@ -195,13 +196,15 @@ h4 {
 
 input[type="text"], input[type="email"], select, textarea {
   @include button;
-  text-align:left;
   font-size: em-calc(37);
   padding:0.5em .75em;
+  display: block;
+  margin: 0 .3333em 0 0;
+  text-align:left;
+  height:2em;
   @include border-radius(.66em);
   @include appearance(none);
   outline:0;
-  margin: 0 .3333em 0 0;
   @include placeholder {
     color:rgba($other-blue, .66)
   }
@@ -211,6 +214,7 @@ select {
   background-position:center right;
   background-repeat:no-repeat;
   background-size:contain;
+  padding-right:2em;
   option[disabled] {
     color:rgba($other-blue, .66);
   }
@@ -218,28 +222,47 @@ select {
 textarea {
   resize:vertical;
 }
-.radio-button-outer-circle {
+.radio-button-outer {
   height: 2.333em;
   width: 2.333em;
   position: absolute;
   @include border-radius(100%);
   background: rgba(#000,.1);
-  overflow: hidden;
   @include box-shadow(inset 2px 2px 0px 2px rgba(#000, .1));
   z-index: 1;
   display: inline-block;
 }
-.radio-button-inner-circle{
+.radio-button-inner{
   height:1em;
   width:1em;
   position:absolute;
   top:50%;
   left:50%;
   margin-top:-0.46em;
-  margin-left:-0.46em;  
+  margin-left:-0.46em;
   @include border-radius(100%);
-  background:white;
+  background:#FFF;
   z-index:2;
+  display:none;
+  label:hover &, .checked &, &.checked {
+    display:block;
+  }
+}
+.checkbox-outer {
+  @extend .radio-button-outer;
+  @include border-radius(0.65em);
+}
+.checkbox-inner {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  height: 1em;
+  width: 1em;
+  margin-top: -.5em;
+  margin-left: -.5em;
+  font-size: 3em;
+  text-align: center;
+  line-height: 1;
   display:none;
   label:hover &, .checked &, &.checked {
     display:block;
@@ -690,7 +713,7 @@ footer {
   filter: alpha(opacity=0);
   @include opacity(0);
   left:50%;
-  padding:8% 0;
+  padding:8% 0 6%;
   // @media #{$large-only} {
   //   width: 760px;
   //   margin-left: -380px;
@@ -768,10 +791,6 @@ footer {
   min-height:3.48em;
   padding-left: 4em;
   padding-top: 0.44em;
-}
-.radio-button-outer-circle {
-  margin-left: -4em;
-  margin-top:-0.44em;
 }
 #quizinart-share-buttons {
   display:none;
@@ -1247,33 +1266,23 @@ footer {
       font-size:0.8em;
     }
   }
-  .ss-form-question {
-    background-color: $blue;
-    border-radius: 1.25em;
-    overflow: hidden;
-    padding:1em 1.5em 1.5em;
-    margin-bottom: 1.33em;
-
-  }
-  .ss-q-title {
-    font-size:2.5em;
-    line-height: 1.15;
-    margin-bottom: .66em;
-    display: block;
-  }
-  .ss-q-help, .ss-secondary-text {
-    margin-bottom: 1.33333em;
-    margin-top: -1em;
-    font-size: 1.5em;
-  }
-  .required-message, .error-message {
-    display:none;
-  }
   input[type="text"], select {
     width:100%;
     @media #{$medium-up} {
-      width:75%;
-      max-width:700px;
+      width:76%;
+      max-width:760px;
+    }
+  }
+  .ss-form-entry.name {
+    @extend .clearfix;
+    input[type="text"] {
+      width:40%;
+      max-width:400px;
+      float:left;
+      &:nth-child(3) {
+        width:55%;
+        max-width:550px;
+      }
     }
   }
   textarea {
@@ -1294,42 +1303,7 @@ footer {
       color:rgba($blue, .66)
     }
   }
-  ul.ss-choices {
-    list-style-type:none;
-    padding:0;
-    margin:0;
-    font-size:2em;
-    li.ss-choice-item {
-      display:block;
-      cursor:pointer;
-      margin: .333em 0;
-      @media #{$medium-up} {  
-        float:left;
-        margin-right:1em;
-      }
-      label {
-        cursor:pointer;
-        padding-left:2em;
-      }
-      .radio-button-outer-circle {
-        font-size:0.6em;
-        margin-left:-3em;
-      }
-      input[type="radio"] {
-        display:none;
-      }
-    }
-  }
-  .submit {
-    margin:4em 0;
-    p {
-      font-size:2.5em;
-      color:#FFF;
-      margin-bottom:0.333em;
-      line-height: 1.25;
-    }
-  }
-  button {
+  button, input[type="submit"] {
     font-size:3.5em;
     margin-left:0;
     color:$blue;
@@ -1343,6 +1317,131 @@ footer {
     width: 32em;
     max-width:100%;
   }
+  .submit {
+    margin:4em 0;
+    p {
+      font-size:2.5em;
+      color:#FFF;
+      margin-bottom:0.333em;
+      line-height: 1.25;
+    }
+  }
+}
+.ss-form-question {
+  background-color: $blue;
+  border-radius: 1.25em;
+  padding:1em 1.5em 1.5em;
+  margin-bottom: 1.33em;
+}
+.ss-q-title {
+  font-size:2.5em;
+  line-height: 1.15;
+  margin-bottom: .66em;
+  display: block;
+}
+.ss-q-help, .ss-secondary-text {
+  margin-bottom: 1.33333em;
+  margin-top: -1em;
+  font-size: 1.5em;
+}
+.required-message, .error-message, .ss-password-warning, .ss-required-asterisk {
+  display:none;
+}
+.giantChecklist-outerwrap {
+  position:relative;
+  @media #{$medium-up} {
+    width:76%;
+    max-width:760px;
+  }
+}
+.fake-select {
+  @extend select;
+  position:relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width:100%!important;
+  span {
+    margin-right:.25em;
+    &:after {
+      content:',';
+    }
+    &:last-child:after {
+      content:'';
+    }
+  }
+}
+.giantChecklist-wrap {
+  display:none;
+  height:0;
+  position:relative;
+  .listOpen & {
+    display:block;
+  }
+}
+.giantChecklist {
+  background-color:$manilla;
+  z-index:1;
+  color:$other-blue;
+  padding:0 1em 1em 1em;
+  @include border-radius(0 0 1.5em 1.5em);
+  margin-left:1.5em;
+  margin-right:1.5em;
+  overflow:hidden;
+  position:absolute;
+  &:before {
+    content:'';
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    height:8px;
+    background-color:rgba(0, 0, 0, 0.0625);
+  }
+}
+ul.ss-choices {
+  list-style-type:none;
+  padding:0;
+  margin:0;
+  font-size:2em;
+  .giantChecklist & {
+    position:relative;
+    max-height:13em;
+    overflow:scroll;
+    padding:.5em .5em 0;
+  }
+}
+li.ss-choice-item {
+  display:inline-block;
+  margin: .333em 0;
+  vertical-align:top;
+  @media #{$medium-up} {  
+    margin-right:1em;
+  }
+  .giantChecklist & {
+    margin-right: 0;
+    width:98%;
+    @media #{$medium-up} {
+      width: 48%;
+    }
+    label {
+      width:100%;
+    }
+  }
+  label {
+    cursor:pointer;
+  }
+  .radio-button-outer {
+    font-size:0.6em;
+  }
+}
+.ss-choice-label {
+  display:block;
+  padding-left:2em;
+  line-height: 1.1;
+  padding-top: .15em;
+  padding-bottom: .15em;
 }
 
 // Partners Section

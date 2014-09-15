@@ -5820,7 +5820,7 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
 .img-wrap {
   position: relative;
   overflow: hidden;
-  max-width: 500px;
+  max-width: 384px;
   margin: 0 auto;
 }
 .img-wrap .static, .img-wrap:hover .animated, .img-wrap.active .animated {

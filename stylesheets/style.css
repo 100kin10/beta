@@ -6719,6 +6719,21 @@ h4.state {
   }
 }
 
+.tumblr .caption {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4693A5;
+}
+.tumblr .tag {
+  font-family: "omnes-pro", "omnes", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 16px !important;
+  font-weight: 500;
+  color: #BBB;
+}
+.tumblr .post-date {
+  font-family: "omnes-pro", "omnes", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
 /* Assistive text */
 .left-half {
   top: 0;

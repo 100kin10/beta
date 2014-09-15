@@ -1915,6 +1915,28 @@ h4.state {
   }
 }
 
+// ==========================================================================
+// Tumblr
+// ==========================================================================
+
+.tumblr {
+  .caption {
+    font-size: 16px;
+    font-weight: 500;
+    color: $other-blue;
+  }
+  .tag {
+    font-family: $omnes;
+    font-size: 16px!important;
+    font-weight: 500;
+    color: #BBB;
+  }
+  .post-date{
+    font-family: $omnes;
+  }
+}
+
+
 
 
 

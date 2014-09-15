@@ -4852,7 +4852,7 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   padding-bottom: 1em;
 }
 
-footer {
+#footer {
   position: relative;
   min-height: 12.5em;
   background-color: #4693A5;
@@ -4863,14 +4863,14 @@ footer {
   font-size: 1.6em;
 }
 @media only screen and (min-width: 401px) {
-  footer {
+  #footer {
     font-size: 1.3em;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
   }
 }
 @media only screen and (min-width: 641px) {
-  footer {
+  #footer {
     font-size: 1em;
     padding: 0;
   }
@@ -6667,6 +6667,7 @@ h4.state {
   font-size: 1.25em;
   color: #4693A5;
   padding: 0;
+  margin-left: 0;
   list-style-type: none;
 }
 .learn-section-paragraphs ul li {

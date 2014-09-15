@@ -371,7 +371,7 @@ textarea {
 // Footer
 // ==========================================================================
 
-footer {
+#footer {
   position: relative;
   min-height: em-calc(200);
   background-color: $other-blue;
@@ -1872,6 +1872,7 @@ h4.state {
     font-size:1.25em;
     color:$other-blue;
     padding:0;
+    margin-left:0;
     list-style-type:none;
     li { margin-bottom:0.66em; }
   }

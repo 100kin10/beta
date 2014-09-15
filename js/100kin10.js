@@ -68,6 +68,28 @@ function fbs_click($shareurl,$sharetitle) {
 
 $(document).ready(function () {
 
+	// Make tweets out of our markup rather than encoding the URLs the crappy way
+
+	$('.tweet').each(function() {
+		var tweet = $(this).text();
+		var datatweet = $(this).data('tweet');
+			if (datatweet) {
+				tweet = datatweet;
+			}
+		var trimmedtweet = $.trim(tweet);
+		var encodedtweet = encodeURIComponent(trimmedtweet);
+		var hashtags = $(this).data('hashtags');
+			if (!hashtags) {
+				hashtags = '';
+			}
+		var link = 'http://100kin10.github.io/beta/';
+		var dataurl = $(this).data('tweeturl');
+			if (dataurl) {
+				link = dataurl;
+			}
+		var encodedlink = encodeURIComponent(link);
+		$(this).siblings('.tweet-this').attr('href', 'http://twitter.com/intent/tweet?text=' + encodedtweet + '&hashtags=' + hashtags + '&url=' + encodedlink);
+	});
 
 	// Quiz stuff
 	// ----------------------------------------

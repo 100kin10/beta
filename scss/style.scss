@@ -1794,10 +1794,12 @@ h4.state {
 #obama-name{
   display:inline-block;
   color: $yellow;
-  font-size: .7em;
+  font-size: 1.4em;
   font-weight: 500;
 }
 #obama-share {
+  display:block;
+  color:#FFF;
   font-size:1.25em;
   margin:2.5em 0;
   img {

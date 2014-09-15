@@ -61,7 +61,7 @@ for cell in cell_list:
 			  <div class="column large-8 answer-copy">
 			    <h4 class="partner-name">%s</h4>
 			    <p class="partner-info">%s</p>
-			    <a id="learn-more-%s" href="#" class="partner-link">Learn more</a>
+			    <a data-target="#fullscreen-%s" data-toggle="modal" href="#" class="partner-link">Learn more</a>
 			  </div>
 			  <span class="column large-3 large-offset-1 answer-copy-location-contact">
 			    <h5 class="partner-info-header">Location</h5>
@@ -69,41 +69,43 @@ for cell in cell_list:
 			    <h5 class="partner-info-header">Website</h5>
 			    <p class="partner-info"><a href="http://woodrow.org/fellowships/ww-teaching-fellowships/">Woodrow.org</a></p>
 			  </span>
-			  <section id="fullscreen-%s" class="fullscreen_hide fullscreen">
-			    <div class="row">
-			      <div class="column small-12 extra-spacer">
-			        <a href="#" class="close"><img src="img/close.svg" alt="close"></a>
+			  <section id="fullscreen-%s" class="modal fade" aria-hidden="true" role="dialog" tabindex="-1">
+			    <div class="modal-dialog">
+			      <div class="row">
+			        <div class="column small-12 extra-spacer">
+			          <a aria-hidden="true" class="close" data-dismiss="modal" type="button"><img src="img/close.svg" alt="close"></a>
+			        </div>
 			      </div>
-			    </div>
-			    <div class="row">
-			      <div class="partner-listing column small-8">
-			        <h4 class="partner-extra-name">%s</h4>
-			        <p class="partner-extra-body">%s</p>
-			        <a class="partner-extra-visit" href="#">Visit their website</a>
-			        <h5 class="partner-extra-section-header partner-info-header">This program offers:</h5>
-			        <ul class="partner-extra-list">
+			      <div class="row">
+			        <div class="partner-listing column small-8">
+			          <h4 class="partner-extra-name">%s</h4>
+			          <p class="partner-extra-body">%s</p>
+			          <a class="partner-extra-visit" href="#">Visit their website</a>
+			          <h5 class="partner-extra-section-header partner-info-header">This program offers:</h5>
+			          <ul class="partner-extra-list">
+			            %s
+			          </ul>
+			          <h5 class="partner-extra-section-header partner-info-header">Their ideal recruit:</h5>
+			          <ul class="partner-extra-list">
+			            %s
+			          </ul>
+			          <h5 class="partner-extra-section-header partner-info-header">What makes them special is:</h5>
+			          <ul class="partner-extra-list">
+			            %s
+			          </ul>
+			          <h5 class="partner-extra-section-header partner-info-header">If you want to learn more check out:</h5>
+			          <ul class="partner-extra-list">
+			            %s
+			          </ul>
+			        </div>
+			        <div class="column small-3 small-offset-1 partner-extra-details">
+			          <h5 class="partner-info-header">Location</h5>
+			          <p class="partner-info partner-extra-details-body">%s</p>
+			          <h5 class="partner-info-header">Website</h5>
+			          <p class="partner-info partner-extra-details-body"><a href="http://woodrow.org/fellowships/ww-teaching-fellowships/">Woodrow.org</a></p>
+			          <h5 class="partner-info-header">Contact</h5>
 			          %s
-			        </ul>
-			        <h5 class="partner-extra-section-header partner-info-header">Their ideal recruit:</h5>
-			        <ul class="partner-extra-list">
-			          %s
-			        </ul>
-			        <h5 class="partner-extra-section-header partner-info-header">What makes them special is:</h5>
-			        <ul class="partner-extra-list">
-			          %s
-			        </ul>
-			        <h5 class="partner-extra-section-header partner-info-header">If you want to learn more check out:</h5>
-			        <ul class="partner-extra-list">
-			          %s
-			        </ul>
-			      </div>
-			      <div class="column small-3 small-offset-1 partner-extra-details">
-			        <h5 class="partner-info-header">Location</h5>
-			        <p class="partner-info partner-extra-details-body">%s</p>
-			        <h5 class="partner-info-header">Website</h5>
-			        <p class="partner-info partner-extra-details-body"><a href="http://woodrow.org/fellowships/ww-teaching-fellowships/">Woodrow.org</a></p>
-			        <h5 class="partner-info-header">Contact</h5>
-			        %s
+			        </div>
 			      </div>
 			    </div>
 			  </section>

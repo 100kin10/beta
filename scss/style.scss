@@ -14,10 +14,10 @@ Version:        0.1.0
 @import "foundation/components/block-grid";
 @import "foundation/components/grid";
 @import "foundation/components/offcanvas";
-@import "foundation/components/reveal";
 @import "foundation/components/visibility";
 
-@import 'mixins';
+@import "mixins";
+@import "modals"; //Bootstrap modals
 
 // Colors
 $pink: #E8606E;
@@ -251,7 +251,7 @@ textarea {
   margin-top:-0.46em;
   margin-left:-0.46em;
   @include border-radius(100%);
-  background:$blue;
+  background:$other-blue;
   z-index:2;
   display:none;
   label:hover &, .checked &, &.checked {
@@ -1562,16 +1562,20 @@ li.ss-choice-item {
 
 #partners-list {
   background-color: $other-blue;
-  padding:4em 0;
+  padding:6em 0 8em;
   h2 {
     color: #fff;
     font-size: 4.5em;
+    margin-bottom: .6em;
     font-weight: 600;
     line-height:1;
   }
 }
-.partner-header-container {
-  padding-bottom:.5em;
+#partner-header-container {
+  padding-bottom:5em;
+}
+#partner-list-header-paragraph {
+  font-size:1.75em;
 }
 .partners-list-container{
   background-color: #FFF;
@@ -1634,25 +1638,7 @@ h4.state {
 // Partners Overlay
 // ------------------------------------------------------
 
-.fullscreen {
-  .partner-listing {
-    font-family:$tisa;
-  }
-  &.fullscreen_hide{
-    display: none;
-  }
-  &.fullscreen_show{
-    @include opacity(1);
-    background-color: #fff;
-    width: 100%;
-    height: 100%; 
-    z-index: 9999;
-    top: 0; 
-    left: 0; 
-    right: 0;
-    bottom: 0;
-    position: fixed; 
-  }
+.modal {
   > .row {
     max-width:$row-width;
     margin:0 auto;
@@ -1663,18 +1649,30 @@ h4.state {
     font-size:1em;
     margin:0.5em 0;
   }
+  ul {
+    font-size:1em;
+  }
   .extra-spacer {
-    margin-top:20px;
-    margin-bottom:10px;
+    margin-top: 2em;
+    margin-bottom: 3em;
   }
 }
 .partner-listing {
-  font-size:15px;
+  font-size:1.125em;
+  font-family:$tisa;
+  color:#555;
+  .partner-info-header {
+    margin:2em 0 1.5em;
+  }
+}
+.partner-extra-details {
+  font-size:1.125em;
 }
 .partner-extra-name{
   color:$other-blue;
   font-size: 1.75em;
   font-weight: 500;
+  margin-bottom: .5em;
 }
 .partner-extra-visit {
   font-family:$omnes;
@@ -1687,9 +1685,10 @@ h4.state {
     margin-bottom:0.4em;
   }  
 }
-.partner-extra-details-body {
+.partner-extra-details-body, .partner-extra-details .partner-extra-body {
   margin-bottom:0;
   color:$other-blue;
+  list-style-type:none;
 }
 
 // Learn More Section

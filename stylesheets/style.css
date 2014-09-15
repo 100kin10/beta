@@ -6733,6 +6733,9 @@ h4.state {
 .tumblr .post-date {
   font-family: "omnes-pro", "omnes", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
+.tumblr .tumblr_controls {
+  top: 53px;
+}
 
 /* Assistive text */
 .left-half {

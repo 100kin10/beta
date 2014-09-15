@@ -4445,6 +4445,7 @@ th.hide-for-touch {
 
 html, body {
   font-size: 8px;
+  font-weight: 500;
 }
 @media only screen and (min-width: 401px) {
   html, body {
@@ -4497,6 +4498,7 @@ a:hover, a:active {
 p {
   font-size: 2em;
   margin: 0;
+  font-weight: 500;
 }
 
 p + p {
@@ -4511,7 +4513,7 @@ small {
 h1, h2, h3, h4, h5, h6 {
   font-family: "omnes-pro", "omnes", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.15;
   margin: 0;
   color: inherit;
@@ -4588,18 +4590,18 @@ h4 {
   text-align: center;
   outline: 0;
   font-size: 1.875em;
-  padding: .2em 1.6em;
+  padding: .1em 1.6em .3em;
   cursor: pointer;
   display: inline-block;
   margin: 0 .16666em;
 }
 .button.large, a.button.large, button.large, input[type="button"].large, input[type="reset"].large, input[type="submit"].large {
   font-size: 2.3125em;
-  padding: .45em 1em;
+  padding: .375em 1em .525em;
 }
 .button.taller, .button.large.taller, a.button.taller, a.button.large.taller, button.taller, button.large.taller, input[type="button"].taller, input[type="button"].large.taller, input[type="reset"].taller, input[type="reset"].large.taller, input[type="submit"].taller, input[type="submit"].large.taller {
-  padding-top: 0.95em;
-  padding-bottom: 0.95em;
+  padding-top: 0.875em;
+  padding-bottom: 1.025em;
   -moz-border-radius: 0.66em;
   -webkit-border-radius: 0.66em;
   border-radius: 0.66em;
@@ -4650,11 +4652,11 @@ input[type="text"], input[type="email"], select, .fake-select, textarea {
 }
 input[type="text"].large, input[type="email"].large, select.large, .large.fake-select, textarea.large {
   font-size: 2.3125em;
-  padding: .45em 1em;
+  padding: .375em 1em .525em;
 }
 input[type="text"].taller, input[type="text"].large.taller, input[type="email"].taller, input[type="email"].large.taller, select.taller, .taller.fake-select, select.large.taller, .large.taller.fake-select, textarea.taller, textarea.large.taller {
-  padding-top: 0.95em;
-  padding-bottom: 0.95em;
+  padding-top: 0.875em;
+  padding-bottom: 1.025em;
   -moz-border-radius: 0.66em;
   -webkit-border-radius: 0.66em;
   border-radius: 0.66em;
@@ -5177,11 +5179,11 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   }
   #playbutton.large {
     font-size: 2.3125em;
-    padding: .45em 1em;
+    padding: .375em 1em .525em;
   }
   #playbutton.taller, #playbutton.large.taller {
-    padding-top: 0.95em;
-    padding-bottom: 0.95em;
+    padding-top: 0.875em;
+    padding-bottom: 1.025em;
     -moz-border-radius: 0.66em;
     -webkit-border-radius: 0.66em;
     border-radius: 0.66em;

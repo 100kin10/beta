@@ -6473,13 +6473,18 @@ h4.state {
 }
 
 #learn-more-links {
+  padding: 0;
+  margin-left: 0;
+  list-style-type: none;
   font-size: 2.5em;
+  color: #4693A5;
+}
+#learn-more-links li {
+  line-height: 1.15;
+  margin-bottom: 1.5em;
 }
 #learn-more-links a {
-  display: block;
-  line-height: 1.15;
   color: #E8606E;
-  margin-bottom: .3em;
 }
 
 #person-top-item {
@@ -6572,11 +6577,13 @@ h4.state {
 #obama-name {
   display: inline-block;
   color: #FBE64F;
-  font-size: .7em;
+  font-size: 1.4em;
   font-weight: 500;
 }
 
 #obama-share {
+  display: block;
+  color: #FFF;
   font-size: 1.25em;
   margin: 2.5em 0;
 }

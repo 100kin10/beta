@@ -78,14 +78,14 @@
   </head>
   <body class="home">
     <div class="off-canvas-wrap" data-offcanvas>
-      <div class="inner-wrap">        <!-- Off Canvas Menu -->
+      <div class="inner-wrap">
+        <!-- Off Canvas Menu -->
         <aside class="left-off-canvas-menu">
-            <!-- whatever you want goes here -->
             <ul>
               <li><a id="left-home" href="index.html" target="_parent">Blow Minds</a></li>
-              <li><a id="left-teach" href="teach.html" target="_parent">Me? A STEM Teacher?</a></li>
-              <li><a id="left-learn" href="learn.html" target="_parent">Why Teachers?</a></li>
-              <li><a id="left-tumblr" href="http://blowmindsteachstem.tumblr.com/" target="_parent">OMFG!!!</a></li>
+              <li><a id="left-teach" href="teach.html" target="_parent">Curious About Teaching?</a></li>
+              <li><a id="left-learn" href="learn.html" target="_parent">Our Back Story</a></li>
+              <li><a id="left-tumblr" href="http://blowmindsteachstem.tumblr.com/" target="_parent">Mind-blowing Blog</a></li>
             </ul>
         </aside>
 
@@ -97,9 +97,9 @@
             <a id="nav-home" href="index.html" target="_parent" class="column medium-2 left-align hide-for-medium-down">Blow Minds</a>
 
             <div class="column medium-8 centered-text hide-for-medium-down">
-              <a id="nav-teach" href="teach.html" target="_parent">Me? A STEM Teacher?</a>
-              <a id="nav-learn" href="learn.html" target="_parent">Why Teachers?</a>
-              <a id="nav-tumblr" href="http://blowmindsteachstem.tumblr.com/" target="_parent">OMFG!!!</a>
+              <a id="nav-teach" href="teach.html" target="_parent">Curious About Teaching?</a>
+              <a id="nav-learn" href="learn.html" target="_parent">Our Back Story</a>
+              <a id="nav-tumblr" href="http://blowmindsteachstem.tumblr.com/" target="_parent">Mind-blowing Blog</a>
             </div>
 
             <div id="share-container" class="column medium-2 right-align  hide-for-medium-down">
@@ -112,57 +112,30 @@
     <section id="video-container">
       <div id="video-container-inner" class="row">
         <div id="video-wrap">
+          <div id="video-click" class="video-click" href="http://youtu.be/9hBIJogkSaU" data-video-id="9hBIJogkSaU">
+            <div id="playbutton" class="pink taller">
+              <span>Watch</span> Our Mind-Blowing Cartoon
+            </div>
+            <div id="the-video" style="display:none">
+              <div class="closebutton">×</div>
+              <div id="the-video-inner"></div>
+            </div>
+          </div>
           <img id="chalkboard" src="img/chalkboard.png"/>
           <img id="chalkboard-mobile" src="img/chalkboard-mobile.png"/>
-          <a class="video-click" href="http://youtu.be/9hBIJogkSaU" data-video-id="9hBIJogkSaU">
-						<div id="the-video" style="display:none"></div>
-	          <div id="playbutton" class="pink taller">
-	            <span>Watch</span> Our Mind-Blowing Cartoon
-	          </div>
-	          <div class="closebutton">×</div>
-	        </a>
         </div>
       </div>
     </section>
 
 		<script type="text/javascript">
+  		// Inject YouTube API script
+  		var tag = document.createElement('script');
+  		tag.src = "//www.youtube.com/player_api";
+  		var firstScriptTag = document.getElementsByTagName('script')[0];
+  		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-		// Inject YouTube API script
-		var tag = document.createElement('script');
-		tag.src = "//www.youtube.com/player_api";
-		var firstScriptTag = document.getElementsByTagName('script')[0];
-		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-		function onYouTubePlayerAPIReady() {
-
-		}
-
-		$(document).ready(function() {
-
-			function videoclick() {
-				$('.video-click').on('click', function(e) {
-					$(this).off('click').removeAttr('href').removeClass('video-click').addClass('video-click-active');
-					vid = $(this).data("video-id");
-					e.preventDefault();
-					$('#playbutton').fadeOut(500, function() {
-						$("#the-video").html('<iframe src="//www.youtube.com/embed/' + vid + '?wmode=transparent&showinfo=0&controls=0&rel=0&autoplay=1&enablejsapi=1" frameborder="0" allowfullscreen></iframe>');
-					});
-					$("#the-video").fadeIn(1000);
-					$(".closebutton").fadeIn(1000);
-				});
-			}
-
-			videoclick();
-
-			$('.closebutton').on('click', function() {
-				$(this).hide( 1, function() {
-					videoclick();
-				});
-				$('#the-video').html('').hide();
-				$('#playbutton').show();
-				$('.video-click-active').removeClass('video-click-active').addClass('video-click');
-			});
-		});
+  		function onYouTubePlayerAPIReady() {
+  		}
 		</script>
 
     <section id="quizinart-container">
@@ -179,251 +152,196 @@
             <div id="quizinart-inner">
 
               <div id="quizinart-intro" class="question-container active">
-                <h2 id="quizinart-title">Wondering what the hell you’re going to do with your totally meaningful world-changing life?</h2>
-                <h3 id="quizinart-subtitle">Take Our 100% Unbiased Science-based Life Quiz.</h3>
-                <h4 id="quizinart-sub-subtitle">(Now With Algorithms!)</h4>
-                <a id="quizinart-start-button" class="button">Begin</a>
+                <h2 id="quizinart-title">Wondering what to do with your life? Need meaningful guidance? There’s an internet quiz for that</h2>
+                <h3 id="quizinart-subtitle">Take Our 100% Unbiased Career Assessment Exam</h3>
+                <h4 id="quizinart-sub-subtitle">(Now With More Algorithms!)</h4>
+                <a id="quizinart-start-button" class="button">Let’s Begin</a>
               </div>
 
               <div id="question-1" class="question-container">
-                <label class="question-number">Question 1/10</label>
-                <div class="question-header">
-                  What’s a good first question for an online quiz?
-                </div>
+                <label class="question-number">Question 1/9</label>
+                <div class="question-header">What’s a good first question for a life-changing internet quiz?</div>
                 <div class="quizinart-selections">
-                  <label class="radio-button-option" data-quip="Welcome to the department of redundancy department.">
+                  <label class="radio-button-option" data-quip="Good choice. We agree.">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    What’s a good first question for an online quiz?
+                    What’s a good first question for a life-changing internet quiz?
                   </label>
-                  <label class="radio-button-option" data-quip="I'm swell, thanks.">
+                  <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Good day, how are you?
+                    Yo, what’s goin’ on?
                   </label>
-                  <label class="radio-button-option" data-quip="Six. I killed Inigo Montoya's father.">
+                  <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
                     How many fingers am I holding up?
                   </label>
-                  <label class="radio-button-option" data-quip="Why does any Universe do anything, really?">
+                  <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Why do you think the Universe came into being?
+                    Do you subscribe to supersymmetry or multiverse theory for explaining the nature of the universe? 
                   </label>
                 </div>
               </div>
 
               <div id="question-2" class="question-container">
-                <label class="question-number">Question 2/10</label>
-                <div class="question-header">
-                  Would you consider yourself a patient person?
-                </div>
+                <label class="question-number">Question 2/9</label>
+                <div class="question-header">Would you consider yourself a patient&nbsp;person?</div>
                 <div class="quizinart-selections">
                   <div class="button-container not-under-paragraph">
-                    <label class="selection-option button long" data-answer="Yes" data-quip="Did you click 'yes' right away? You should totally retake this quiz again.">Yes</label>
-                    <label class="selection-option button long no" data-answer="No" data-quip="Whoa. You, my friend, are a magical being.">No</label>
+                    <label class="selection-option button yes">Yes</label>
+                    <label class="selection-option button no" data-quip="Maybe you’re more patient than you think.">No</label>
                   </div>
                 </div>
               </div>
               
               <div id="question-3" class="question-container">
-                <label class="question-number">Question 3/10</label>
-                <div class="question-header">
-                  Instead of asking you 16 thinly veiled introvert/extrovert questions, we’ll trust you to know yourself and cut to the chase: are you an introvert or an extrovert? 
-                </div>
+                <label class="question-number">Question 3/9</label>
+                <div class="question-header">Instead of asking you 16 thinly veiled introvert/extrovert questions, we’ll trust you to know yourself and cut to the chase: Are you an introvert or an extrovert?</div>
                 <div class="quizinart-selections">
                   <div class="button-container not-under-paragraph">
-                    <label class="selection-option button long" data-answer="1" >Introvert</label>
-                    <label class="selection-option button long" data-answer="2" >Extrovert</label>
+                    <label class="selection-option button long" data-quip="Thanks, that saved us a lot of time.">Introvert</label>
+                    <label class="selection-option button long" data-quip="Thanks, that saved us a lot of time.">Extrovert</label>
                   </div>
                 </div>
               </div>
-              
-<!--               <div id="question-4" class="question-container">
-                <div class="question-header">
-                  Interesting. <br>
-                  How would you rate your experience so far?
-                </div>
-                <div class="quizinart-selections center-align">
-                  <label class="selection-option number-option" data-answer="1">1</label>
-                  <label class="selection-option number-option" data-answer="2">2</label>
-                  <label class="selection-option number-option" data-answer="3">3</label>
-                  <label class="selection-option number-option" data-answer="4">4</label>
-                  <label class="selection-option number-option" data-answer="5">5</label>
-                </div>
-              </div> -->
 
               <div id="question-4" class="question-container">
-                <label class="question-number">Question 4/10</label>
-                <div class="question-header">
-                  What best describes the reasons for your current career track?
-                </div>
+                <label class="question-number">Question 4/9</label>
+                <div class="question-header">What best describes the reasons for your current career&nbsp;track?</div>
                 <div class="quizinart-selections">
                   <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    A strong desire to positively impact the future
+                    A strong desire to positively impact the future.
                   </label>
                   <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Mother and/or Father
+                    Mother and/or Father.
+                  </label>
+                  <label class="radio-button-option" data-quip="Here’s &lt;a href='http://goldmansachs.com/careers' target='_blank'&gt;another site&lt;/a&gt; for when you’re done with this one.">
+                    <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
+                    Moneymoneymoneymoneymoney.
                   </label>
                   <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Moneymoneymoneymoneymoney
+                    “Exhausted all educational opportunities.”
                   </label>
-                  <label class="radio-button-option">
+                  <label class="radio-button-option" data-quip="Yeah, us too.">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Exhausted all educational opportunities
-                  </label>
-                  <label class="radio-button-option">
-                    <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    What is “career track”?
+                    Circus clown made offer I couldn’t refuse.
                   </label>
                 </div>
               </div>
               
               <div id="question-5" class="question-container">
-                <label class="question-number">Question 5/10</label>
-                <div class="question-header">
-                  All hands meetings make me:
-                </div>
+                <label class="question-number">Question 5/9</label>
+                <div class="question-header">What is your opinion of bioluminescence?</div>
                 <div class="quizinart-selections">
                   <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Want to prepare thoroughly! I mean, it says “all hands,” so I should be ready to pitch in
+                    A great band.
                   </label>
                   <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Miss the real world
+                    Icky.
                   </label>
                   <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Want to slap the person who came up with the term “all hands meeting.”
+                    Completely mind-blowing and beautiful.
                   </label>
                   <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Feel sorry for the people who have to attend them all the time.
+                    That word has a lot of consonants.
                   </label>
                 </div>
               </div>
-              
+
               <div id="question-6" class="question-container">
-                <label class="question-number">Question 6/10</label>
-                <div class="question-header">
-                  What is your opinion of bioluminescence?
-                </div>
+                <label class="question-number">Question 6/9</label>
+                <div class="question-header">Which of these activities seem more appealing?</div>
                 <div class="quizinart-selections">
-                  <label class="radio-button-option">
+                  <label class="radio-button-option" data-quip="Hint: All you need are leafy greens and secrets.">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    A great band
+                    Iguana whisperer.
+                  </label>
+                  <label class="radio-button-option" data-quip="We hear that’s not only rewarding, but fun!">
+                    <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
+                    Endowing future generations with the gift of knowledge.
                   </label>
                   <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Icky
+                    Spreadsheets! I love my job because my employer monitors my online activities, and I love my job!
                   </label>
                   <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Completely mind blowing and beautiful
-                  </label>
-                  <label class="radio-button-option">
-                    <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    A word with a lot of consonants
+                    Laying on a beach all day (in crippling debt).
                   </label>
                 </div>
               </div>
 
               <div id="question-7" class="question-container">
-                <label class="question-number">Question 7/10</label>
-                <div class="question-header">
-                  Which of these activities seem more appealing? 
-                </div>
+                <label class="question-number">Question 7/9</label>
+                <div class="question-header">You’re almost done. Computer screens&nbsp;are:</div>
                 <div class="quizinart-selections">
-                  <label class="radio-button-option">
-                    <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Working a mine in Saskatoon, Saskatchewan
-                  </label>
-                  <label class="radio-button-option">
-                    <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Endowing future generations with the gift of knowledge
-                  </label>
-                  <label class="radio-button-option">
-                    <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Filing. Spreadsheets. I love my job because my employer monitors my online activities and I love my job!
-                  </label>
-                  <label class="radio-button-option">
-                    <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Laying on a beach all day (in crippling debt)
-                  </label>
-                </div>
-              </div>
-
-              <div id="question-8" class="question-container">
-                <label class="question-number">Question 8/10</label>
-                <div class="question-header">
-                  Computer screens are:
-                </div>
-                <div class="quizinart-selections">
-                  <label class="radio-button-option">
+                  <label class="radio-button-option" data-quip="This is where you live? Cuz it’s kinda filthy in here.">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
                     Where I live. 
                   </label>
                   <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Really nasty when they get those grease and oil streaks on them
+                    Really nasty when they get those grease and oil streaks on them.
                   </label>
                   <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Only one of many windows into the world
+                    Only one of many windows into the world.
+                  </label>
+                  <label class="radio-button-option" data-quip="It’s okay. Breathe. You’re just high. It will pass. Here’s a really easy one to answer:">
+                    <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
+                    But you are my screen. Why would you ask me what you are? Screen? What’s happening?
+                  </label>
+                </div>
+              </div>
+
+              <div id="question-8" class="question-container">
+                <label class="question-number">Question 8/9</label>
+                <div class="question-header">Which do you&nbsp;prefer?</div>
+                <div class="quizinart-selections">
+                  <label class="radio-button-option">
+                    <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
+                    Working with others (like a teacher guiding a roomful of students through a lesson).
                   </label>
                   <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    But you are my screen. Why would you ask me what you are? Screen? What’s happening? 
+                    Working alone (as in, for instance, a teacher grading papers or crafting a lesson plan).
                   </label>
                   <label class="radio-button-option">
                     <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    It’s okay. Breathe. If you are high, you should go outside and come back when you’ve chilled out a little. 
+                    Both (see: a teacher).
                   </label>
                 </div>
               </div>
 
               <div id="question-9" class="question-container">
-                <label class="question-number">Question 9/10</label>
-                <div class="question-header">
-                  Which do you prefer? 
-                </div>
-                <div class="quizinart-selections">
-                  <label class="radio-button-option">
-                    <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Working with others (like a teacher guiding a roomful of students through a lesson)
-                  </label>
-                  <label class="radio-button-option">
-                    <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Working alone (as in, for instance, a teacher grading papers or crafting a lesson plan)
-                  </label>
-                  <label class="radio-button-option">
-                    <div class="radio-button-outer"><div class="radio-button-inner"></div></div>
-                    Both (see: a teacher)
-                  </label>
-                </div>
-              </div>
-
-              <div id="question-10" class="question-container">
-                <label class="question-number">Question 10/10</label>
-                <div class="question-header">
-                  Have you ever taught anybody anything? You’ve experienced that moment when the light goes on and you’ve literally altered somebody’s brain with the information you’ve shared? That’s pretty cool, right?
-                </div>
+                <label class="question-number">Question 9/9</label>
+                <div class="question-header">Final, totally non-leading question: Have you ever taught anybody anything? You know that moment when the light goes on and you’ve literally altered somebody’s brain with the information you’ve shared? That’s pretty cool, right? </div>
                 <div class="quizinart-selections">
                   <div class="button-container not-under-paragraph">
-                    <label class="selection-option button long" data-answer="Yes" >Yes</label>
-                    <label class="selection-option button long no" data-answer="No" >No</label>
+                    <label class="selection-option button yes">Yes</label>
+                    <label class="selection-option button no"><span class="or-no">No</span><span class="or-yes">Yes</span></label>
                   </div>
                 </div>
               </div>
 
-              <div id="question-19" class="question-container">
-                <div class="final-statement">
-                  <h3>You should be a STEM Teacher!</h3>
-                  <p>Wow. Would you believe it? Our highly advanced, totally legit algorithms suggest you would make for a great science, technology, engineering, or math teacher! And wouldn’t you know it, we have incredible resources to get you started down that path right here on this site.</p>
-                  <p>Share your results with the world, scroll on down to explore how to become a STEM teacher.</p>
-                  <a class="button large share"><img src="img/share-facebook-blue.svg" alt=""> Share on Facebook</a>
-                  <a class="button large share"><img src="img/share-twitter-blue.svg" alt=""> Share on Twitter</a>
+              <div id="processing" class="question-container center-align">
+                <h3>Science Is Happening...</h3>
+                <div class="loader"></div>
+              </div>
+
+              <div id="final-statement" class="question-container">
+                <p>Our highly objective, mathnologically advanced supercomputers suggest you&nbsp;try:</p>
+                <p class="large">Teaching STEM (science, tech, engineering, or math)</p>
+                <p>Coincidentally, this site is chock-full of resources to get you started down that path. Man, that is so lucky and convenient for you!</p>
+                <p>Tell the world that this internet quiz is the best internet quiz. Then scroll down to begin your new life as a STEM teacher.</p>
+                <div class="center-align">
+                  <a class="button large share blue"><img src="img/share-facebook-blue.svg" alt=""> Share on Facebook</a>
+                  <a class="button large share blue"><img src="img/share-twitter-blue.svg" alt=""> Share on Twitter</a>
                 </div>
               </div>
           
@@ -440,15 +358,15 @@
           <img id="figure1" src="img/figure1.png" alt="">
         </div>
         <div class="column medium-10 medium-centered xlarge-7 xlarge-uncentered">
-          <h3>Are you a Science, Technology, Engineering, or Math (STEM) Major?</h3>
+          <h3>STEM Majors Stop Here! Everybody Else Keep Scrolling.</h3>
 
-          <p>The number one most bestest thing you can do for the world is teach STEM. You could build a giant brain army to solve all of the future’s problems. Teachers are better than everyone else. Their farts don’t even stink.*</p>
+          <p>If you are/were a science, tech, engineering, or math major, you can harness your knowledge and use it to blow minds. Help us create a super genius brain army* to unleash on the future. You know, teaching.</p>
 
           <div class="clearfix">
-            <a id="handoff-button" href="teach.html" target="_parent" class="button large taller">Learn More about Teaching STEM</a>
+            <a id="handoff-button" href="teach.html" target="_parent" class="button taller">See If Teaching Is Maybe Possibly For You</a>
           </div>
   
-          <p class="caveat">*something science is still working on</p>
+          <p class="caveat">*Cerebrally endowed super squadrons also acceptable.</p>
         </div>
 
       </div>
@@ -457,24 +375,24 @@
     <section id="learn-more-outer">
       <div id="learn-more-inner" class="row">
 
-        <h2 id="section-3-sub-header" class="column">Don’t want Americans to be called stupid dumb dumbs by other bully countries? Then help us recruit more STEM teachers</h2>
+        <h2 id="section-3-sub-header" class="column">You can help in this mission to grow smarter as a nation and stop us from getting bullied by that smarty pants Finland.</h2>
 
         <div id="learn-more-content">
           <div class="column large-4">
-            <h3>Minds Don’t Blow Themselves</h3>
-            <p>On the smallest scale, this movement is about one moment. When somebody takes something they find profoundly interesting, and shares it in a way that it becomes profoundly interesting to somebody else. It’s why teachers teach.</p>
+            <h3>Honestly, Every Share Makes A Tangible Difference</h3>
+            <p>The goal is to recruit 100,000 new STEM teachers. Even without a math degree, you have to admit that’s a big number. Fortunately, every shred of exposure increases the likelihood a future teacher discovers this site and begins their journey toward blowing minds professionally.</p>
           </div>
           <div class="column large-4">
-            <h3>The World Don’t Change Itself</h3>
-            <p>On the biggest scale, this movement is about a better future. It’s about connecting the dots between solving problems, finding cures, improving lives, and the educational foundation required to make all those possible.</p>
+            <h3>Who Do You Know That Could Be A Great Teacher?</h3>
+            <p>Do you know anybody majoring in a STEM field, or who recently graduated with a degree in one of those subjects? Are they wondering what to do next? Send them this site then never let them forget how you changed their life for the better.</p>
           </div>
           <div class="column large-4">
-            <h3>We Don't Not Help Yourself</h3>
-            <p>Sorry, our desire for consistency on these headers got a little outta control. Point is, the biggest obstacle most STEM majors face in becoming a great teacher is usually their own ignorance on how easy that process can be. Hence, this site.</p>
+            <h3>Oh, And One Other Thing: Go Hug A Teacher</h3>
+            <p>Everybody’s had a teacher, even if it was the wolf that taught you to howl and never open suspicious emails. And chances are, no matter your age, you still know a teacher or two. These people are heroes, paying it forward for all of humanity. Go on and hug one already! They deserve it.</p>
           </div>
 
           <div class="column center-align">
-            <a id="learn-button" href="learn.html" target="_parent" class="button taller wider">More Background About how America isn’t #1</a>
+            <a id="learn-button" href="learn.html" target="_parent" class="button taller wider">The President Told Us To Tell You To Learn More</a>
           </div>
 
         </div>
@@ -483,7 +401,7 @@
 
     <section id="playground-outer">
       <div id="playground-inner" class="row">
-        <h3 id="section-4-header" class="section-header">A Teacher Taught The Kid That One Day Invented GIFs</h3>
+        <h3 id="section-4-header" class="section-header">Make A GIFerence. Share Some STEM Teaching Love.</h3>
 
         <ul class="large-block-grid-3">
 
@@ -598,7 +516,7 @@
         </ul>
 
         <div class="column center-align">
-          <a id="fun-button" href="http://blowmindsteachstem.tumblr.com/" target="_parent" class="button large taller blue">See more things STEM is responsible for</a>
+          <a id="fun-button" href="http://blowmindsteachstem.tumblr.com/" target="_parent" class="button large taller blue">Like Fun Internet Stuff? There’s More.</a>
         </div>
       </div>
     </section>
@@ -609,7 +527,7 @@
             <div id="footer-communicate" class="column large-4 footer-column">
 
               <div class="footer-column-inner">
-                <h3 class="column large-11 footer-section-header clearfix">The Once-Students Behind This</h3>
+                <h3 class="column large-11 footer-section-header clearfix">The One-Time-Pupils Behind This Campaign</h3>
                 <div class="footer-organization" id="leadingorganization">
                   <h4>Leading Organization</h4>
                   <a href="http://www.100kin10.org/">100KIN10</a>
@@ -620,14 +538,14 @@
                 </div>
                 <div class="footer-organization" id="fundingpartners">
                   <h4>Funding Partners</h4>
-                  <a href="http://www.100kin10.org/">See all 30 Partners</a>
+                  <a href="http://www.100kin10.org/">See all TK Partners</a>
                 </div>
               </div>
             </div>
           
             <div id="footer-social" class="column medium-6 large-4 footer-column">
               <div class="footer-column-inner">            
-                <h3 class="column footer-section-header">A Student of STEM Invented the Following</h3>
+                <h3 class="column footer-section-header">Stem Teachers Made Social Media Possible</h3>
                 <div id="follow-links" class="column">
                   <a class="follow-facebook footer social-link follow-link" href="http://facebook.com" target="_blank"></a>
                   <a class="follow-twitter footer social-link follow-link" href="https://twitter.com" target="_blank"></a>
@@ -637,9 +555,9 @@
           
             <div id="footer-newsletter" class="column medium-6 large-4 footer-column">
               <div class="footer-column-inner">  
-                <h3 class="column footer-section-header">STEM is also responsible for email</h3>  
+                <h3 class="column footer-section-header">Contact Us Via The Wonder Of Technology</h3>  
                 <div id="newsletter-container" class="column">
-                  <a href="mailto:answeringmachine@cultivatedwit.com">Email Questions</a>
+                  <a href="mailto:answeringmachine@cultivatedwit.com">Enter Your Email</a>
                 </div>  
               </div>
             </div>

@@ -177,12 +177,16 @@ h4 {
     padding-right:2em;
   }
   &.blue {
-    color:#FFF;
-    background-color:$blue;
+    color:#FFF!important;
+    background-color:$blue!important;
   }
   &.pink {
-    color:#FFF;
-    background-color:$pink;
+    color:#FFF!important;
+    background-color:$pink!important;
+  }
+  &.other-blue {
+    color:#FFF!important;
+    background-color:$other-blue!important;
   }
 }
 .button, a.button, button, input[type="button"], input[type="reset"], input[type="submit"] {
@@ -230,6 +234,8 @@ textarea {
   height: 2.333em;
   width: 2.333em;
   position: absolute;
+  left:0;
+  top:0;
   @include border-radius(100%);
   background: rgba(#000,.1);
   @include box-shadow(inset 2px 2px 0px 2px rgba(#000, .1));
@@ -245,7 +251,7 @@ textarea {
   margin-top:-0.46em;
   margin-left:-0.46em;
   @include border-radius(100%);
-  background:#FFF;
+  background:$blue;
   z-index:2;
   display:none;
   label:hover &, .checked &, &.checked {
@@ -580,6 +586,7 @@ footer {
 }
 @media #{$large-up} {
   .video-click, .video-click-active {
+    cursor:pointer;
     display: block;
     position: absolute;
     top: 8.6%;
@@ -594,12 +601,21 @@ footer {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
-    background-color:#000;
-    @include border-radius(1em);
-    overflow:hidden;
-    iframe {
-      width: 100%;
-      height: 100%;
+    #the-video-inner {
+      position: absolute;
+      width:100%;
+      height:100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color:#000;
+      @include border-radius(1em);
+      overflow:hidden;
+      iframe {
+        height:100%;
+        width:100%;
+      }
     }
   }
 }
@@ -703,6 +719,7 @@ footer {
   color: #FFF;
   line-height: 1;
   border: 2px solid #FFF;
+  z-index: 1;
   @include border-radius(100%);
   @include box-sizing(content-box);
   &:hover {
@@ -717,7 +734,7 @@ footer {
 /* Base styles */
 
 #quizinart-container{
-  background:$blue;
+  background:$pink;
   background-size: cover;
   position:relative;
   overflow:visible;
@@ -727,7 +744,7 @@ footer {
   @include transition(height 0.4s ease-in-out);
   @include border-radius(em-calc(12));
   border:2px solid #1F1B1C;
-  background:$yellow;
+  background:$pink;
   margin-bottom:em-calc(100);
   position:relative;
   @include box-shadow(7px 10px 0 rgba(#000,0.1));
@@ -738,15 +755,18 @@ footer {
   @include transition(height 0.4s ease-in-out);
   @include border-radius(em-calc(12));
   border:2px solid #1F1B1C;
-  background:$pink;
+  background:$manilla;
   margin:em-calc(5);
   overflow: hidden;
   position: relative;
+  color:$other-blue;
   a {
+    @include box-shadow(0 -2px $other-blue inset);
+  }
+  .button {
+    @include box-shadow(none!important);
     color:#FFF;
-    &.button {
-      color:$other-blue;
-    }
+    background-color:$pink;
   }
   label {
     cursor:pointer;
@@ -776,7 +796,7 @@ footer {
   filter: alpha(opacity=0);
   @include opacity(0);
   left:50%;
-  padding:8% 0 6%;
+  padding:5em 0;
   // @media #{$large-only} {
   //   width: 760px;
   //   margin-left: -380px;
@@ -790,7 +810,7 @@ footer {
   //   margin-left:-450px;
   // }
   .question-number {
-    color:$yellow;
+    color:$blue;
     font-size: 1.25em;
     margin-bottom: .4em;
     cursor: default;
@@ -810,7 +830,6 @@ footer {
   }
 }
 .question-header {
-  color:#FFF;
   text-align:center;
   font-size:em-calc(37);
   text-transform:inherit;
@@ -824,6 +843,15 @@ footer {
   padding-top: em-calc(60);
   &.not-under-paragraph{
     padding-top:0;
+  }
+  .yes, .no {
+    padding: 0.2em;
+    width: 5em;
+    .or-yes { display:none; }
+    &:hover {
+      .or-yes { display:inline; }
+      .or-no { display:none; }
+    }
   }
   .no {
     position:relative;
@@ -909,44 +937,65 @@ footer {
   }
   h2#quizinart-title{
     font-size:3.5em;
-    color:#fff;
     width:100%;
     margin:0.63em 0;
     @media #{$large-up} {
-      font-size:3.9375em;
+      font-size:3.8em;
     }
   }
   h3#quizinart-subtitle{
     font-size:em-calc(28);
-    color:$manilla;
+    color:$blue;
     text-align:center;
     margin-bottom:0.35em;
   }
   h4#quizinart-sub-subtitle{
     font-size:em-calc(16);
-    color:$yellow;
+    text-transform:uppercase;
     text-align:center;
   }
   a.button {
-    color:$pink;
     font-size:em-calc(38);
     margin:0.66em auto;
     cursor:pointer;
     display:inline-block;
   }
 }
-#question-0-1 {
-  padding:18% 0;
+#processing {
+  padding:8em 0;
+  .loader {
+    width: 70px;
+    height: 70px;
+    margin:0 auto;
+    border-style: solid;
+    border-bottom-color: $blue;
+    border-left-color: rgba($blue,.75);
+    border-top-color: rgba($blue,.5);
+    border-right-color: rgba($blue,.25);
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-width:12px;
+  }
+  &.currentQuestion .loader { // Only play animation while slide is active
+    @include animation(rotate 2s linear infinite);
+  }
 }
-#question-19 {
+@include keyframes(rotate) {
+  0% { @include transform(rotate(0deg)); }
+  100% {  @include transform(rotate(360deg)); }
+}
+#final-statement {
   width: 90%;
   margin-left:-45%;
-  padding: 8% 0 4%;
+  font-size:.8em;
   h3 {
     text-align:left;
   }
-  p {
-    margin-bottom:1.5em;
+  p.large {
+    font-size:2.5em;
+  }
+  .center-align {
+    font-size: 1.2em;
   }
   a.button.share {
     color:$blue;
@@ -957,9 +1006,9 @@ footer {
       position: absolute;
       top: 50%;
       left: .25em;
-      height:1.666em;
-      width:1.666em;
-      margin-top: -0.8333em;
+      height:1.5em;
+      width:1.5em;
+      margin-top: -0.75em;
     }
   }
 }
@@ -968,7 +1017,7 @@ footer {
 // ------------------------------------------------------
 
 #tool-handoff {
-  background-color:$blue;
+  background-color:$pink;
   font-weight:500;
   line-height: 1.5;
   padding: em-calc(120) 0 em-calc(80);
@@ -993,6 +1042,7 @@ footer {
   h3 {
     font-size:1.5625em;
     text-align:left;
+    text-transform:uppercase;
     letter-spacing: .04em;
     margin-bottom:2em;
     @media #{$medium-up} {
@@ -1018,7 +1068,7 @@ footer {
 // ------------------------------------------------------
 
 #learn-more-outer {
-  background: $pink;
+  background: $blue;
   min-height: em-calc(650);
   padding:(80em/16) 0 (40em/16);
   @media #{$medium-down} {
@@ -1032,7 +1082,6 @@ footer {
     font-size: em-calc(29);
     font-weight: 500;
     // min-height: em-calc(80);
-    color:$yellow;
     max-width: em-calc(300);
     text-align:left;
   }
@@ -1093,6 +1142,8 @@ footer {
 .img-wrap {
   position:relative;
   overflow:hidden;
+  max-width: 500px;
+  margin: 0 auto;
   .static, &:hover .animated, &.active .animated {
     display:inline;
   }
@@ -1100,27 +1151,22 @@ footer {
     display:none;
   }
   .img-share {
-    padding:2.5% 0 5%;
+    padding:0;
+    position: absolute;
+    right: .5em;
+    bottom: .5em;
+    @media #{$large-up} {
+      bottom:-5em;
+    }
+    @include transition(all .2s ease-in);
     img {
-      margin: 0 1.5%;
-      max-width: 20%;
-      width: 9em;      
+      margin: 0 2px;
+      max-width: inherit;
+      width:45px;
+      height:45px;
     }
   }
   @media #{$large-up} {
-    .img-share {
-      padding:0;
-      position: absolute;
-      right: .5em;
-      bottom:-5em;
-      @include transition(all .2s ease-in);
-      img {
-        margin: 0 2px;
-        max-width: inherit;
-        width:30px;
-        height:30px;
-      }
-    }
     &:hover {
       .img-share {
         bottom: .5em;
@@ -1170,15 +1216,15 @@ footer {
 }
 #teaching-large-paragraph {
   color:$blue;
-  font-size:2em;
+  font-size:1.9em;
   font-weight:400;
   margin-bottom: 1.4em;
   @media #{$large-up} {
-    font-size:1.7em;
+    font-size:1.6em;
     margin-bottom:.6em;
   }
   @media #{$xlarge-up} {
-    font-size:1.3em;
+    font-size:1.14em;
     margin-bottom:0;
   }
 
@@ -1480,6 +1526,7 @@ ul.ss-choices {
 }
 li.ss-choice-item {
   display:inline-block;
+  position:relative;
   margin: .333em 0;
   vertical-align:top;
   @media #{$medium-up} {  

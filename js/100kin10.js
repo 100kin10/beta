@@ -26,10 +26,9 @@ if ($.browser.mozilla) {
 $(window).load(responsivequery);
 $(window).resize(responsivequery);
 
-function responsivequery() {
-  /* getting viewport width */
-  var responsive_viewport = $(window).width() + scrollBarWidth;
 
+function responsivequery() {
+  var responsive_viewport = $(window).width() + scrollBarWidth;
   var socialbuttons = $("#quizinart-share-buttons");
 
 	$introHeight = $('#quizinart-intro.active').outerHeight(true);
@@ -48,7 +47,7 @@ function responsivequery() {
   if (responsive_viewport < 640) {
 		if (socialbuttons.hasClass('largescreen')) {
 			socialbuttons.detach();
-			socialbuttons.appendTo('#video-container-inner').removeClass('largescreen').addClass('smallscreen');
+			socialbuttons.insertAfter('#video-click').removeClass('largescreen').addClass('smallscreen');
 		}
   }
 
@@ -68,6 +67,101 @@ function fbs_click($shareurl,$sharetitle) {
 
 
 $(document).ready(function () {
+
+
+	// Quiz stuff
+	// ----------------------------------------
+
+	function quizinart() {
+
+		$('#quizinart-start-button').on( 'click', function(e) {
+
+			$container = $('#quizinart-intro')
+			$nextQuestion = $container.next( '.question-container' );
+			$nextQuestionHeight = $nextQuestion.outerHeight('true');
+
+			$container.removeClass('currentQuestion').addClass('inactive').removeClass('active');
+			$('#quizinart-inner').height($nextQuestionHeight);
+			$nextQuestion.addClass('currentQuestion');
+
+		});
+
+		$('.quizinart-selections label').on( 'click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			
+			var quip = $(this).data('quip');
+			if (!quip) {
+				quip = ' ';
+			}
+			$container = $(this).closest('.question-container');
+			$nextQuestion = $container.next('.question-container');
+
+			$container.removeClass('currentQuestion');
+			$nextQuestion.addClass('currentQuestion').find('.question-header').prepend(quip + ' ');
+
+			$nextQuestionHeight = $nextQuestion.outerHeight('true'); //Important to define this AFTER the previous question's intro has been prepended.
+			$('#quizinart-inner').height($nextQuestionHeight);
+
+			if ($nextQuestion.is('#processing')) {
+		    setTimeout(function(){
+					$container = $('#processing');
+					$nextQuestion = $container.next('.question-container');
+					$container.removeClass('currentQuestion');
+					$nextQuestion.addClass('currentQuestion');
+					$nextQuestionHeight = $nextQuestion.outerHeight('true');
+					$('#quizinart-inner').height($nextQuestionHeight);
+		    },4000);
+			}
+
+		});
+
+		var list = $("#question-2 .button-container");
+		//make default state _not_ a special case by adding a class to it
+		$("label:not(.one,.two,.three,.four)", list).addClass("default"); 
+		//declare cycle transition function
+		var cycleClass = function(classFrom, classTo){
+			list.delegate("label.no."+classFrom, "mouseover", function(){
+				$(this).toggleClass(classFrom + " " + classTo);
+			});
+		};
+		cycleClass("default", "two");
+		cycleClass("one", "two");
+    cycleClass("two", "three");
+		cycleClass("three", "four");
+		cycleClass("four", "default");
+
+	}
+
+	quizinart();
+
+	// YouTube video on main page
+	// ----------------------------------------
+
+	function videoclick() {
+		$('#video-click').on('click', function(e) {
+			$(this).off('click').removeAttr('href').removeClass('video-click').addClass('video-click-active');
+			vid = $(this).data("video-id");
+			e.preventDefault();
+			$('#playbutton').fadeOut(500, function() {
+				$('#the-video-inner').html('<iframe src="//www.youtube.com/embed/' + vid + '?wmode=transparent&showinfo=0&controls=0&rel=0&autoplay=1&enablejsapi=1" frameborder="0" allowfullscreen></iframe>');
+			});
+			$('#the-video').fadeIn(1000);
+			$('.closebutton').fadeIn(1000);
+		});
+
+		$('.closebutton').on('click', function() {
+			$('#the-video').hide( 1, function() {
+				videoclick();
+				$(this).css('overflow', 'visible');
+			});
+			$('#the-video-inner').html('');
+			$('#playbutton').show();
+			$('.video-click-active').removeClass('video-click-active').addClass('video-click');
+		});
+	}
+
+	videoclick();
 
 	// Find the select boxes and change them to fancy fake select boxes and radio buttons
 	// ----------------------------------------
@@ -159,11 +253,7 @@ $(document).ready(function () {
 	  $questionNumber++;
 	  $(this).prepend('<label class="question-number">Question ' + $questionNumber + '</label>');
 	});
-	$('.question-number').append('/' + $questionNumber);
-
-
-// <label class="question-number">Question 2/5</label>
-
+	$('.ss-form-question .question-number').append('/' + $questionNumber);
 
 
 
@@ -317,57 +407,6 @@ $(document).ready(function () {
 		$('#partner-contact-form').toggleClass('open');
 		$('#partner-contact-form').toggleClass('closed');
 	});
-		
-		
-
-
-
-	function quizinart() {
-
-		$('#quizinart-start-button').on( 'click', function(e) {
-
-			$container = $('#quizinart-intro')
-			$nextQuestion = $container.next( '.question-container' );
-			$nextQuestionHeight = $nextQuestion.outerHeight('true');
-
-			$container.removeClass('currentQuestion').addClass('inactive').removeClass('active');
-			$('#quizinart-inner').height($nextQuestionHeight);
-			$nextQuestion.addClass('currentQuestion');
-
-		});
-
-		$('.quizinart-selections label').on( 'click', function(e) {
-			e.preventDefault();
-			e.stopPropagation();
-			
-			$quip = $(this).data('quip');
-			$container = $(this).closest('.question-container');
-			$nextQuestion = $container.next('.question-container');
-
-			$container.removeClass('currentQuestion');
-			$nextQuestion.addClass('currentQuestion').find('.question-header').prepend($quip);
-
-			$nextQuestionHeight = $nextQuestion.outerHeight('true'); //Important to define this AFTER the previous question's intro has been prepended.
-			$('#quizinart-inner').height($nextQuestionHeight);
-
-		});
-
-		var list = $(".button-container");
-		//make default state _not_ a special case by adding a class to it
-		$("label:not(.one,.two,.three,.four)", list).addClass("default"); 
-		//declare cycle transition function
-		var cycleClass = function(classFrom, classTo){
-			list.delegate("label.no."+classFrom, "mouseover", function(){
-				$(this).toggleClass(classFrom + " " + classTo);
-			});
-		};
-		cycleClass("default", "two");
-		cycleClass("one", "two");
-    cycleClass("two", "three");
-		cycleClass("three", "four");
-		cycleClass("four", "default");
-
-	};
 	
 	init();
 

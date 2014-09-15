@@ -1144,26 +1144,35 @@ textarea {
     }
   }
 }
+@media #{$medium-down} {
+  .playground-gif {
+    max-width: 384px; 
+    margin:0 auto; 
+  }
+}
 .img-wrap {
   position:relative;
   overflow:hidden;
-  max-width: 384px;
   margin: 0 auto;
-  .static, &:hover .animated, &.active .animated {
-    display:inline;
+  height:0;
+  padding-bottom:100%;
+  .static, .animated {
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
   }
-  .animated, &:hover .static, &.active .static {
-    display:none;
+  .static, &:hover .animated, &.active .animated {
+    z-index:1;
   }
   .img-share {
     padding:0;
     position: absolute;
-    right: .5em;
-    bottom: .5em;
-    @media #{$large-up} {
-      bottom:-5em;
-    }
+    right: 1em;
+    bottom: 1em;
+    z-index:2;
     @include transition(all .2s ease-in);
+    @media #{$large-up} { bottom:-5em; }
     img {
       margin: 0 2px;
       max-width: inherit;
@@ -1174,7 +1183,7 @@ textarea {
   @media #{$large-up} {
     &:hover {
       .img-share {
-        bottom: .5em;
+        bottom: 1em;
       }
     }
   }

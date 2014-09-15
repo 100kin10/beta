@@ -5819,23 +5819,34 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   }
 }
 
+@media only screen and (max-width: 640px) {
+  .playground-gif {
+    max-width: 384px;
+    margin: 0 auto;
+  }
+}
 .img-wrap {
   position: relative;
   overflow: hidden;
-  max-width: 384px;
   margin: 0 auto;
+  height: 0;
+  padding-bottom: 100%;
+}
+.img-wrap .static, .img-wrap .animated {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .img-wrap .static, .img-wrap:hover .animated, .img-wrap.active .animated {
-  display: inline;
-}
-.img-wrap .animated, .img-wrap:hover .static, .img-wrap.active .static {
-  display: none;
+  z-index: 1;
 }
 .img-wrap .img-share {
   padding: 0;
   position: absolute;
-  right: .5em;
-  bottom: .5em;
+  right: 1em;
+  bottom: 1em;
+  z-index: 2;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
@@ -5854,7 +5865,7 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
 }
 @media only screen and (min-width: 641px) {
   .img-wrap:hover .img-share {
-    bottom: .5em;
+    bottom: 1em;
   }
 }
 

@@ -1,3 +1,39 @@
+function loadAnimatedImagesOnLoad() {
+	$('.img-wrap img.static').each(function() {
+		var animated2 = $(this).data('animated');
+		$(this).after('<img id="animated" class="animated" src="' + animated2 + '" alt="">')
+	});
+	$('.img-wrap').hover(function() {
+		$this = $(this);
+		onHoverOrClick($this);
+	}, function() {
+		onHoverOrClickOut();
+	});
+}
+
+function loadAnimatedImagesOnClick() {
+	$('.img-wrap').toggle(function() {
+		$this = $(this);
+		onHoverOrClick($this);
+	}, function() {
+		onHoverOrClickOut();
+	});
+}
+
+function onHoverOrClick($this) {
+	$('img#animated').remove();
+	var staticgif = $this.children('img.static');
+	var animated = staticgif.data('animated');
+	staticgif.after('<img id="animated" class="animated" src="' + animated + '" alt="">');
+}
+
+function onHoverOrClickOut() {
+	$('img#animated').remove();
+}
+
+
+
+
 // IE8 polyfill for GetComputed Style (for Responsive Script below)
 if (!window.getComputedStyle) {
     window.getComputedStyle = function(el, pseudo) {
@@ -57,6 +93,14 @@ function responsivequery() {
 			socialbuttons.prependTo('#quizinart-inner-border').removeClass('smallscreen').addClass('largescreen');
 		}
   }
+
+	if (responsive_viewport < 768) {
+		loadAnimatedImagesOnClick();
+	}
+  if (responsive_viewport >= 768) { // iPad and up
+		loadAnimatedImagesOnLoad();
+  }
+
 };
 
 function fbs_click($shareurl,$sharetitle) {
@@ -335,6 +379,7 @@ $(document).ready(function () {
 
 	function init() {
 		// quizinart();
+		disableImageClick();
 		fullScreenSlide();
 		mediaQueryCalculator();	
 		
@@ -421,8 +466,13 @@ $(document).ready(function () {
 			
 		}	
 	}
-	
-	
+
+	function disableImageClick() {
+		$('.img-wrap img').bind('contextmenu', function(e){
+		    return false;
+		});
+	}	
+
 	$('a.open-form').click(function(e) {
 		e.preventDefault();
 		e.stopPropagation();

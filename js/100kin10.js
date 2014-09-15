@@ -312,7 +312,7 @@ $(document).ready(function () {
 	}
 
 	function init() {
-		quizinart();
+		// quizinart();
 		fullScreenSlide();
 		mediaQueryCalculator();	
 		

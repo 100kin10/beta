@@ -3725,6 +3725,105 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/gifs\/1_boom.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 66454,
+		"inputAbbreviatedPath": "\/img\/gifs\/1_boom.png",
+		"outputAbbreviatedPath": "\/img\/gifs\/1_boom.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/gifs\/2_aging.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 42187,
+		"inputAbbreviatedPath": "\/img\/gifs\/2_aging.png",
+		"outputAbbreviatedPath": "\/img\/gifs\/2_aging.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/gifs\/3_hug.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 95099,
+		"inputAbbreviatedPath": "\/img\/gifs\/3_hug.png",
+		"outputAbbreviatedPath": "\/img\/gifs\/3_hug.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/gifs\/4_code.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21411,
+		"inputAbbreviatedPath": "\/img\/gifs\/4_code.png",
+		"outputAbbreviatedPath": "\/img\/gifs\/4_code.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/gifs\/5_runner.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 61141,
+		"inputAbbreviatedPath": "\/img\/gifs\/5_runner.png",
+		"outputAbbreviatedPath": "\/img\/gifs\/5_runner.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/gifs\/6_jane.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 48009,
+		"inputAbbreviatedPath": "\/img\/gifs\/6_jane.png",
+		"outputAbbreviatedPath": "\/img\/gifs\/6_jane.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/gifs\/7_future.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 57881,
+		"inputAbbreviatedPath": "\/img\/gifs\/7_future.png",
+		"outputAbbreviatedPath": "\/img\/gifs\/7_future.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/gifs\/8_rollerskate.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 32419,
+		"inputAbbreviatedPath": "\/img\/gifs\/8_rollerskate.png",
+		"outputAbbreviatedPath": "\/img\/gifs\/8_rollerskate.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/gifs\/9_fish.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 49656,
+		"inputAbbreviatedPath": "\/img\/gifs\/9_fish.png",
+		"outputAbbreviatedPath": "\/img\/gifs\/9_fish.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/gifs\/adventure-time.png": {
 		"fileType": 32768,
 		"ignore": 0,

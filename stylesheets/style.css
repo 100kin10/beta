@@ -6756,6 +6756,13 @@ h4.state {
 .tumblr .tumblr_controls {
   top: 53px;
 }
+.tumblr .blog-title .other-blue {
+  font-weight: 300;
+}
+.tumblr .blog-title .other-blue a {
+  font-weight: 500;
+  color: #E8606E;
+}
 
 /* Assistive text */
 .left-half {

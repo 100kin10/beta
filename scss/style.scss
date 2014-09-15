@@ -1958,6 +1958,15 @@ h4.state {
   .tumblr_controls {
     top:53px;
   }
+  .blog-title {
+    .other-blue {
+      font-weight:300;
+      a {
+        font-weight:500;
+        color:$pink;
+      }
+    }
+  }
 }
 
 

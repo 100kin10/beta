@@ -1,3 +1,34 @@
+function resetQuizHeightOnScreenResize() {
+	$introHeight = $('#quizinart-intro.active').outerHeight(true);
+
+	if ($introHeight) {
+		// alert($introHeight);
+		$('#quizinart-inner').height($introHeight);
+		$('#quizinart-intro').addClass('currentQuestion');
+	}
+	else {
+		$('.currentQuestion').height('auto');
+		$currentHeight = $('.currentQuestion').outerHeight(true);
+		$('#quizinart-inner').height($currentHeight);
+	}
+}
+
+var socialbuttons = $("#quizinart-share-buttons");
+
+function moveSocialButtons_smallScreen() {
+	if (socialbuttons.hasClass('largescreen')) {
+		socialbuttons.detach();
+		socialbuttons.insertAfter('#video-click').removeClass('largescreen').addClass('smallscreen');
+	}
+}
+
+function moveSocialButtons_largeScreen() {
+	if (socialbuttons.hasClass('smallscreen')) {
+		socialbuttons.detach();
+		socialbuttons.prependTo('#quizinart-inner-border').removeClass('smallscreen').addClass('largescreen');
+	}
+}
+
 function loadAnimatedImagesOnLoad() {
 	$('.img-wrap img.static').each(function() {
 		var animated2 = $(this).data('animated');
@@ -65,42 +96,22 @@ $(window).resize(responsivequery);
 
 function responsivequery() {
   var responsive_viewport = $(window).width() + scrollBarWidth;
-  var socialbuttons = $("#quizinart-share-buttons");
 
-	$introHeight = $('#quizinart-intro.active').outerHeight(true);
-
-	if ($introHeight) {
-		// alert($introHeight);
-		$('#quizinart-inner').height($introHeight);
-		$('#quizinart-intro').addClass('currentQuestion');
-	}
-	else {
-		$('.currentQuestion').height('auto');
-		$currentHeight = $('.currentQuestion').outerHeight(true);
-		$('#quizinart-inner').height($currentHeight);
-	}
+  // Do these things every time the screen is resized, at every size
+	resetQuizHeightOnScreenResize();
 
   if (responsive_viewport < 640) {
-		if (socialbuttons.hasClass('largescreen')) {
-			socialbuttons.detach();
-			socialbuttons.insertAfter('#video-click').removeClass('largescreen').addClass('smallscreen');
-		}
+		moveSocialButtons_smallScreen();
   }
-
   if (responsive_viewport >= 640) {
-		if (socialbuttons.hasClass('smallscreen')) {
-			socialbuttons.detach();
-			socialbuttons.prependTo('#quizinart-inner-border').removeClass('smallscreen').addClass('largescreen');
-		}
+		moveSocialButtons_largeScreen();
   }
-
 	if (responsive_viewport < 768) {
 		loadAnimatedImagesOnClick();
 	}
   if (responsive_viewport >= 768) { // iPad and up
 		loadAnimatedImagesOnLoad();
   }
-
 };
 
 function fbs_click($shareurl,$sharetitle) {

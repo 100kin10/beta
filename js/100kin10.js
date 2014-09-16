@@ -198,7 +198,7 @@ $(document).ready(function () {
 		$("label:not(.one,.two,.three,.four)", list).addClass("default"); 
 		//declare cycle transition function
 		var cycleClass = function(classFrom, classTo){
-			list.delegate("label.no."+classFrom, "mouseover", function(){
+			list.delegate("label.yes."+classFrom, "mouseover", function(){
 				$(this).toggleClass(classFrom + " " + classTo);
 			});
 		};

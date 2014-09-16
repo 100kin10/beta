@@ -5470,7 +5470,7 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
 .button-container .yes:hover .or-no, .button-container .no:hover .or-no {
   display: none;
 }
-.button-container .no {
+.button-container .yes {
   position: relative;
   -moz-transition: all 0.05s ease-in-out;
   -o-transition: all 0.05s ease-in-out;
@@ -5479,19 +5479,19 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   top: 0;
   left: 0;
 }
-.button-container .no.one {
+.button-container .yes.one {
   top: 2em;
   left: 0;
 }
-.button-container .no.two {
+.button-container .yes.two {
   top: -3em;
   left: 1em;
 }
-.button-container .no.three {
+.button-container .yes.three {
   top: 1em;
   left: -1em;
 }
-.button-container .no.four {
+.button-container .yes.four {
   top: 3em;
   left: 0;
 }
@@ -5665,7 +5665,9 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   text-align: left;
 }
 #final-statement p.large {
+  text-align: center;
   font-size: 2.5em;
+  font-weight: 600;
 }
 #final-statement .center-align {
   font-size: 1.2em;

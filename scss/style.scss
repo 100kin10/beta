@@ -858,7 +858,7 @@ textarea {
       .or-no { display:none; }
     }
   }
-  .no {
+  .yes {
     position:relative;
     @include transition(all .05s ease-in-out);
     top:0;
@@ -997,7 +997,9 @@ textarea {
     text-align:left;
   }
   p.large {
+    text-align:center;
     font-size:2.5em;
+    font-weight:600;
   }
   .center-align {
     font-size: 1.2em;

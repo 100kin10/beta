@@ -5792,6 +5792,9 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
     font-size: 1em;
   }
 }
+#learn-more-content p a {
+  color: #FBE64F;
+}
 
 #playground-outer {
   background: #FFF;

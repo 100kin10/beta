@@ -1107,6 +1107,7 @@ textarea {
   .button {
     margin:0.666em 0;
   }
+  a {}
 }
 #learn-more-content {
   font-size:1.2em;
@@ -1117,6 +1118,7 @@ textarea {
   @media #{$xlarge-up} {
     font-size:1em;
   }
+  p a { color:$yellow; }
 }
 
 // Playground Section

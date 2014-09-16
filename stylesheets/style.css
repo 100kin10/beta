@@ -4736,7 +4736,7 @@ textarea {
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%;
-  background: #4693A5;
+  background: #FFF;
   z-index: 2;
   display: none;
 }
@@ -5055,8 +5055,7 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   margin-top: -.15em;
   line-height: 1;
   color: white;
-  font-size: 2.25em;
-  text-transform: uppercase;
+  font-size: 1.6em;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   filter: alpha(opacity=70);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -5322,7 +5321,7 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
 
 /* Base styles */
 #quizinart-container {
-  background: #E8606E;
+  background: #2BBFEF;
   background-size: cover;
   position: relative;
   overflow: visible;
@@ -5338,7 +5337,7 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   -webkit-border-radius: 0.75em;
   border-radius: 0.75em;
   border: 2px solid #1F1B1C;
-  background: #E8606E;
+  background: #FBE64F;
   margin-bottom: 6.25em;
   position: relative;
   -moz-box-shadow: 7px 10px 0 rgba(0, 0, 0, 0.1);
@@ -5357,11 +5356,11 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   -webkit-border-radius: 0.75em;
   border-radius: 0.75em;
   border: 2px solid #1F1B1C;
-  background: #F4F0D7;
+  background: #E8606E;
   margin: 0.3125em;
   overflow: hidden;
   position: relative;
-  color: #4693A5;
+  color: #FFF;
 }
 #quizinart-inner a {
   -moz-box-shadow: 0 -2px #4693A5 inset;
@@ -5369,11 +5368,10 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   box-shadow: 0 -2px #4693A5 inset;
 }
 #quizinart-inner .button {
+  color: #4693A5;
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  color: #FFF;
-  background-color: #E8606E;
 }
 #quizinart-inner label {
   cursor: pointer;
@@ -5419,7 +5417,7 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   padding: 5em 0;
 }
 .question-container .question-number {
-  color: #2BBFEF;
+  color: #FBE64F;
   font-size: 1.25em;
   margin-bottom: .4em;
   cursor: default;
@@ -5584,16 +5582,18 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
 }
 #quizinart-intro h3#quizinart-subtitle {
   font-size: 1.75em;
-  color: #2BBFEF;
+  color: #F4F0D7;
   text-align: center;
   margin-bottom: 0.35em;
 }
 #quizinart-intro h4#quizinart-sub-subtitle {
   font-size: 1em;
+  color: #FBE64F;
   text-transform: uppercase;
   text-align: center;
 }
 #quizinart-intro a.button {
+  color: #E8606E;
   font-size: 2.375em;
   margin: 0.66em auto;
   cursor: pointer;
@@ -5608,10 +5608,10 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   height: 70px;
   margin: 0 auto;
   border-style: solid;
-  border-bottom-color: #2BBFEF;
-  border-left-color: rgba(43, 191, 239, 0.75);
-  border-top-color: rgba(43, 191, 239, 0.5);
-  border-right-color: rgba(43, 191, 239, 0.25);
+  border-bottom-color: #FBE64F;
+  border-left-color: rgba(251, 230, 79, 0.75);
+  border-top-color: rgba(251, 230, 79, 0.5);
+  border-right-color: rgba(251, 230, 79, 0.25);
   border-radius: 50%;
   box-sizing: border-box;
   border-width: 12px;
@@ -5663,11 +5663,15 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
 }
 #final-statement h3 {
   text-align: left;
+  font-size: 3.3em;
+  margin-bottom: 1em;
 }
-#final-statement p.large {
-  text-align: center;
-  font-size: 2.5em;
-  font-weight: 600;
+#final-statement h3 span {
+  color: #FBE64F;
+}
+#final-statement p {
+  font-weight: 400;
+  font-size: 1.9em;
 }
 #final-statement .center-align {
   font-size: 1.2em;
@@ -5676,7 +5680,7 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   color: #2BBFEF;
   padding-left: 2.2em;
   position: relative;
-  margin: .2em .4em .2em 0;
+  margin: 2em .4em .2em 0;
 }
 #final-statement a.button.share img {
   position: absolute;
@@ -5688,7 +5692,7 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
 }
 
 #tool-handoff {
-  background-color: #E8606E;
+  background-color: #2BBFEF;
   font-weight: 500;
   line-height: 1.5;
   padding: 7.5em 0 5em;
@@ -5728,7 +5732,8 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   }
 }
 #tool-handoff p {
-  font-size: 2.25em;
+  font-size: 2em;
+  line-height: 1.4;
 }
 #tool-handoff .caveat {
   font-size: 1.25em;
@@ -5742,7 +5747,7 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
 }
 
 #learn-more-outer {
-  background: #2BBFEF;
+  background: #E8606E;
   min-height: 40.625em;
   padding: 5em 0 2.5em;
 }
@@ -5756,15 +5761,16 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   padding-bottom: 0.72727em;
 }
 #learn-more-outer h3 {
+  color: #FBE64F;
   font-size: 1.8125em;
   font-weight: 500;
+  margin-bottom: 1em;
   max-width: 18.75em;
   text-align: left;
 }
 #learn-more-outer p {
   font-family: "ff-tisa-web-pro", "omnes-pro", "omnes", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 1.25em;
-  line-height: 1.8;
+  font-size: 1.1875em;
   font-weight: 500;
   margin-bottom: 2em;
 }
@@ -5894,6 +5900,7 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
 #teaching-large-intro h1 {
   line-height: 0.95;
   margin-top: 5%;
+  margin-bottom: 6%;
   text-align: left;
   font-size: 5.25em;
 }
@@ -6011,8 +6018,9 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
 }
 #teaching-large-content h3 {
   font-size: 2em;
+  font-weight: 400;
   text-align: left;
-  margin-bottom: .66em;
+  margin-bottom: 5.25em;
 }
 #teaching-large-content h3 span {
   color: #EF984A;
@@ -6036,6 +6044,10 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
 @media only screen and (min-width: 641px) {
   #teaching-large-content .button {
     margin: 1.2em 0;
+    position: absolute;
+    bottom: 0;
+    left: .5em;
+    right: .5em;
   }
 }
 #teaching-large-content small {
@@ -6088,26 +6100,22 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   font-size: 3em;
   font-weight: 600;
   line-height: 1;
+  margin-bottom: .5em;
 }
 @media only screen and (min-width: 1025px) {
   #teaching-form h2 {
-    font-size: 3.75em;
-  }
-}
-@media only screen and (min-width: 1025px) {
-  #teaching-form h2 {
-    font-size: 4.625em;
+    font-size: 4.4em;
   }
 }
 #teaching-form p {
-  font-size: 1.4em;
+  font-size: 1.25em;
   color: #FBE64F;
   line-height: 1.75;
 }
 @media only screen and (min-width: 641px) {
   #teaching-form p {
     width: 90%;
-    font-size: 1.25em;
+    font-size: 1.1em;
   }
 }
 
@@ -6346,6 +6354,7 @@ li.ss-choice-item .radio-button-outer, li.ss-choice-item .checkbox-outer {
 
 #partner-list-header-paragraph {
   font-size: 1.75em;
+  font-weight: 400;
 }
 
 .partners-list-container {
@@ -6495,8 +6504,10 @@ h4.state {
   color: #4693A5;
 }
 #learn-more-links li {
-  line-height: 1.15;
-  margin-bottom: 1.5em;
+  line-height: 1.4;
+  margin-bottom: 1.75em;
+  font-size: .6em;
+  font-weight: 400;
 }
 #learn-more-links a {
   color: #E8606E;
@@ -6571,7 +6582,7 @@ h4.state {
   font-weight: 600;
   margin-top: 0.75em;
   margin-bottom: 1.25em;
-  font-size: 2.875em;
+  font-size: 2.5em;
 }
 @media only screen and (min-width: 401px) and (max-width: 640px) {
   #top-person-headline {
@@ -6627,14 +6638,15 @@ h4.state {
 
 .learn-section-headline {
   color: #4693A5;
-  font-size: 3.5em;
+  font-size: 2.25em;
   font-weight: 500;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   margin-top: -0.125em;
+  line-height: 1.3;
 }
 @media only screen and (min-width: 1025px) {
   .learn-section-headline {
-    font-size: 4em;
+    font-size: 2.5em;
   }
 }
 
@@ -6645,7 +6657,7 @@ h4.state {
 
 .learn-section-quote {
   color: #2bbfef;
-  font-size: 2.25em;
+  font-size: 1.875em;
   font-weight: 500;
   margin: 1.5em 0 0.75em;
   line-height: 1.5;

@@ -1,8 +1,8 @@
 /*
 Theme Name:     Blow Minds, Teach Stem
-Theme URI:      http: //ihavenoidea.com/
+Theme URI:      http: //blowmindsteachstem.com/
 Description:    Minds aren't going to blow themselves
-Author:         I Shot Him
+Author:         Cultivated Wit
 Template:       blow-minds-teach-stem
 Version:        0.1.0
 */
@@ -5075,19 +5075,51 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
 }
 
 #video-container {
-  background: #F4F0D7;
-  padding-top: 48px;
-  padding-bottom: 14%;
+  background: #3B4044;
+  padding-top: 88px;
+  padding-bottom: 20%;
 }
+
+img#video-header{
+	margin-bottom:32px;
+}
+
+
+@media only screen and (min-width: 401px) {
+    #video-container {
+      padding-bottom: 100px;
+    }
+}
+
 @media only screen and (min-width: 641px) {
   #video-container {
-    padding-bottom: 0;
+    padding-bottom: 130px;
   }
 }
+
+@media only screen and (min-width: 1025px) {
+  #video-container {
+	  padding-bottom: 250px;
+  }
+}
+
 
 #video-container-inner {
   position: relative;
   text-align: center;
+}
+
+#video-share-buttons{
+	margin-top:30px;
+}
+
+#video-share-buttons a{
+	display:inline-block;
+	padding:0 10px;
+}
+
+#share-text{
+	padding-bottom:10px;
 }
 
 #video-wrap, #video-wrap-active {
@@ -6202,6 +6234,17 @@ label:hover .checkbox-inner, .checked .checkbox-inner, .checkbox-inner.checked {
   color: #FFF;
   margin-bottom: 0.333em;
   line-height: 1.25;
+}
+#form-container .submit a {
+  color: #FBE64F;
+}
+#form-container .submit.confirmation h2 {
+  font-size: 2.5em;
+  font-weight: 500;
+}
+#form-container .submit.confirmation p {
+  font-size: 1.65em;
+  font-weight: 400;
 }
 
 .ss-form-question {

@@ -1467,6 +1467,19 @@ textarea {
       margin-bottom:0.333em;
       line-height: 1.25;
     }
+    a {
+      color:$yellow;
+    }
+    &.confirmation {
+      h2 {
+        font-size:2.5em;
+        font-weight:500;
+      }
+      p {
+        font-size:1.65em;
+        font-weight:400;
+      }
+    }
   }
 }
 .ss-form-question {

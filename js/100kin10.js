@@ -62,6 +62,14 @@ function onHoverOrClickOut() {
 	$('img#animated').remove();
 }
 
+//look here dude
+
+$('.analytics-link').click(function() {
+	var $linkCategory = $(this).data('category');
+	var $linkAction = $(this).data('action');
+	var $linkLabel = $(this).data('label');
+	ga('send', 'event', $linkCategory, $linkAction, $linkLabel);
+});
 
 
 
@@ -120,38 +128,58 @@ function fbs_click($shareurl,$sharetitle) {
 	return false;
 };
 
-
 $(document).ready(function () {
 
 	// Make tweets out of our markup rather than encoding the URLs the crappy way
 
 	$('.tweet').each(function() {
 		var tweet = $(this).text();
-		var datatweet = $(this).data('tweet');
-			if (datatweet) {
-				tweet = datatweet;
-			}
-		var trimmedtweet = $.trim(tweet);
-		var encodedtweet = encodeURIComponent(trimmedtweet);
+		var data_tweet = $(this).data('tweet');
+		if (data_tweet) { tweet = data_tweet; }
+		var trimmed_tweet = $.trim(tweet);
+		var encoded_tweet = encodeURIComponent(trimmed_tweet);
+
 		var hashtags = $(this).data('hashtags');
-			if (!hashtags) {
-				hashtags = '';
-			}
-		var link = 'http://100kin10.github.io/beta/';
-		var dataurl = $(this).data('tweeturl');
-			if (dataurl) {
-				link = dataurl;
-			}
-		var encodedlink = encodeURIComponent(link);
-		$(this).siblings('.tweet-this').attr('href', 'http://twitter.com/intent/tweet?text=' + encodedtweet + '&hashtags=' + hashtags + '&url=' + encodedlink);
+		if (!hashtags) { hashtags = ''; }
+
+		var link = 'http://blowmindsteachstem.com/'; //Default link
+		var data_url = $(this).data('tweeturl');
+		if (data_url) { link = data_url; }
+		var encoded_link = encodeURIComponent(link);
+
+		$(this).siblings('.tweet-this').attr('href', 'http://twitter.com/intent/tweet?text=' + encoded_tweet + '&hashtags=' + hashtags + '&url=' + encoded_link);
+
 	});
+
+	$('.tumblr-share').each(function() {
+		var title = 'Blow Minds. Teach Stem'; //Default title
+		var data_title = $(this).data('title');
+		if (data_title) { title = data_title; }
+		var trimmed_title = $.trim(title);
+		var encoded_title = encodeURIComponent(trimmed_title);
+
+		var description = $(this).text();
+		var data_description = $(this).data('description');
+		if (data_description) { description = data_description; }
+		var trimmed_description = $.trim(description);
+		var encoded_description = encodeURIComponent(trimmed_description);
+
+		var link = 'http://blowmindsteachstem.com/'; //Default link
+		var data_url = $(this).data('url');
+		if (data_url) { link = data_url; }
+		var encoded_link = encodeURIComponent(link);
+
+		$(this).siblings('.tumblr-this').attr('href', 'http://www.tumblr.com/share/link?url=' + encoded_link + '&name=' + encoded_title + '&description=' + encoded_description);
+
+	});
+
 
 	// Quiz stuff
 	// ----------------------------------------
 
 	function quizinart() {
 
-		$('#quizinart-start-button').on( 'click', function(e) {
+		$('#quizinart-start-button').on( 'click touchend', function(e) {
 
 			$container = $('#quizinart-intro')
 			$nextQuestion = $container.next( '.question-container' );
@@ -163,15 +191,15 @@ $(document).ready(function () {
 
 		});
 
-		$('.quizinart-selections label').on( 'click', function(e) {
+		var labelclick = function(e) {
 			e.preventDefault();
 			e.stopPropagation();
 			
-			var quip = $(this).data('quip');
+			var quip = $this.data('quip');
 			if (!quip) {
 				quip = ' ';
 			}
-			$container = $(this).closest('.question-container');
+			$container = $this.closest('.question-container');
 			$nextQuestion = $container.next('.question-container');
 
 			$container.removeClass('currentQuestion');
@@ -190,8 +218,18 @@ $(document).ready(function () {
 					$('#quizinart-inner').height($nextQuestionHeight);
 		    },4000);
 			}
+		}
 
+		$('.quizinart-selections label:not(.yes,.no)').on( 'click touchend', function(e) {
+			$this = $(this);
+			labelclick(e);
 		});
+
+		$('.quizinart-selections label:not(:not(.yes,.no))').on( 'click', function(e) {
+			$this = $(this);
+			labelclick(e);
+		});
+
 
 		var list = $("#question-2 .button-container");
 		//make default state _not_ a special case by adding a class to it
@@ -239,6 +277,9 @@ $(document).ready(function () {
 	}
 
 	videoclick();
+	
+
+
 
 	// Find the select boxes and change them to fancy fake select boxes and radio buttons
 	// ----------------------------------------
@@ -365,6 +406,12 @@ $(document).ready(function () {
 		$isMobile = false;
 		$('html').addClass('not-mobile-device');
 	};
+	
+	// if($isMobile){
+	// 	$('.quizinart-selections label').on('touchstart', function (event) {
+	// 		$('this').trigger('click');
+	//   });
+	// }
 		
 	function isiPad(){
 	    if (navigator.userAgent.match(/iPad/i) != null) {
@@ -393,7 +440,7 @@ $(document).ready(function () {
 		disableImageClick();
 		fullScreenSlide();
 		mediaQueryCalculator();	
-		
+		$("#new-embed-container").fitVids();
 	
 		if(!$isMobile){
 			$('a.changing-number').unbind('hover');
